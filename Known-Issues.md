@@ -1,17 +1,16 @@
 **Table of contents**
-* [General Issues](Known-Issues#general-issues)
- * [Hitting/Fighting](Known-Issues#hittingfighting)
- * [Moving/Passable](Known-Issues#movingpassable)
-* [Compatibility Issues](Known-Issues#compatibility-issues)
- * [NPCs](Known-Issues#npcs)
- * [Skills, machines and other](Known-Issues#skills-machines-and-other)
- * [Super jumps and flying skills](Known-Issues#super-jumps-and-flying-skills)
- * [Tekkit, FeedTheBeast, Hexxit and all the other mod packs](Known-Issues#tekkit-feedthebeast-hexxit-and-all-the-other-mod-packs)
- * [Spout and CompatNoCheatPlus](Known-Issues#spout-and-compatnocheatplus)
- * [Passable check](Known-Issues#passable-check)
-* [Other](Known-Issues#other)
- * [Special (cheat) Client-Mods](Known-Issues#special-cheat-client-mods)
- * [Minecraft Chat Apps](Known-Issues#minecraft-chat-apps)
+* [General Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#general-issues)
+ * [Hitting/Fighting](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#hittingfighting)
+ * [Moving/Passable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#movingpassable)
+* [Compatibility Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#compatibility-issues)
+ * [Skills, machines and other](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#skills-machines-and-other)
+ * [Super jumps and flying skills](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#super-jumps-and-flying-skills)
+ * [Tekkit, FeedTheBeast, Hexxit and all the other mod packs](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#tekkit-feedthebeast-hexxit-and-all-the-other-mod-packs)
+ * [Spout and CompatNoCheatPlus](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#spout-and-compatnocheatplus)
+ * [Passable check](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#passable-check)
+ * [Other](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#other)
+ * [Special (cheat) Client-Mods](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#special-cheat-client-mods)
+ * [Minecraft Chat Apps](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md#minecraft-chat-apps)
 
 ## General Issues
 Issues that are only related to NCP and occur in vanilla Minecraft.
@@ -39,10 +38,6 @@ Additional informations:
 
 ## Compatibility issues
 Issues that arise from using other client mods, server mods, plugins.
-
-### NPCs
-For problems with non-player-characters such as with Citizens, have a look at CompatNoCheatPlus and open a ticket for that, such usually is fixable.
-Please note that using names of players that are on your server to get a pretty skin on your NPCs may cause some side effects with NoCheatPlus and other plugins (NC+ might setback the NPC instead of the player etc.).
 
 ### Skills, Machines and other
 Some plugins provide extra skills like fast block breaking, or automatic mining and block placing etc. To keep it compatible with protection plugins they use custom events to tell other plugins that they break blocks. These will be interpreted by NCP and might lead to various violations.
