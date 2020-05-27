@@ -22,7 +22,7 @@
 * [NoSwing](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Noswing.md)
 * [Speed](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Speed.md)
 * [PreventMisc]()
-   * [BoatsAnywhere
+   * BoatsAnywhere
 
 # Chat
 * [Captcha](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BChat%5D-Captcha.md)
