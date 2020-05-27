@@ -11,7 +11,7 @@ It does not concern the speed at which players can break a single block (which i
 | intervalcreative    | The minimally allowed time to pass between breaking blocks in creative gamemode. |
 | intervalsurvival    | The minimally allowed time to pass between breaking blocks in survival gamemode. |
 | shortterm _ticks_   | Number of server ticks (50 ms each) to keep track for limiting short term bursts. |
-| shortterm _limit_   | how many blocks are players allowed to break in the specified ticks? |
+| shortterm _limit_   | How many blocks are players allowed to break in the specified ticks? |
 
 **Notes**
 * There is a general buffer counting in 2 seconds by default and allowing to accumulate as many blockbreaks as fit into the time given the intervalcreative and/or intervalsurvival settings interpreted as durations.
