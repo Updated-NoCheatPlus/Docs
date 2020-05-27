@@ -1,12 +1,12 @@
 **Table of context**
-* [Shortcuts](Permissions#shortcuts)
-* [Checks](Permissions#checks)
- * [Specific](Permissions#specific)
-* [Commands](Permissions#commands)
- * [Auxiliary commands](Permissions#auxiliary-commands)
-* [Client modifications](Permissions#client-modifications)
-* [Miscellaneous and parent permissions](Permissions#miscellaneous-and-parent-permissions)
-* [Configure permission caching behavior](Permissions#Configure-permission-caching-behavior)
+* [Shortcuts](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#shortcuts)
+* [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#checks)
+* [Specific](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#specific)
+* [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#commands)
+* [Auxiliary commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#auxiliary-commands)
+* [Client modifications](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#client-modifications)
+* [Miscellaneous and parent permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#miscellaneous-and-parent-permissions)
+* [Configure permission caching behavior](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#configure-permission-caching-behavior)
 
 # Shortcuts
 `nocheatplus.shortcut.info` Gives permissions to  
