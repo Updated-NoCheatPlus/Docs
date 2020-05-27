@@ -8,4 +8,4 @@ This check makes sure that there has been a bed near the player if they send a b
 **Related**
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
 * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
-* [SurvivalFly](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md)
+* [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md)
