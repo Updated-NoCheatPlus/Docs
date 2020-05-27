@@ -2,8 +2,8 @@ Config path: `checks.blockbreak.reach`
 Permission (bypass): `nocheatplus.checks.blockbreak.reach`  
 Exemption: `BLOCKBREAK_REACH`  
 
-Players may slightly increase the distance at which they can break blocks. This check will try to identify that by comparing player and block location.
+The BlockBreak.Reach check ensures that the block the player is trying to break is within a legit reach/distance (5.2 blocks in Survival, 5.6 in Creative)
 
 **Related**  
-* [Active](General#Active)
-* [Actions](General#Actions)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
