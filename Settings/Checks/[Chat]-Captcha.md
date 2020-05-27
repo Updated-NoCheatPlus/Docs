@@ -16,6 +16,6 @@ The captcha feature can be used together with our text or commands spam check to
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
 * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
-* [Text](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BChat%5D-Text.md)
-* [Commands](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BChat%5D-Commands.md)
+* [Text](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Text.md)
+* [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Commands.md)
 * [Formatting codes](http://minecraft.gamepedia.com/Formatting_codes)
