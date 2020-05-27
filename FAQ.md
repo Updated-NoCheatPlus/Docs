@@ -1,6 +1,7 @@
 **Table of Contents**
 * [Why is aimbot/killaura not detected by NoCheatPlus?](FAQ#why-is-aimbot/killaura-not-detected-by-nocheatplus)
 * [Why does NoCheatPlus not detect NoKnockback?](FAQ#why-does-nocheatplus-not-detect-nokncokback)
+* [How can I make NoCheatPlus so that it only notifies about potential cheaters instead of canceling actions?](https://github.com/Updated-NoCheatPlus/Docs/blob/e7dfa1215da46bdf70a024501be2f2af600c2976/FAQ.md#how-can-i-make-nocheatplus-so-that-it-only-notifies-about-potential-cheaters-instead-of-canceling-actions)
 * [Why use NoCheatPlus instead of plugin X?](FAQ#why-use-nocheatplus-instead-of-plugin-x)
 * [NoCheatPlus does not block any hacks on my server, I can login with any hack client and grief as much as I want without getting blocked?](FAQ#nocheatplus-does-not-block-any-hacks-on-my-server-i-can-login-with-any-hack-client-and-grief-as-much-as-i-want-without-getting-blocked)
 * [I gave my friend permissions for a mod but he stills get blocked by NoCheatPlus?](FAQ#i-gave-my-friend-permissions-for-a-mod-but-he-stills-get-blocked-by-nocheatplus)
@@ -35,7 +36,7 @@ After giving permissions to a player, he/she has to relog to activate their mods
 ### Will NoCheatPlus support plugins like mcMMO and Citizens out of the box?
 NoCheatPlus does not have any special plugin dependencies built in, because they delay the update process of our plugin. Instead we provide you with a compatibility bridge called [CompatNoCheatPlus].  
 CompatNoCheatPlus simply connects NoCheatPlus (reason why it needs to be installed alongside CNCP also) with other plugins such as [mcMMO], [Citizens] and others using the powerful [NoCheatPlus API](API) to make them compatible together.  
-If you would like to suggest or implement another plugin compatibility in CompatNoCheatPlus then contact @asofold for additional support.
+If you would like to suggest or implement another plugin compatibility in CompatNoCheatPlus then contact @xaw3ep or @CaptainObvious0 for additional support.
 
 ### Why isn't cncp (CompatNoCheatPlus) already integrated in NoCheatPlus?
 Because it would slow down the development of NoCheatPlus, we would always have to keep up with the other plugins if those get changed, also changes to NoCheatPlus might break compatibility with other plugins, so we would have to fix those too or remove the broken hooks. Also the testing for those components takes a lot of time and can't really be done by us. We might at some point build in a couple of generic things that will help with _some_ compatibility issues without endangering us of getting stuck with compatibility issues.
@@ -53,7 +54,7 @@ We don't encourage banning in general, because checks can have false positives a
 It has been removed for the time being. We might re-add it once we are in need of donations.
 
 **Related**  
-* [Known Issues](Known-Issues).
+* [Known Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md).
 
 [CompatNoCheatPlus]:https://dev.bukkit.org/bukkit-plugins/compatnocheatplus-cncp/
 [mcMMO]:https://dev.bukkit.org/bukkit-plugins/mcmmo/
