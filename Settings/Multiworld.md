@@ -5,7 +5,7 @@
 3. NoCheatPlus should now write every settings available for world specific configuration in that/those empty yaml files.
 4. If you rather prefer to use some settings of your global config.yml then set "savebackconfig" to false and remove the settings from your world specific configuration file.  
 
-* Example end result: ![Multiworld](Resources/Multiworld.gif)  
+* Example end result: ![Multiworld](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/Multiworld.gif)  
 * Other examples: WorldName_config.yml, world_nether_config.yml, world_the_end_config.yml, HungerGames_config.yml or BackupWorld_config.yml  
 
 ## Configs that only work in config.yml (Global configuration file)
