@@ -2,7 +2,7 @@ Config path: `checks.blockplace.direction`
 Permission (bypass): `nocheatplus.checks.blockplace.direction`  
 Exemption: `BLOCKPLACE_DIRECTION`  
 
-Forces players to look at the position they want to place their block on. 
+The BlockPlace.Direction check forces players to look at the position they want to place their block on.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
