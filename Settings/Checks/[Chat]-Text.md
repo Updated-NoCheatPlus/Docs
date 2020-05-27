@@ -71,7 +71,7 @@ Text.Player: uses more extended and advanced methods that keep track of each pla
 
 
 **Related**   
-* [Active](General#Active)
-* [Actions](General#Actions)
-* [[Chat] Captcha](%5BChat%5D-Captcha)
-* [Long-term and Short-term](Backgrounds#long-term-and-short-term)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
+* [Captcha](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Captcha.md)
+* [Long-term and Short-term](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Others/Backgrounds.md#long-term-and-short-term)
