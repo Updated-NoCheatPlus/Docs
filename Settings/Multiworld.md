@@ -9,7 +9,7 @@
 * Other examples: WorldName_config.yml, world_nether_config.yml, world_the_end_config.yml, HungerGames_config.yml or BackupWorld_config.yml  
 
 ## Configs that only work in config.yml (Global configuration file)
-`ToDo for asofold: Why exactly are those only global?`
+
 * configversion.notify
 * configversion.created
 * configversion.saved
