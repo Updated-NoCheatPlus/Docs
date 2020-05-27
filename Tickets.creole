@@ -1,4 +1,0 @@
-
-[[https://github.com/NoCheatPlus/Issues/issues|Tickets are now hosted on GitHub.]]
-
-TODO: Enjoy the search features. Might add direct links for typical searches here or elsewhere.
