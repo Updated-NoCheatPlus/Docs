@@ -8,7 +8,7 @@
 3. Start-up your server
 
 # Configuration
-1. [Make other plugins compatible with NoCheatPlus](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Compatibility.md)
+1. [Make other plugins compatible with NoCheatPlus](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Features-and-Compatibility.md)
 2. Install ProtocolLib to enable the NET checks
 3. [Setup permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md)
 4. [Learn what YAML is and how to edit it](https://github.com/Updated-NoCheatPlus/Docs/blob/master/YAML.md)
