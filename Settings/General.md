@@ -22,10 +22,10 @@ Just a simple on/off switch for most features.
 | **vl>X**      | Is meant to symbolize "violation level at least X". Used to define actions that will be executed only if players reached a certain violation level. Failing a check usually increases their "vl", not failing checks reduces it over time. Violation levels mean different things for different checks, e.g. they may describe moved distance beyond the limit, number of attacks above the attack limit, sent messages beyond the spam limit. <br> The "vl>x" isn't really an action. It limits all actions that are written afterwards to be only executed if the players’ violation level has reached at least the given value. This allows defining layers of actions and handling repeated or severe failing of checks different. For example the spam check will only kick players if they reach a certain violation level (vl). </br> |
 
 **Template**  
-![Action Explenation](Resources/ActionExplenation.gif)  
+![Action Explenation](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/ActionExplenation.gif)  
 
 **Levels**  
-![Action Levels](Resources/ActionLevels.gif)  
+![Action Levels](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/ActionLevels.gif)  
 Level 1: Will be executed if the violation is under 1000  
 Level 2: Will be executed if the violation is in range of 1000-1299  
 Level 3: Will be executed if the violation is 1300 and higher  
@@ -38,5 +38,5 @@ Once a violation level reaches a **vl>X** limit all actions before that limit wi
 * The ":delay:repeat" part can be omitted from the "log" and "cmd" actions
 
 **Related**  
-* [Strings](Strings)
-* [Violations](Backgrounds#violations)
+* [Strings](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Strings.md)
+* [Violations](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Others/Backgrounds.md#violations)
