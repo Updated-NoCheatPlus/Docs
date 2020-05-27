@@ -1,5 +1,5 @@
 # BlockBreak
-* [[Direction]()
+* [Direction]()
 * [FastBreak](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Fastbreak.md)
 * [Frequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Frequency.md)
 * [NoSwing](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Noswing.md)
