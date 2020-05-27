@@ -2,8 +2,8 @@ Config path: `checks.blockinteract.reach`
 Permission (bypass): `nocheatplus.checks.blockinteract.reach`  
 Exemption: `BLOCKINTERACT_REACH`  
 
-This check makes sure that the distance from block to player is legit before that player can interact with it (open a door for example).
+The BlockInteract.Reach check prevents players from interacting with blocks that are too far away (opening a door for example).
 
 **Related**  
-* [Active](General#Active)
-* [Actions](General#Actions)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
