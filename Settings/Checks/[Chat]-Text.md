@@ -6,7 +6,7 @@ Advanced check designed to prevent chat spam and floodding.
 
 | Option           | Description |
 | :--------------- | :---------- |
-| allowvlreset     |  |
+| allowvlreset     | TODO: |
 
 ## Frequency
 This check is split in two in order to cover both faster and slower types of chat spamming.  
