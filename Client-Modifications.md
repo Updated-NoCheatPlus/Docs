@@ -1,6 +1,6 @@
 Some nice Minecraft client mod developers allow us to control their mod over a hidden motd message.
 
-Currently NoCheatPlus supports:
+**Currently NoCheatPlus supports:**
 * CJB Mods
 * Rei's Minimap
 * Smart Moving
@@ -10,4 +10,4 @@ Currently NoCheatPlus supports:
 If you have another mod you want us to support then please contact us.
 
 **Related:**  
-* [Permissions](Permissions)
+* [Permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md)
