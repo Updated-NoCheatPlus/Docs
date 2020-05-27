@@ -22,7 +22,7 @@ We are currently working on a proper fix for this problem so keep an eye on the 
 
 Additional informations about pvp:
 * The higher the latency (server and client) the worse is the hit detection
-* Beware of players who fake informations in order to persuade you into making the 'fight' checks less strict
+* Beware of players who fake informations in order to persuade you into making the 'fight' checks less strict (always verify first-hand)
 * If you encounter problems with the fight.direction check you could set "strict" to false in your configuration file.
 * Turning down the "penalty" value for fight.direction and fight.reach check could help also.
 * Increasing the 'maxloopletencyticks' leniency will help as well.
