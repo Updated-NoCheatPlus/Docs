@@ -21,8 +21,7 @@
 * [Scaffold](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Scaffold.md)
 * [NoSwing](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Noswing.md)
 * [Speed](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Speed.md)
-* [PreventMisc]()
-   * BoatsAnywhere
+* [PreventMisc](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Preventmisc.md)
 
 # Chat
 * [Captcha](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BChat%5D-Captcha.md)
