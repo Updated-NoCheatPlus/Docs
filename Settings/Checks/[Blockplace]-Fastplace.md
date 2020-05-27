@@ -6,9 +6,11 @@ FastPlace prevents players from placing blocks too quickly. This will prevent pl
 
 | Option             | Description |
 | :--------------    | :---------- |
-| limit              | How many blocks should a player be allowed to place in 2 seconds? Mind lag spikes and server tps drops. |
-| shortterm _ticks_  | The amount of ticks to track for the short-term checking.|
-| shortterm _limit_  | How many blocks should a player be able to place in the specified ticks? |
+| limit              | How many blocks should a player be allowed to place in 2 seconds? Mind lag spikes and server tps drops.|
+| Shortterm _ticks_  | The amount of ticks to track for the short-term checking.|
+| Shortterm _limit_  | How many blocks should a player be able to place in the specified ticks? |
+| Improbable _feedonly_ | If false, this check can directly incur Improbable VIOLATIONS with its data. If true this check will only contribute in feeding Improbable with its data.|
+| Improbable _weight_ |The weight this check should have when feeding improbable.|
 
 
 **Related**  
