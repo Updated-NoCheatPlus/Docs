@@ -18,7 +18,10 @@ NCP’s suit of combat checks serve this exact purpose; they attempt to create a
 Unfortunately, unlike in the movement area, combat cannot be modelled upon by us. Movement cheats are meant to leave vanilla envelopes which can be tracked down and then be enforced to players, whereas combat hacks simply try to simulate a legit, player-like behaviour so there’s nothing that we can realistically “enforce”.  
 
 ### Why does NoCheatPlus not detect NoKnockback?
-Key issues are that the client side decides on responding to velocity, the latency between client and server makes workarounds complicated for the general case, given that the players path can be blocked. We don't deem it impossible to detect simple to check or extreme cases.
+Key issues is that the client is authoritative on how it responds to velocity, the latency between client and server makes it extra hard for us to detect such cheat as well. Something is already in the works, however. (Moving.UnusedVelocity).
+
+### How can I make NoCheatPlus so that it only notifies about potential cheaters instead of canceling actions?
+If you want NCP to work silently (for all or just some checks), remove the `cancel` flag under each check `actions`.
 
 ### Why use NoCheatPlus instead of plugin X?
 It is up to you! NoCheatPlus puts emphasis on configurability allowing you to choose when to kick, ban, log, do anything at all, also allowing to adjust a lot of parameters to tweak checks for your needs. Other plugins may put emphasis on simplicity of configuration. All plugins strive to work fine "out of the box" without need to adapt much. Of course every plugin might have strengths and weaknesses on different fields, also consider that NoCheatPlus is both free and open source - we suggest you match your needs against the [features](Features) of the plugins, and ask if in doubt.
