@@ -5,9 +5,9 @@ Allows you to warn the player of the chat.text and chat.commands weight levels, 
 
 | Option         | Description |
 | :------------- | :---------- |
-| level          | Percentage of level at which to warn. |
+| level          | Chance(%) to warn a player.. |
 | message        | This message will be sent to all of the players that fail a chat check. |
-| timeout        | Time in seconds before warning again. |
+| timeout        | Time in seconds before warning again (cooldown) (seconds). |
 
 **Notes**
 * Currently warning does not necessarily happen before violations are being triggered.
@@ -15,6 +15,6 @@ Allows you to warn the player of the chat.text and chat.commands weight levels, 
 * If for example your CHAT_TEXT_SHORTTERM check has level set to 160 you calculate: (160 / 100) * level you set here in warning. Result= The level at which warning will trigger for CHAT_TEXT_SHORTTERM
 
 **Related**
-* [Active](General#Active)
-* [[Chat] Text](%5BChat%5D-Text)
-* [[Chat] Commands](%5BChat%5D-Commands)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Text](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Text.md)
+* [Chat Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Commands.md)
