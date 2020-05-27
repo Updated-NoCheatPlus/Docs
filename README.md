@@ -1,6 +1,6 @@
 ![Title](https://raw.githubusercontent.com/asofold/NCPDocs/master/wiki/resources/sNCPBanner.gif)
 
-Welcome to the wiki! 
+# Welcome to the wiki 
 This page will explain everything that you need to know about NoCheatPlus.
 
 NoCheatPlus is a Bukkit (CraftBukkit/Spigot) plugin meant to protect your server from various kinds of cheating. A wide area of cheats is covered, such as player and vehicle moving, interaction, block breaking and placing, fighting, chat and other types of areas including client behavior that might crash the server.
