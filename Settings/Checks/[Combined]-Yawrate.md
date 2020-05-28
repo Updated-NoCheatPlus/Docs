@@ -2,7 +2,7 @@ Config path: `checks.combined.yawrate`
 Permission (bypass): `nocheatplus.checks.combined.yawrate`  
 Exemption: `COMBINED_YAWRATE`  
 
-Yawrate monitors how quickly players turn around to perform certain actions (most important, to attack) by monitoring how quickly the yaw-change rate varies over time. 
+Yawrate monitors how quickly players turn around to perform certain actions (most important, to attack) by checking how quickly the yaw-change rate varies over time. 
 
 | Option             | Description |
 | :----------------- | :---------- |
