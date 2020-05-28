@@ -7,7 +7,7 @@ This check limits the overall amount of packets a player can send in one time-fr
 
 | Option              | Description |
 | :------------------ | :---------- |
-| limitpersecond      | Maximum cap of packets that NCP will accept.
+| limitpersecond      | Maximum amount of packets that NCP will accept in one second |
 | seconds             | Seconds that the check will use in its internals to determine how long it should last.|
 
 **Note**
