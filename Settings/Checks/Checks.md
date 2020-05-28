@@ -42,7 +42,6 @@
 
 # Fight
 * [General](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BFight%5D-General.md)
-* [YawRate(Activation flag)]()
 * [Angle](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BFight%5D-Angle.md)
 * [Critical](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BFight%5D-Criticals.md)
 * [Direction](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BFight%5D-Direction.md)
@@ -59,8 +58,8 @@
 * [InstantBow](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Instantbow.md)
 * [InstantEat](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Instanteat.md)
 * [FastConsume](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Fastconsume.md)
-* [InventoryMove]()
-* [MoreInventory]()
+* [InventoryMove](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Inventorymove.md)
+* [MoreInventory](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Moreinventory.md)
 * [Gutenburg](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Gutenberg.md)
 * [Items](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Items.md)
 * [Open](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Open.md)
@@ -76,10 +75,11 @@
 * [Vehicle]()
 
 # Net
-* [AttackFrequency]()
+* [General]()
+* [AttackFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Attackfrequency.md)
 * [FlyingFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Flyingfrequency.md)
-* [KeepAliveFrequency]()
-* [PacketFrequency]()
+* [KeepAliveFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Keepalivefrequency.md)
+* [PacketFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Packetfrequency.md)
 * [SoundDistance](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Sounddistance.md)
-* [WrongTurn]()
+* [WrongTurn](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-WrongTurn.md)
 
