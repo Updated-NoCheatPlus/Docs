@@ -13,6 +13,10 @@ The Fight.Speed check prevents payers from hitting entities too quickly.
 | Improbable _weight_ |The weight this check should have when feeding improbable. Set to 0.0 if you don't want this check to feed Improbable at all.|
 
 
+**Notes**
+* See also `Net.AttackFrequency`for a better version of this check.
+
+
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
 * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
