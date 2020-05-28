@@ -14,9 +14,7 @@ The NoFall check prevents players from manipulating fall damage and fall distanc
 | anticriticals       | If this is set to true, NoFall will set the player's falldistance to 0 if NCP detects the player to be on ground. Prevents most Critical cheats from working correctly (Cheaters will see critical particles client-side, but no real additional damage will be inflicted to the player). See `checks.fight.critical` for more information about this. |
 
 **Notes**
-* resetonvehicle was set to true because of a strange bug that killed players when they left a vehicle.
-* In Minecraft its possible to fake small amounts of fall damage to get fake critical hits on entities. For that reason we highly recommend to let anticriticals to true unless you have no choice.
-
+* The NoFall check has two sub-checks: *fakefall* and *fakeground*, the former prevents players from faking dall distance and get fall damage while being on ground, the latter prevents players from faking the onGround flag by setting it to true in-air in order to get fall damage.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
