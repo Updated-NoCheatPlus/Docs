@@ -7,7 +7,7 @@ The Morepackets check is complementary to the Survivalfly and Creativefly checks
 
 | Option                  | Description |
 | :---------------------- | :---------- |
-| seconds                 | # How long the check should last? (seconds that MorePackets will track) Compensates for higher latency but it will longer to take actions against cheats. |
+| seconds                 | How long the check should last? (seconds that MorePackets will track) Compensates for higher latency but it will longer to take actions against cheats. |
 | epsideal                | The ideal amount of packets that NCP will expect a player to send.. |
 | epsmax                  | The maximum number of events per second tolerated (in average). |
 | burst                   | The burst mechanics allow MorePackets to keep track of packet rates in a longer run|
