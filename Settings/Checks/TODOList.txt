@@ -5,3 +5,4 @@ List of stuff that's still missing documentation:
 * Redundant packets in FlyingFrequency 
 * Net.general
 * Text: allowvlreset
+* Vehicle.schedulesetbacks
