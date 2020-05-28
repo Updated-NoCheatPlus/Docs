@@ -9,6 +9,6 @@ This check was designed to prevent players from eating food faster then usually 
 * This check has been tested and doesn't cause any problems with plugins that modify eat speed such as FastEat or AutoSoup.
 
 **Related**  
-* [Active](General#Active)
-* [Actions](General#Actions)
-* [[Inventory] Fastconsume](%5BInventory%5D-Fastconsume)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
+* [Fastconsume](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BInventory%5D-Fastconsume.md)
