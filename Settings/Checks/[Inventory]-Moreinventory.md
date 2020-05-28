@@ -6,4 +6,3 @@ MoreInventory prevents players from obtaining 4 additional storage slots by expl
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
-* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
