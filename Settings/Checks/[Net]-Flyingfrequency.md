@@ -7,7 +7,7 @@ Check aimed at catching packet manipulation/spam. It prevents extremely fast tic
 
 | Option              | Description |
 | :------------------ | :---------- |
-| seconds             | Seconds used within the internals of the check: a violation will be triggered if (Total packet score / _seconds_ > _packetsperseconds_ |
+| seconds             | Seconds used within the internals of the check: a violation will be triggered if (Total packet score / _seconds_ > _packetsperseconds_)|
 | packetspersecond    | Amount of packets per seconds tolerated. |
 | cancelredundant     | TODO: |
 | reduceredundant _seconds_| TODO:  |
