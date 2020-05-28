@@ -1,6 +1,6 @@
-Config path: `checks.net.flyingfrequency`  
-Permission (bypass): `nocheatplus.checks.net.flyingfrequency`  
-Exemption: `NET_FLYINGFREQUENCY`  
+Config path: `checks.net.attackfrequency`  
+Permission (bypass): `nocheatplus.checks.net.attackfrequency`  
+Exemption: `NET_ATTACKFREQUENCY`  
 Depends on: `ProtocolLib (plugin)`  
 
 The AttackFrequency check limits the amount attacks a player can perform in multiple time-frames.
