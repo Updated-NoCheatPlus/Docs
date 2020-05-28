@@ -75,7 +75,7 @@
 * [Vehicle]()
 
 # Net
-* [General]()
+* [General](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-General.md)
 * [AttackFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Attackfrequency.md)
 * [FlyingFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Flyingfrequency.md)
 * [KeepAliveFrequency](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BNet%5D-Keepalivefrequency.md)
