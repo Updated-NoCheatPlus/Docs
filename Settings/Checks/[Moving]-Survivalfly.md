@@ -9,19 +9,24 @@ SurvivalFly aims to control pretty much everything related to moving such as fly
 | :---------------------------------- | :---------- |
 | extended _vertical-accounting_      | Monitor how the players speed varies in-air. Enforces gravity for a minimum amount. |
 | stepheight                          | The height a player can from ground upwards to ground, without jumping. This is set to 'default' by default, so NCP will adjust it automatically with the Minecraft version. In case NCP can't detect the version properly, e.g. with custom builds, setting an explicit value might help. Used to be 0.5 before MC 1.8 and 0.6 from then on. |
-| setbackpolicy _falldamage_          | Deal fall-damage according to fall-distance on survivalfly violations. Meant to make exploiting the set-back to last ground location more expensive. |
-| setbackpolicy _voidtovoid_          | Attempt to set-back into the void, if already there. |
+| leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer - it fills up with (allowed) moving below the applicable base moving speed (not accounting for special acceleration like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
+| leniency _ViolationFrequency_| By default, SurvivalFly will relax the total violation level of the player over time with legit moves. The following feature allows SurvivalFly to better discern false positives from potential cheaters for lower violation levels by keeping track of how frequently a player is triggering this check, between a custom amount of moves. SurvivalFly won't cancel any detected move if they are below your set `maxleniencyvl` VL, but if a player is continiously triggering SF under the set threshold, NCP will pick up on that and start to *increase* the violation level so that they will get blocked much faster. This will significantly grant a better gameplay experience to legit players as sporadic/occasional low violations won't get hard blocked immediately by SF.|
+| ViolationFrequency _active_| Should this hook be enabled for SurvivalFly? If false, SurvivalFly will always setback players upon violations, no matter how small they are (normal behaviour). Do note that this hook requires that you have set a 'cancel' flag in your actions.|
+| leniency  _ViolationFrequency_  _debug_| Debug flag, for debugging issues about this hook|
+| leniency  _ViolationFrequency_  _maxleniencyvl_| Maximum violation after which Survivalfly will setback players normally.|
+| leniency  _ViolationFrequency_ _mintoadd_| Minimum VL for which SurvialFly will not weight out lower violations.|
+|leniency  _ViolationFrequency_ _morevls_| How much should NCP increase lower violation levels by when a player is continiously triggering SurvivalFly under your set ` maxleniencyvl`?|
+|leniency _ViolationFrequency_ _movecount_| Move counter after the last *violated* move for which SurvivalFly will use this hook.
+| leniency _freezecount_ | The number of moves, for which the violation level can't decrease, after a violation has happened. |
+| leniency _freezeinair_ | If set to true, the violation level can't decrease, while the player is moving in-air.
+| setbackpolicy _falldamage_          | Deal the amount of fall damage players are supposed to get if they happen to fall and get setbacked on ground. This prevents people from exploiting NoCheatPlus to avoid fall damage by purposelly triggering SurvivalFly to force a setback. |
+| setbackpolicy _voidtovoid_          | Should players be setbacked into the void instead of the last valid ground position (if no ground has been detected by NCP beneath the player)? This is meant to prevent cheaters from exploiting the set-back logic by purposelly trigger a detection to never fall down (SkyWars/Block) [BETA feature, not recommended to enable as of now]. |
 | hover _step_                        | Tick-period for which to perform hover checking. |
 | hover _ticks_                       | Ticks after which a player is assumed to hover if still in-air and not moving. |
 | hover _logingticks_                 | Extra ticks added to hoverticks directly after login, to give more leniency. Set this on problems with hover + loging in. |
 | hover _falldamage_                  | Deal fall-damage according to fall-distance, to make avoiding fall-damage harder. |
 | hover _sfviolation_                 | A hover violation is counted as a survivalfly violations with this amount of violation level. |
-| leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer - it fills up with (allowed) moving below the applicable base moving speed (not accounting for special acceleration like with bunny hopping). |
-| leniency _freezecount_ | The number of moves, for which the violation level can't decrease, after a violation has happened. |
-| leniency _freezeinair_ | If set to true, the violation level can't decrease, while the player is moving in-air. 
-
-The _leniency/freeze_ settings mainly aim at configurations that don't cancel for low violation levels. With the freezing option, cheaters can't create repeated small violations as easily.
-
+ 
 There are also hidden options, which give more access to internals. Use with care, as these might allow different kinds of cheats or lead to other false positives, if changed. Ask back if in doubt or test changes made.
 
 |Hidden Option                    | Description |
@@ -37,9 +42,10 @@ There are also hidden options, which give more access to internals. Use with car
 * If you alter the actions in the configuration to not always cancel, you might be allowing glide-like cheats. Issues with horizontal speed are easier to work a around by configuration, than issues with the vertical part of a move (display [tags] for reference, ask back).
 * A powerful tool for issues with moving is provided with the _on-the-fly debug logging feature_, significantly improving the odds for a quick fix: https://github.com/NoCheatPlus/Docs/wiki/Debugging#on-the-fly-debug-output-for-individual-players
 * Hover is a sub-check of SurvivalFly which prevents players from hovering around in mid-air.
+* The _leniency/freeze_ settings mainly aim at configurations that don't cancel for low violation levels. With the freezing option, cheaters can't create repeated small violations as easily.
 
 **Related**  
-* [Active](General#Active)
-* [Actions](General#Actions)
-* [[Moving] Nofall](%5BMoving%5D-Nofall)
-* [[Moving] Creativefly](%5BMoving%5D-Creativefly)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
+* [Nofall](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Nofall.md)
+* [Creativefly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Creativefly.md)
