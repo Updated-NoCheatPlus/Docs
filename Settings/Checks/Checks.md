@@ -1,5 +1,6 @@
 # BlockBreak
-* [Direction]()
+#### Checks that are related to players breaking blocks.
+* [Direction](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Direction.md)
 * [FastBreak](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Fastbreak.md)
 * [Frequency](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Frequency.md)
 * [NoSwing](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Noswing.md)
@@ -7,12 +8,14 @@
 * [WrongBlock](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Wrongblock.md)
 
 # BlockInteract
+#### Checks that are related to players interacting with blocks.
 * [Direction](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Direction.md)
 * [Reach](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Reach.md)
 * [Speed](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Speed.md)
 * [Visible](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Visible.md)
 
 # BlockPlace
+#### Checks that are related to players placing blocks.
 * [Against](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Against.md)
 * [AutoSign](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Autosign.md)
 * [Direction](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Direction.md)
@@ -24,6 +27,7 @@
 * [PreventMisc](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Preventmisc.md)
 
 # Chat
+#### Checks that are related to chat activity and login/join.
 * [Captcha](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Captcha.md)
 * [Color](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Color.md)
 * [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Commands.md)
@@ -33,6 +37,7 @@
 * [Logins](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Logins.md)
 
 # Combined
+#### Checks that are combined by multiple inputs from NoCheatPlus or that just don't fit into any other category.
 * [BedLeave](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Bedleave.md)
 * [Enderpearls](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Enderpearl.md)
 * [Improbable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Improbable.md)
@@ -41,6 +46,7 @@
 * [YawRate(Settings)](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Yawrate.md)
 
 # Fight
+#### Checks related to players interacting with other entities.
 * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BFight%5D-General.md)
 * [Angle](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BFight%5D-Angle.md)
 * [Critical](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BFight%5D-Criticals.md)
@@ -53,6 +59,7 @@
 * [Speed](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BFight%5D-Speed.md)
 
 # Inventory
+#### Concerns players interacting with inventories and/or containers.
 * [Drop](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BInventory%5D-Drop.md)
 * [FastClick](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BInventory%5D-Fastclick.md)
 * [InstantBow](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BInventory%5D-Instantbow.md)
@@ -66,6 +73,7 @@
 * [Hotifx](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BInventory%5D-Hotfix.md)
 
 # Moving
+#### Checks that concern player movement and locations.
 * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-General.md)
 * [CreativeFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Creativefly.md)
 * [MorePackets](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Morepackets.md)
@@ -73,11 +81,13 @@
 * [Passable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Passable.md)
 * [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md)
  ## Vehicle
+ #### Checks related to players riding vehicles
  * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving-Vehicle%5D-General.md)
  * [MorePackets](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving-Vehicle%5D-Morepackets.md)
  * [Envelope](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving-Vehicle%5D-Envelope.md)
 
 # Net
+#### These checks are ProtocolLib-dependant. They check players on a packet-level.
 * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BNet%5D-General.md)
 * [AttackFrequency](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BNet%5D-Attackfrequency.md)
 * [FlyingFrequency](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BNet%5D-Flyingfrequency.md)
