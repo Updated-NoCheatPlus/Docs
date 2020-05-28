@@ -6,3 +6,6 @@ This check was a hotfix against a devastating exploit in Minecraft 1.4.5 (and lo
 
 **Notes**
 * In Minecraft 1.4.6 this exploit got fixed and the "enchanted books" got introduced into the game
+
+**Related**  
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
