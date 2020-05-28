@@ -1,6 +1,6 @@
 Config path: `checks.moving.vehicle.morepackets`  
-Permission (bypass): `nocheatplus.checks.moving.vehicle.morepacketsvehi`  
-Exemption: `MOVING_VEHICLE.MOREPACKETS`  
+Permission (bypass): `nocheatplus.checks.moving.vehicle.morepackets`  
+Exemption: `MOVING_VEHICLE_MOREPACKETS`  
 
 The Vehicle.MorePackets does the same job as the Moving.MorePackets check this one however, is for players riding vehicles (carts, horses, boats etc..)
 
