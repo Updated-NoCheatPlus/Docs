@@ -90,7 +90,7 @@ With those permissions you can decide which mods should not be disabled on login
 
 # Miscellaneous and parent permissions
 
-`nocheatplus.admin` Gives access to all [NoCheatPlus commands](https://github.com/MyPictures/NoCheatPlus/wiki/Commands) including Auxiliary ones  
+`nocheatplus.admin` Gives access to all [NoCheatPlus commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md) including Auxiliary ones  
 `nocheatplus.notify` Will receive hack notifications over in-game chat
 
 Commands for which the permission got set by the protection features (hide plugins), might have altered default permissions or NoCheatPlus may have set a filter permission 'nocheatplus.filter.command.COMMAND_NAME', for the case the command was allowed to be run by everyone.
@@ -99,10 +99,10 @@ Commands for which the permission got set by the protection features (hide plugi
 * By default NoCheatPlus assigns all permissions and gives full rights to players that have been `/op-ed` on your server. If you don't want to give OPs full access to all NoCheatPlus features then take a look in the configuration of your permissions plugin (Example with PermissionsEx: allowOps: false).
 
 **Related**
-* [Client Modifications](Client-Modifications)
-* [Checks](Checks)
-* [Commands](Commands)
-* [Debugging](Debugging)
+* [Client Modifications](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Client-Modifications.md)
+* [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/Checks.md)
+* [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md)
+* [Debugging](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Debugging.md)
 
 [CJB Mods]:http://cjbmods.com/
 [Rei's Minimap]:http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1275219-jul-08-reis-minimap-v3-4_01
