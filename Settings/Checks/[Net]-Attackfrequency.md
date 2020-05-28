@@ -13,7 +13,7 @@ The AttackFrequency check limits the amount attacks a player can perform in mult
 | limitforseconds _two_| How many clicks in two seconds?|
 | limitforseconds _four_| Hoow many clicks in four seconds?|
 | limitforseconds _eight_| How many clicks in eight seconds?|
-| Improbable _weight_ | How much weight should this check have when feeding Combined.Improbable? Set to 0.0 to disable.
+| Improbable _weight_ | How much weight should this check have when feeding Combined.Improbable? Set to 0.0 to disable.|
 
 
 **Related**  
