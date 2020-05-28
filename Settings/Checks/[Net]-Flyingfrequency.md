@@ -13,7 +13,8 @@ Check aimed at catching packet manipulation/spam. It prevents extremely fast tic
 | reduceredundant _seconds_| TODO:  |
 
 **Note**
-When a flying packet gets canceled, the position of the player _won't_ get updated to the server but they will still be able to move client-side; this will result in a _server-sided_ freeze. When the player thaws out of this state, all their movements will be sent as a batch, making them look like as if they were speeding, causing (high) violations in SurvivalFly. Hence why it's not recommended to immediately cancel packets here.
+
+* When a flying packet gets canceled, the position of the player _won't_ get updated to the server but they will still be able to move client-side; this will result in a _server-sided_ freeze. When the player thaws out of this state, all their movements will be sent as a batch, making them look like as if they were speeding, causing (high) violations in SurvivalFly. Hence why it's not recommended to immediately cancel packets here.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
