@@ -63,7 +63,7 @@
 * [Gutenburg](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Gutenberg.md)
 * [Items](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Items.md)
 * [Open](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Open.md)
-* [Hotifx]()
+* [Hotifx](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BInventory%5D-Hotfix.md)
 
 # Moving
 * [General](https://github.com/Lysandr0/Docs/blob/master/Settings/Checks/%5BMoving%5D-General.md)
