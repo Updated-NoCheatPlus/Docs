@@ -15,6 +15,8 @@ The AttackFrequency check limits the amount attacks a player can perform in mult
 | limitforseconds _eight_| How many clicks should players be able to do in eight seconds?|
 | Improbable _weight_ | How much weight should this check have when feeding Combined.Improbable? Set to 0.0 to disable.|
 
+**Note**
+* It is *extremely* unlikely that a (casual) player can reach 20 CPS and keeping such value for long period of times, anything above 20-ish can be considered as cheating. 
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
