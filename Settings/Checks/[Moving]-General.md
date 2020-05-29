@@ -2,8 +2,6 @@ This page explains configuration options which affect or support multiple moving
 
 | Option                          | Description |
 | :------------------------------ | :---------- |
-| vehicles _preventdestroyown_    | Prevent to destroy a vehicle while they are riding/mounting it.|
-| vehicles _enforcelocation_      | Attempt to track extreme deviations from the vehicle position and correct them. Experimental (hopefully-) legacy option. Likely inoperable and useless, subject to removal.|
 | velocity _activationcounter_    | Queued unused velocity is removed after this amount of incoming moving packets. Decreasing this will nerf some abuses (such as long-jump) but it could also create more false positives (lag(...))|
 | velocity _activationticks_      | Queued unused velocity is removed after this amount of server ticks. Decreasing this will nerf some abuses (such as long-jump) but it could also create more false positives (lag(...))|
 | velocity _strictinvalidation_   | More strict invalidation of queued velocity.|
@@ -29,6 +27,5 @@ There are also hidden options, which give more access to internals. Use with car
 
 **Notes**
 * Players could do a illegal movements which would crash the server, so we made a check against it that would tempban a player for 24 hours if they exploit that. However some users wanted to just kick such players and for that reason we put boolean to activate/deactivate temporary banning called `tempkickillegal`.
-* Minecraft fixed the "destroyown vehicle" bug so vehicles preventdestroyown option is just here for legacy servers. Leaving it enabled won't conflict with anything either.
 * *If you use plugins that allow 0 delay between two hits, reduce `velocity.activationcounter` and `velocity.activationticks` to something lower.*
 * The Minecraft client moves (well more falls) even if no chunks are loaded up which could trigger a tiny Passable false positive. We tried to smooth this further out by loading up the chuncks on join as fast as possible with `loadchuncks _join_`. It seems that Mojang allows the client to move inside unloaded chunks, for the vanilla fly check because it would prevent false positives with it.
