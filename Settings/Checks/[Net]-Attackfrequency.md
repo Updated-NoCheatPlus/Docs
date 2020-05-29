@@ -7,12 +7,12 @@ The AttackFrequency check limits the amount attacks a player can perform in mult
 
 | Option              | Description |
 | :------------------ | :---------- |
-| limitforseconds     | Set the lick limit for each established time frame.|
-| limitforseconds _half_| How many clicks in 500 milliseconds?|
-| limitforseconds _one_| How many clicks in one second?|
-| limitforseconds _two_| How many clicks in two seconds?|
-| limitforseconds _four_| Hoow many clicks in four seconds?|
-| limitforseconds _eight_| How many clicks in eight seconds?|
+| limitforseconds     | Set the click limit for each established time frame.|
+| limitforseconds _half_| How many clicks should players be able to do in 500 milliseconds?|
+| limitforseconds _one_| How many clicks should players be able to do in one second?|
+| limitforseconds _two_| How many clicks should players be able to do in two seconds?|
+| limitforseconds _four_| Hoow many clicks should players be able to do in four seconds?|
+| limitforseconds _eight_| How many clicks should players be able to do in eight seconds?|
 | Improbable _weight_ | How much weight should this check have when feeding Combined.Improbable? Set to 0.0 to disable.|
 
 
