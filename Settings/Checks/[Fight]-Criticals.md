@@ -10,6 +10,7 @@ This check prevents players from doing more damage to players and mobs by faking
 
 **Notes**
 * In MC you need to hit someone while falling to get a critical hit.
+* Check `checks.moving.nofall.anticrticals` if you wish to further tweak settings concerning critical cheats..
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
