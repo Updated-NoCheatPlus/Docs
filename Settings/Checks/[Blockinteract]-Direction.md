@@ -1,6 +1,7 @@
 Config path: `checks.blockinteract.direction`  
 Permission (bypass): `nocheatplus.checks.blockinteract.direction`  
-Exemption: `BLOCKINTERACT_DIRECTION`  
+Exemption: `BLOCKINTERACT_DIRECTION`
+Better with: `ProtocolLib (plugin)`  
 
 The Direction check forces players to look (eye location) at the block they want to interact with.
 
