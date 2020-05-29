@@ -2,7 +2,7 @@ Config path: `checks.fight.fastheal`
 Permission (bypass): `nocheatplus.checks.fight.fastheal`  
 Exemption: `FIGHT_FASTHEAL`  
 
-This check prevents players from generating healthy faster then possible.
+FastHeal enforces realistic health regeneration speeds on players, preventing Regen cheats and the like from working.
 
 | Option              | Description |
 | :------------------ | :---------- |
