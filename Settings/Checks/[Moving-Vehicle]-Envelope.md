@@ -1,6 +1,6 @@
 Config path: `checks.moving.vehicle.envelope`  
 Permission (bypass): `nocheatplus.checks.moving.vehicle.envelope`  
-Exemption: `MOVING_VEHICLE.ENVELOPE`  
+Exemption: `MOVING_VEHICLE_ENVELOPE`  
 
 The VehicleEnvelope check handles everything related to vehicle movement (As of 1.9, vehicles are not under the server's control anymore so we need checks for players in vehicles as well)                              
 
