@@ -15,7 +15,7 @@ The Fight.Speed check prevents payers from hitting entities too quickly.
 
 **Notes**
 * See also `Net.AttackFrequency`for a better version of this check.
-
+* It is *extremely* unlikely that a (casual) player can reach 20 CPS and keeping such value for long period of times, anything above 20(+)-ish can be considered as cheating. 
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
