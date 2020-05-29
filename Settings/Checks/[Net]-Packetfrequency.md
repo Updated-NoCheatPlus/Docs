@@ -11,8 +11,7 @@ This check limits the overall amount of packets a player can send in one time-fr
 | seconds             | Seconds that the check will use in its internals to determine how long it should last.|
 
 **Note**
-* It shouldn't be possible to crash/harm servers by flodding them with packets since 1.9, but if you notice further packet-based exploits in newer versions, then force-enabling this check
-might be useful.    
+* As of MC 1.9, it shouldn't be possible to crash/harm servers by flodding them with packets, but if you notice further packet-based exploits in newer versions, then force-enabling this check might be useful.    
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
