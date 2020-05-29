@@ -15,6 +15,7 @@ The NoFall check prevents players from manipulating fall damage and fall distanc
 
 **Notes**
 * The NoFall check has two sub-checks: *fakefall* and *fakeground*, the former prevents players from faking dall distance and get fall damage while being on ground, the latter prevents players from faking the onGround flag by setting it to true in-air in order to get fall damage.
+* The NoFall check does not directly detect NoFall cheats, instead, we calculate fall distances on our own and apply fall damage to players accordingly.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
