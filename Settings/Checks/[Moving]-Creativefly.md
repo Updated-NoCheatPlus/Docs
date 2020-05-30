@@ -3,7 +3,7 @@ Permission (bypass): `nocheatplus.checks.moving.creativefly`
 Exemption: `MOVING_CREATIVEFLY`  
 Better with: `[Moving] Morepackets`  
 
-The CreativeFly checks aims to handle movement related to flying, it's more tailored for players who are in special gamemode modes or are exposed to particular effects (e.g.: levitation)
+The CreativeFly checks aims to handle movement related to flying; it's more tailored for players who are in special gamemode modes or are exposed to particular effects (e.g.: levitation)
 CreativeFly is also the check responsible to validate the player's movement when gliding with an elytra.
 
 | Option              | Description |
@@ -47,16 +47,22 @@ CreativeFly is also the check responsible to validate the player's movement when
 | elytra _resetFwOnGround_ | Reset the firework boost time if NCP detects the player to be on ground. |
 | elytra _strict_ | Enable extra elytra checking methods. With this disabled, it'll be much easier for cheaters to exploit the elytra and fly around in Survival.|
 
-
-
-
 **Notes**
-* The following conditions can force use of the creativefly check, regardless of options `ignoreallowflight` and `ignorecreative`:
-- The survivalfly check is not activated for the player (activation, exemption, permissions).
-- The player is flying.
-- The player is gliding with an elytra.
-- The player is exposed to the levitation effect.
-- The player is exposed to the slowfalling effect
+* `hFrict`: Horizontal friction has been applied.
+* `hDist`: Indicates that the player went beyond the horizontal limits.
+* `hVel`: Player has velocity active.
+* `MaxHeight`: Indicates that the player tried to fly too high up.
+* `AntiLevitate`: Player triggered the "anti-levitate" subcheck.
+* `vDist`: Indicates that the player went beyond the vertical limits.
+* `Bunnyhop`: This move was (most likely) a bunnyhop and all conditions have been applied.
+* `vFrict_g`: Horizontal friction + gravity.
+* `Jump_gain`: Ordinary jump.
+* `Step_up`: Ordinary step-up.
+* `Fw_speed`: The player is boosting their elytra with a firework.
+* `Elytra_v_keep`: The player is retaining the same (or changing very little) altitude with the elytra (which is not possible)
+* `Elytra_v_asc`: Vertical ascending phase with the elytra.
+* `Elytra_v_desc`: Vertical descending phase with the elytra.
+* `Elytra_h_asc`: The player glided horizontally more than allowed for this gliding phase.
 
 
 **Related**  
