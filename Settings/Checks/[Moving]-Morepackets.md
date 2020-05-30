@@ -18,6 +18,7 @@ The Morepackets check is complementary to the Survivalfly and Creativefly checks
 
 **Notes**
 * A normal value is 20 steps per second.
+* "eps" stands for "events per second".
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
