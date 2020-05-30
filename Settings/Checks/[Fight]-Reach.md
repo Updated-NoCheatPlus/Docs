@@ -16,7 +16,7 @@ The Fight.Reach check prevents players from _consistenly_ over-reaching.
 
 **Notes**
 * Because of lag the reach distance isn't a fixed value and may increase/decrease, reach is for that reason designed to be dynamic and adapt to server lag if needed.
-* The max reach for attacking is set to 3.0/.5 blocks client-side, the server however allows players to hit up to 6 block maximum to compensate for latency, this can be easily exploit by cheaters to always attack at the maximum range the server will allow.
+* The max reach for attacking is set to 3.0/.5 blocks client-side, the server however allows players to hit up to 6 block maximum to compensate for latency, this can be easily exploited by cheaters to always attack at the maximum range the server will allow.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
