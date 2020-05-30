@@ -41,25 +41,25 @@ There are also hidden options, which give more access to internals. Use with car
 **Tags**
 * `vDistRel`: The player went beyond our y (vertical) envelopes or did a move that does not follow our vertical-distance rules.
 * `hSpeed`: The player went beyond our horizontal envelopes or did a move that exceeded our horizontal speed limits.
-* `waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in yDistances.).
-* `watermove`: Indicates that the player is moving with very little y deltas above water.
-* `lostground_[tag]`: A LostGround case has been detected and applied to the player.
+* `Waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in yDistances.).
+* `Watermove`: Indicates that the player is moving with very little y deltas above water.
+* `Lostground_[tag]`: A LostGround case has been detected and applied to the player.
 * `yChInc/yChIncFly/yChDec/yChIncAir`: Change of y direction checks, the yChIncFly one indicates moving upwards after falling without having touched the ground first. (yChangeIncrease/yChangeDecrease/yChangeIncreaseAir/(...).
 * `vAcc`. The vertical-accounting check. Demands players to start to fall after having been in air for a specific amount of time. It enforces gravity for a minimum amount on players.
 * `hAcc`: The horizontal-accounting check. It monitors average combined-medium (e.g. air+ground or air+water) speed, with a rather simple bucket(s)-overflow mechanism.
 * `Bunnyhop/Bunnyenv/Bunny(...)`: The move performed by the player was (most likely) a bunnyhop and all mechanisms/conditions have been applied.
-* `badsprint`: The player tried to sprint with blindness active.
-* `backsprint`: The player tried to sprint backwards.
+* `Badsprint`: The player tried to sprint with blindness active.
+* `Backsprint`: The player tried to sprint backwards.
 * `Step`: Most likely a step-like movement.
 * `vDistSb`: The player went beyond the absolute y-distance to set back.
-* `dirty`: Indicates that the player got velocity while being in-air.
+* `Dirty`: Indicates that the player got velocity while being in-air.
 * `vAccDirty`: In-air velocity with vAcc being triggered.
 * `LostSprint`: The LostSprint workaround has been applied to the player.
 * `UsingItem`: Indicates that the player is using/consuming an item (Blocking/Eating(...))
 * `Hack_vEnv`: A vertical envelope case has been applied to the player, allowing the move.
 * `LowJump/LowJump_set/ceil`: This move was most likely a low jump (cheating). Ceil represents a legit lowjump due to the player jumping in a 2-blocks high area.
 * `Data_reset/missing`: Indicates that the allowed y distance of the player has been reset due to a teleport/join/respawn.
-* `permchecks(out/inliquid)`: After (horizontal) failure permission checks.
+* `Permchecks(out/inliquid)`: After (horizontal) failure permission checks.
 * `hVel`: Some velocity has been applied to the player.
 * `hBufUse`: Indicates that the player used up all the available horizontal buffer.
 * `SwimUp/Down`: The player went beyond our in-water y (vertical) envelopes or did a move that does not follow our vertical-distance rules while being in water.
@@ -67,6 +67,7 @@ There are also hidden options, which give more access to internals. Use with car
 * `CilmbDetached`: The player tried to climb up a block that's not possible to climb. (This applies for vines that are not attached to other blocks)
 * `vFrict_Climb`: Friction with velocity on climbable (e.g.: being hit while climbing a ladder)
 * `vWeb/Bush`: The player went beyond our vertical speed limits for web-like blocks (includes bushes as well)
+* `MaxPhase`: Indicates a too high jump or step phase for this move. 
 
 **Notes**
 * If you alter the actions in the configuration to not always cancel, you might be allowing glide-like cheats. Issues with horizontal speed are easier to work a around by configuration, than issues with the vertical part of a move.
