@@ -1,7 +1,7 @@
 Config path: `checks.fight.criticals`  
 Permission (bypass): `nocheatplus.checks.fight.criticals`  
 Exemption: `FIGHT_CRITICALS`              
-Depends on: `[Moving] NoFall` 
+Better with: `[Moving] NoFall` 
 
 This check prevents players from doing more damage to players and mobs by faking critical hits.
 
