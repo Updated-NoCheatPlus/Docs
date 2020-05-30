@@ -3,7 +3,7 @@ Permission (bypass): `nocheatplus.checks.moving.survivalfly`
 Exemption: `MOVING_SURVIVALFLY`  
 Better with: `[Moving] Morepackets` and `[Combined] Bedleave`
 
-SurvivalFly aims to control pretty much everything related to moving such as flying, running, swimming and more.
+SurvivalFly is the main check for player movement. It checks both horizontal and vertical moves.
 
 | Option                              | Description |
 | :---------------------------------- | :---------- |
@@ -80,5 +80,5 @@ There are also hidden options, which give more access to internals. Use with car
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
 * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
-* [Nofall](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Nofall.md)
-* [Creativefly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Creativefly.md)
+* [NoFall](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Nofall.md)
+* [CreativeFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Creativefly.md)
