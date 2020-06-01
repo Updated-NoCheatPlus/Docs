@@ -3,7 +3,7 @@ Permission (bypass): `nocheatplus.checks.moving.survivalfly`
 Exemption: `MOVING_SURVIVALFLY`  
 Better with: `[Moving] Morepackets` and `[Combined] Bedleave`
 
-SurvivalFly is the main check for player movement. It checks both horizontal and vertical moves.
+SurvivalFly is the main check for player movement. It checks both horizontal and vertical moves in/on all kind of mediums (water, air, etc...)
 
 | Option                              | Description |
 | :---------------------------------- | :---------- |
