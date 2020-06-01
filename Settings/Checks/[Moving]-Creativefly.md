@@ -3,7 +3,7 @@ Permission (bypass): `nocheatplus.checks.moving.creativefly`
 Exemption: `MOVING_CREATIVEFLY`  
 Better with: `[Moving] Morepackets`  
 
-The CreativeFly checks aims to handle movement related to flying; it's more tailored for players who are in special gamemode modes or are exposed to particular effects (e.g.: levitation)
+The CreativeFly checks aims to handle movement related to flying; it's more tailored for players who are in special gamemmodes (Creative/Spectator) or are exposed to particular effects (e.g.: levitation)
 CreativeFly is also the check responsible to validate the player's movement when gliding with an elytra.
 
 | Option              | Description |
