@@ -23,7 +23,8 @@ Key issues is that the client is authoritative on how it responds to velocity, t
 
 ### How can I make NoCheatPlus so that it only notifies about potential cheaters instead of canceling actions?
 If you want NCP to work silently (for all or just some checks), remove the `cancel` flag under each check `actions`.
-E.g.: `cancel vl>100 log:angle:6:5:i cancel vl>800 log:angle:0:20:if cancel` -> `vl>100 log:angle:6:5:i vl>800 log:angle:0:20:if`
+E.g.: `cancel vl>100 log:angle:6:5:i cancel vl>800 log:angle:0:20:if cancel` -> `vl>100 log:angle:6:5:i vl>800 log:angle:0:20:if`.
+Please do note that it might be dangerous to indiscriminately remove all cancel flags, as cheaters could exploit this to crash and/or lag the server or other players. (E.g.: Removing all cancel flags from Survival/Creativefly will allow cheaters to perform very large movements, causing extra load to the server to process such moves. Not canceling illegal packets detected by FlyingFrequency and PacketFrequency is also not recommended, as cheaters could otherwise use magnet/paralyse-like cheats to freeze other players)
 
 ### Why use NoCheatPlus instead of plugin X?
 It is up to you! NoCheatPlus puts emphasis on configurability allowing you to choose when to kick, ban, log, do anything at all, also allowing to adjust a lot of parameters to tweak checks for your needs. Other plugins may put emphasis on simplicity of configuration. All plugins strive to work fine "out of the box" without need to adapt much. Of course every plugin might have strengths and weaknesses on different fields, also consider that NoCheatPlus is both free and open source.
