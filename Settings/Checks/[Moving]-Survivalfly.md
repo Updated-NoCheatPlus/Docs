@@ -8,6 +8,7 @@ SurvivalFly is the main check for player movement. It checks both horizontal and
 | Option                              | Description |
 | :---------------------------------- | :---------- |
 | extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) |
+| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) |
 | stepheight                          | The height a player can from ground upwards to ground, without jumping. This is set to 'default' by default, so NCP will adjust it automatically with the Minecraft version. In case NCP can't detect the version properly, e.g. with custom builds, setting an explicit value might help. Used to be 0.5 before MC 1.8 and 0.6 from then on. |
 | leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer - it fills up with (allowed) moving below the applicable base moving speed (not accounting for special acceleration like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
 | leniency _ViolationFrequency_| By default, SurvivalFly will relax the total violation level of the player over time with legit moves. The following feature allows SurvivalFly to better discern false positives from potential cheaters for lower violation levels by keeping track of how frequently a player is triggering Sf, between a custom amount of moves. SurvivalFly won't cancel any detected move if the VL generated is below your `maxleniencyvl` value, but if a player is repeatedly triggering it under this threshold, NCP will pick up on that and start to *increase* the violation level so that they will get blocked much faster. This will grant a better gameplay experience to legit players as sporadic/occasional low violations won't get hard blocked immediately by SF.|
@@ -41,13 +42,13 @@ There are also hidden options, which give more access to internals. Use with car
 **Tags**
 * `vDistRel`: The player went beyond our y (vertical) envelopes or did a move that does not follow our vertical-distance rules.
 * `hSpeed`: The player went beyond our horizontal envelopes or did a move that exceeded our horizontal speed limits.
-* `Waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in yDistances.).
+* `Waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in y distances.).
 * `Watermove`: Indicates that the player is moving with very little y deltas above water.
-* `Lostground_[tag]`: A LostGround case has been detected and applied to the player.
+* `Lostground_[tag]`: A LostGround case has been detected and applied to the player. This will allow the movement.
 * `yChInc/yChIncFly/yChDec/yChIncAir`: Change of y direction checks, the yChIncFly one indicates moving upwards after falling without having touched the ground first. (yChangeIncrease/yChangeDecrease/yChangeIncreaseAir/(...)).
-* `vAcc`. The vertical-accounting check. Demands players to start to fall after having been in air for a specific amount of time. It enforces gravity for a minimum amount on players.
+* `vAcc`. The vertical-accounting check. Demands players to start to fall after having been in air for a specific amount of time. Acts as a "gravity enforcer", sort of. 
 * `hAcc`: The horizontal-accounting check. It monitors average combined-medium (e.g. air+ground or air+water) speed, with a rather simple bucket(s)-overflow mechanism.
-* `Bunnyhop/Bunnyenv/Bunny(...)`: The move performed by the player was (most likely) a bunnyhop and all mechanisms/conditions have been applied.
+* `Bunnyhop/Bunnyenv/any tag containing "bunny"`: This movement is related to our bunnyhop detection method. This will often result in the player being allowed to perform such move.
 * `Badsprint`: The player tried to sprint with blindness active.
 * `Backsprint`: The player tried to sprint backwards.
 * `Step`: Most likely a step-like movement.
@@ -76,6 +77,7 @@ There are also hidden options, which give more access to internals. Use with car
 * The _leniency/freeze_ settings mainly aim at configurations that don't cancel for low violation levels. With the freezing option, cheaters can't create repeated small violations as easily.
 * The LostGround workarounds check if touching the ground was lost (because the client did not send, or the server did not put it through) [This is due to a Minecraft bug](https://bugs.mojang.com/browse/MC-90024).
 * The LostSprint workaround allows for smoother transitions between sprinting/walking. It checks if the player is still (legitimately) moving at sprinting speed even though the server has caused their sprinting status to expire (lag/latency)
+* The hAcc subcheck acts as a sort of last line of defense against speed hacks, in case all other methods get bypassed, so it's not recommended to disable.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
