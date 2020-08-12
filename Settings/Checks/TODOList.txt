@@ -6,3 +6,4 @@ List of stuff that's still missing documentation:
 * Net.general
 * Text: allowvlreset
 * Vehicle.schedulesetbacks
+* vehicle.schedulesetpassenger
