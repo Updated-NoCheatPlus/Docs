@@ -12,7 +12,7 @@ NCP’s popularity and open-source nature means that we are obligated to adopt a
 
 * List of known issues: [Known Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md).
 
-* FAQ about the project: [FAQ](https://github.com/Lysandr0/Docs/blob/master/FAQ.md).
+* FAQ about the project: [FAQ](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md).
 
 Download and further project links:
 * [NoCheatPlus on BukkitDev - with downloads for releases approved by their staff.](https://dev.bukkit.org/projects/nocheatplus)
