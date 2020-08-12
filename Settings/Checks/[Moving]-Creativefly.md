@@ -16,7 +16,6 @@ CreativeFly is also the check responsible to validate the player's movement when
 | slowfalling _vertical maxheight_||
 | slowfalling _vertical gravity_||
 | slowfalling _modifiers_||
-| slowfalling _gravity_ ||
 | slowfalling _ground_||
 | creative           | Creative mode fly speed/model, this also applies to players in survival who can fly: players in Creative (or that can fly) are checked by the CreativeFly by default (unless ignorecreative/allowflight is set to true)|
 | creative _horizontal speed_||
@@ -28,7 +27,6 @@ CreativeFly is also the check responsible to validate the player's movement when
 | spectator  _vertical maxheight_||
 | spectator  _vertical gravity_||
 | spectator  _modifiers_||
-| spectator  _gravity_ ||
 | spectator  _ground_||
 | levitation        | If the player is exposed to the levitation effect, they'll be checked by Creativefly. |
 | levitation  _horizontal speed_ ||
@@ -36,7 +34,6 @@ CreativeFly is also the check responsible to validate the player's movement when
 | levitation  _vertical maxheight_||
 | levitation  _vertical gravity_||
 | levitation  _modifiers_||
-| levitation  _gravity_ ||
 | levitation  _ground_||
 | elytra           | Elytra checking is shared between Survival/CreativeFly. When the player is gliding, CreativeFly will validate the player movements.|
 | elytra _horizontal speed_||
