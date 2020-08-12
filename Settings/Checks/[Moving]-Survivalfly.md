@@ -7,10 +7,11 @@ SurvivalFly is the main check for player movement. It checks both horizontal and
 
 | Option                              | Description |
 | :---------------------------------- | :---------- |
-| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) |
-| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) |
+| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) (See notes) |
+| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) (See notes) |
+| extended _reset-activeitem_         |  If this is set to true, Survivalfly will refresh whatever item the player is currently holding/using (off-hand is taken into account here) after failing the 'noslowdown' check. (See notes)  |
 | stepheight                          | The height a player can from ground upwards to ground, without jumping. This is set to 'default' by default, so NCP will adjust it automatically with the Minecraft version. In case NCP can't detect the version properly, e.g. with custom builds, setting an explicit value might help. Used to be 0.5 before MC 1.8 and 0.6 from then on. |
-| leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer - it fills up with (allowed) moving below the applicable base moving speed (not accounting for special acceleration like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
+| leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer. It fills up with moving below the applicable base moving speed (not accounting for special accelerations like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
 | leniency _ViolationFrequency_| By default, SurvivalFly will relax the total violation level of the player over time with legit moves. The following feature allows SurvivalFly to better discern false positives from potential cheaters for lower violation levels by keeping track of how frequently a player is triggering Sf, between a custom amount of moves. SurvivalFly won't cancel any detected move if the VL generated is below your `maxleniencyvl` value, but if a player is repeatedly triggering it under this threshold, NCP will pick up on that and start to *increase* the violation level so that they will get blocked much faster. This will grant a better gameplay experience to legit players as sporadic/occasional low violations won't get hard blocked immediately by SF.|
 | leniency _ViolationFrequency_ _active_| Should this hook be enabled for SurvivalFly? If false, SurvivalFly will always setback players upon violations, no matter how small they are (normal behaviour). Do note that this hook requires that you have set a `cancel` flag in your actions.|
 | leniency  _ViolationFrequency_  _debug_| Debug flag, for debugging issues about this hook|
@@ -69,15 +70,17 @@ There are also hidden options, which give more access to internals. Use with car
 * `vFrict_Climb`: Friction with velocity on climbable (e.g.: being hit while climbing a ladder)
 * `vWeb/Bush`: The player went beyond our vertical speed limits for web-like blocks (includes bushes as well)
 * `MaxPhase`: Indicates a too high jump or step phase for this move. 
+* `Itemreset`: The reset workaround has been applied.
 
 **Notes**
 * If you alter the actions in the configuration to not always cancel, you might be allowing glide-like cheats. Issues with horizontal speed are easier to work a around by configuration, than issues with the vertical part of a move.
 * A powerful tool for issues with moving is provided with the _on-the-fly debug logging feature_, significantly improving the odds for a quick fix: https://github.com/NoCheatPlus/Docs/wiki/Debugging#on-the-fly-debug-output-for-individual-players
 * Hover is a sub-check of SurvivalFly which prevents players from hovering around in mid-air.
 * The _leniency/freeze_ settings mainly aim at configurations that don't cancel for low violation levels. With the freezing option, cheaters can't create repeated small violations as easily.
-* The LostGround workarounds check if touching the ground was lost (because the client did not send, or the server did not put it through) [This is due to a Minecraft bug](https://bugs.mojang.com/browse/MC-90024).
-* The LostSprint workaround allows for smoother transitions between sprinting/walking. It checks if the player is still (legitimately) moving at sprinting speed even though the server has caused their sprinting status to expire (lag/latency)
-* The hAcc subcheck acts as a sort of last line of defense against speed hacks, in case all other methods get bypassed, so it's not recommended to disable.
+* The `LostGround` workarounds check if touching the ground was lost (because the client did not send, or the server did not put it through) [This is due to a Minecraft bug](https://bugs.mojang.com/browse/MC-90024)
+* The `LostSprint` workaround allows for smoother transitions between sprinting/walking. It checks if the player is still (legitimately) moving at sprinting speed even though the server has caused their sprinting status to expire (lag/latency)
+* The `hAcc` subcheck acts as a sort of last line of defense against speed hacks, in case all other method get bypassed, so it's not recommended to disable.
+* Around MC 1.8.x/1.13.x the server would sometimes desync the player when using items, making them look like as if they were using noslowdown cheats (e.g.: the player is blocking server-side but not client-side). The itemsreset workaround will attempt to mitigate this by refreshing the player's item after failing our noslow detection.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
