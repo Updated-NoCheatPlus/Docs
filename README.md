@@ -6,13 +6,40 @@ This page will explain everything that you need to know about NoCheatPlus.
 NoCheatPlus is a Bukkit (CraftBukkit/Spigot) plugin meant to protect your server from various kinds of cheating. A wide area of cheats is covered, such as player and vehicle moving, interaction, block breaking and placing, fighting, chat and other types of areas including client behavior that might crash the server.
 NCP’s popularity and open-source nature means that we are obligated to adopt a different approach in how we block cheats in order to not resort in the infamous ‘cat-and-mice’ play with us spending countless of hours trying to keep up with cheat clients. Have a look at the [Fundamentals page](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Fundamentals.md) for more details on our approach.
 
-* To get started follow these instructions: [Getting Started](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Getting-Started.md).
-
 * To report an issue, or request support: [Issues](https://github.com/Updated-NoCheatPlus/NoCheatPlus/issues).
 
-* List of known issues: [Known Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md).
 
-* FAQ about the project: [FAQ](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md).
+## Home 
+* [Getting Started](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Getting-Started.md)
+* [FAQ](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md)
+* [Known Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md)
+* [Features and Compatibility](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Features-and-Compatibility.md)
+* [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md)
+* [Permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md)
+* [Notable Builds](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Notable-Builds.md)
+
+## Configuration
+* [Multiworld](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Multiworld.md)
+* [Data](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Data.creole)
+* [Logging](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Logging.creole)
+* [Protection](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Protection.creole)
+* [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/Checks.md)
+ * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md)
+ * [Strings](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Strings.md)
+ * [Miscellaneous](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Miscellaneous.md)
+* [Compatibility](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/%5BSettings%5D-Compatibility.creole)
+
+## Development
+* [API](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/API.md)
+* [Debugging](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Debugging.md)
+* [Dev Pinboard](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Dev-Pinboard.creole)
+* [Build Infos](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Build-Infos.md)
+
+## Others
+* [Backgrounds](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Others/Backgrounds.md)
+* [Lag](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Others/Lag.md)
+
+
 
 Download and further project links:
 * [NoCheatPlus on BukkitDev - with downloads for releases approved by their staff.](https://dev.bukkit.org/projects/nocheatplus)
