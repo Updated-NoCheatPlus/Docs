@@ -47,4 +47,5 @@ Download and further project links:
 
 
 _If you prefer a full text search for any GitHub wiki, have a look at: [Github Wiki Search](https://github.com/linyows/github-wiki-search)_ 
+
 _To report an issue, or request support: [Issues](https://github.com/Updated-NoCheatPlus/NoCheatPlus/issues)_
