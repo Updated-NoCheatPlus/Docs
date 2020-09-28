@@ -10,37 +10,37 @@ CreativeFly is also the check responsible to validate the player's movement when
 | :------------------ | :---------- |
 | ignoreallowflight   | Should CreativeFly **ignore** players who are set to be allowed to fly and let SurvivalFly handle them instead? Provided there aren't side conditions forcing use of the CreativeFly check regardless of the ignoreallowflight being set to false. If this option is set to false, players in Survival who are set to be allowed to fly will be able to use almost **any kind of movement cheat** as SurvivalFly will not be run for the player. |
 | ignorecreative      | If set to false, the creativefly check will run for players who are in the _creative_ game mode, regardless if they're flying or not. If set to true, the SurvivalFly check will run instead, provided there are not other side conditions forcing use of the CreativeFly check. **This does not disable the creativefly check**. |
-| slowfalling        | If the player is exposed to the slowfalling potion, they'll be checked by Creativefly. |
-| slowfalling _horizontal speed_ ||
-| slowfalling _vertical ascend speed_ ||
-| slowfalling _vertical maxheight_||
-| slowfalling _vertical gravity_||
-| slowfalling _modifiers_||
-| slowfalling _ground_||
-| creative           | Creative mode fly speed/model, this also applies to players in survival who can fly: players in Creative (or that can fly) are checked by the CreativeFly by default (unless ignorecreative/allowflight is set to true)|
-| creative _horizontal speed_||
-| creative _vertical ascend speed_||
-| creative _vertical maxheight_||
-| spectator         | Players in Spectator mode are always checked by the CreativeFly check. |
-| spectator  _horizontal speed_ ||
-| spectator  _vertical ascend speed_ ||
-| spectator  _vertical maxheight_||
-| spectator  _vertical gravity_||
-| spectator  _modifiers_||
-| spectator  _ground_||
-| levitation        | If the player is exposed to the levitation effect, they'll be checked by Creativefly. |
-| levitation  _horizontal speed_ ||
-| levitation  _vertical ascend speed_ ||
-| levitation  _vertical maxheight_||
-| levitation  _vertical gravity_||
-| levitation  _modifiers_||
-| levitation  _ground_||
-| elytra           | Elytra checking is shared between Survival/CreativeFly. When the player is gliding, CreativeFly will validate the player movements.|
-| elytra _horizontal speed_||
-| elytra  _horizontal modsprint_||
-| elytra _vertical ascend speed_ ||
-| elytra _maxheight_||
-| elytra _modifiers_||
+| **slowfalling**        | Slowfalling is handled by CreativeFly. |
+| slowfalling _horizontal speed_ |Maximum horizontal speed allowed with slowfalling active. The formula is as it follows: (horizontal value / 100 * 0.6).|
+| slowfalling _vertical ascend speed_ |Maximum ascend speed allowed with slowfalling active. The formula is as it follows: (vertical value / 100). Set to 0 here since players cannot ascend while being exposed to slowfall. Setting it to a different value may allow slowly fly upwards.|
+| slowfalling _vertical maxheight_|The maximum height in blocks that players can travel after having gone beyond MC's 256 height limit. (maxheight + 256 = maximum world height).|
+| slowfalling _vertical gravity_|Set whether NCP should calculate the ordinary falling friction with slowfalling active.|
+| slowfalling _modifiers_|Set whether NCP should increase the base slowfalling speed by the attribute/potion modifiers value.|
+| slowfalling _ground_|Set whether NCP should perform a ground check and collect all ground flags with slowfalling active.|
+| **creative**           | Creative mode fly modelling, this also applies to players in survival who can fly: players in Creative (or that can fly) are checked by the CreativeFly by default (unless ignorecreative/allowflight is set to true)|
+| creative _horizontal speed_|Maximum horizontal speed allowed in creative mode. The formula is as it follows: (horizontal value / 100 * 0.6).|
+| creative _vertical ascend speed_|Maximum ascend speed allowed in creative mode. The formula is as it follows: (vertical value / 100). |
+| creative _vertical maxheight_|The maximum height in blocks that players can travel after having gone beyond MC's 256 height limit. (maxheight + 256 = maximum world height).|
+| **spectator**         | Spectator mode is handled by CreativeFly only. |
+| spectator  _horizontal speed_ |Maximum horizontal speed allowed in spectator mode. The formula is as it follows: (horizontal value / 100 * 0.6).|
+| spectator  _vertical ascend speed_ |Maximum ascend speed allowed in spectator mode. The formula is as it follows: (vertical value / 100).|
+| spectator  _vertical maxheight_|The maximum height in blocks that players can travel after having gone beyond MC's 256 height limit. (maxheight + 256 = maximum world height)|
+| spectator  _vertical gravity_|Set whether NCP should calculate the ordinary falling friction for players in spectator mode.|
+| spectator  _modifiers_|Set whether NCP should increase the base speed for players in spectator mode by the attribute/potion modifiers value.|
+| spectator  _ground_|Set whether NCP should perform a ground check and collect all ground flags for players in spectator mode.|
+| **levitation**        | Levitation is handled by CreativeFly. |
+| levitation _horizontal speed_ |Maximum horizontal speed allowed with levitation active. The formula is as it follows: (horizontal value / 100 * 0.6).|
+| levitation _vertical ascend speed_ |Maximum ascend speed allowed with levitation active. The formula is as it follows: (vertical value / 100). Set to 0 here since players cannot ascend while being exposed to levitation. Setting it to a different value may allow slowly fly upwards.|
+| levitation _vertical maxheight_|The maximum height in blocks that players can travel after having gone beyond MC's 256 height limit. (maxheight + 256 = maximum world height).|
+| levitation _vertical gravity_|Set whether NCP should calculate the ordinary falling friction with levitation active.|
+| levitation _modifiers_|Set whether NCP should increase the base levitation speed by the attribute/potion modifiers value.|
+| levitation _ground_|Set whether NCP should perform a ground check and collect all ground flags with levitation active.|
+| **elytra**           | Gliding with an elytra is handled by CreativeFly only.|
+| elytra _horizontal speed_|Maximum horizontal speed allowed when gliding. The formula is as it follows: (horizontal value / 100 * 0.6).|
+| elytra  _horizontal modsprint_|The horizontal sprint modifier multiplier.|
+| elytra _vertical ascend speed_ |Maximum ascend speed allowed when gliding. The formula is as it follows: (horizontal value / 100 * 0.6). Set to 0 here since players cannot intentionally glide upwards.|
+| elytra _maxheight_|The maximum height in blocks that players can travel after having gone beyond MC's 256 height limit. (maxheight + 256 = maximum world height).|
+| elytra _modifiers_|Set whether NCP should increase the base speed for players gliding with an elytra by the attribute/potion modifiers value|
 | elytra _resetFwOnGround_ | Reset the firework boost time if NCP detects the player to be on ground. |
 | elytra _strict_ | Enable extra elytra checking methods. With this disabled, it'll be much easier for cheaters to exploit the elytra and fly around in Survival.|
 
