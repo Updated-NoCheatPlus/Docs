@@ -1,6 +1,6 @@
 List of stuff that's still missing documentation:
 
-* Document all mdofiers under CreativeFly
+[X] Document all modifiers under CreativeFly
 * Splitmove in moving.general
 * Redundant packets in FlyingFrequency 
 * Net.general
