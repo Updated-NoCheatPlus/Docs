@@ -8,8 +8,8 @@ CreativeFly is also the check responsible to validate the player's movement when
 
 | Option              | Description |
 | :------------------ | :---------- |
-| ignoreallowflight   | Should CreativeFly **ignore** players who are set to be allowed to fly in _survival/adventure_ and let SurvivalFly handle them instead? Provided aren't side conditions forcing use of CreativeFly (see notes) regardless of `ignoreallowflight` being set to false. If this option is set to false, players in _survival_ who are set to be allowed to fly will be able to use almost **any kind of movement cheat** as SurvivalFly will not be run for the player. |
-| ignorecreative      | Should CreativeFly **ignore* players who are in creative mode and let SurvivalFly handle them instead? Provided there aren't other side conditions forcing use of CreativeFly (see notes), regardless of `ignorecreative` being set to true. **This does not disable CreativeFly**. |
+| ignoreallowflight   | Should CreativeFly **ignore** players who are set to be allowed to fly in _survival/adventure_ and let SurvivalFly handle them instead? Provided there aren't side conditions forcing use of CreativeFly (see notes) regardless of `ignoreallowflight` being set to false. If this option is set to false, players in _survival_ who are set to be allowed to fly will be able to use almost **any kind of movement cheat** as SurvivalFly will not be run for the player. |
+| ignorecreative      | Should CreativeFly **ignore** players who are in creative mode and let SurvivalFly handle them instead? Provided there aren't other side conditions forcing use of CreativeFly (see notes), regardless of `ignorecreative` being set to true. **This does not disable CreativeFly**. |
 | **slowfalling**        | Slowfalling is handled by CreativeFly. |
 | slowfalling _horizontal speed_ |Maximum horizontal speed allowed with slowfalling active. The formula is as it follows: (horizontal value / 100 * 0.6).|
 | slowfalling _vertical ascend speed_ |Maximum ascend speed allowed with slowfalling active. The formula is as it follows: (vertical value / 100). Set to 0 here since players cannot ascend while being exposed to slowfall. Setting it to a different value may allow slowly fly upwards.|
@@ -56,7 +56,7 @@ CreativeFly is also the check responsible to validate the player's movement when
 * `Jump_gain`: Ordinary jump.
 * `Step_up`: Ordinary step-up.
 * `Fw_speed`: The player is boosting their elytra with a firework.
-* `Elytra_v_keep`: The player is retaining the same (or changing very little) altitude with the elytra (which is not possible)
+* `Elytra_v_keep`: Tag usually associated to elytra cheats (fly etc...)
 * `Elytra_v_asc`: Vertical ascending phase with the elytra.
 * `Elytra_v_desc`: Vertical descending phase with the elytra.
 * `Elytra_h_asc`: The player glided horizontally more than allowed for this gliding phase.
