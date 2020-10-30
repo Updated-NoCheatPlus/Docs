@@ -10,7 +10,7 @@ This is a simple switch to enable or disable features throughout the configigura
 We will be using the following string as an example for our walkthrough.
 <br>`actions: vl>2 log:fdirectionlowvl:5:6:i vl>10 cancel log:fdirection:2:4:if vl>50 cancel log:fdirection:0:7:icf cmdc:kicksuspiciouscombat:1:5`</br>
 
-## Understading actions
+## Actions
 `actions` is NoCheatPlus's task scheduler. This is the only place where you actually can control what a check should do after reaching a determined violation level.
 * `vl>X` To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached our defined violation threshold, the following interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
 * The `cancel` flag is used in order to prevent something from happening (to cancel, as the flag would intend): with movement, this will cause a setback; in combat, this will result in a hit being canceled/not registered etc... If you don't want to penalise players on detections, the `cancel` flag can be omitted.
