@@ -23,7 +23,6 @@ This is particulary beneficiary in combat, where you may not want NoCheatPlus to
 * After 10 VL we then start to cancel whatever has been detected by the check and then execute the `log` action.
 * In the final interval, after a player has reached VL 50, we cancel, then `log` and finally we execute the `cmdc` action (which will kick the player in this case).
 
-
 ## Strings usage
 Strings are defined at the file's bottom part; you can think of them as aliases.
 A string can be used to either log something into NoCheatPlus' logging stream or execute a command. This enables server owners to do almost anything they wish to do upon detections.
@@ -46,7 +45,6 @@ The format used for `log` actions will be like this: `log:string:delay:cooldown:
 * The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging a `string`. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
 * The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log a `string` once again. This is needed to prevent the spam of `strings`. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
 * The `target` part is used to indicate where NoCheatPlus should log a `log:string`. `i` stands for in-game chat, `c` stands for console, `f` stands for file.
-
 <br>_As always, we'll be taking the previously illustrated string as an example:_</br>
 * `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
 * `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to log the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `6` seconds
