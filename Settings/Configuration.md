@@ -4,7 +4,7 @@
 * [Logging](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Logging.creole)
 * [Protection](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Protection.creole)
 * [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/Checks.md)
- * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md)
+ * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md)
  * [Strings](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Strings.md)
  * [Miscellaneous](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Miscellaneous.md)
 * [Config Compatibility](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/%5BSettings%5D-Compatibility.creole)
