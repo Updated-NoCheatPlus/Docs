@@ -45,7 +45,8 @@ The format used for `log` actions will be like this: `log:string:delay:cooldown:
 * The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging a `string`. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
 * The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log a `string` once again. This is needed to prevent the spam of `strings`. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
 * The `target` part is used to indicate where NoCheatPlus should log a `log:string`. `i` stands for in-game chat, `c` stands for console, `f` stands for file.
-<br>_As always, we'll be taking the previously illustrated string as an example:_</br>
+
+_As always, we'll be taking the previously illustrated string as an example:_
 * `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
 * `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to log the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `6` seconds
 
