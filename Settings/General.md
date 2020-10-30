@@ -1,7 +1,7 @@
 This page lists all the config options that apply to the multiple existing features.  
 
 # Active
-This is a simple switch to enable or disable features throughout the configiguration.  
+This is a simple switch to enable or disable features throughout the configuration.  
 **True**: Enables a feature  
 **False**: Disables a feature 
  
