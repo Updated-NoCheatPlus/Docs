@@ -11,8 +11,9 @@ We will be using the following string as an example for our walkthrough.
 <br>`actions: vl>2 log:fdirectionlowvl:5:6:i vl>10 cancel log:fdirection:2:4:if vl>50 cancel log:fdirection:0:7:icf cmdc:kicksuspiciouscombat:1:5`</br>
 
 ## Actions
-`actions` is NoCheatPlus's task scheduler. This is the only place where you actually can control what a check should do after reaching a determined violation level.
-* `vl>X` To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached our defined violation threshold, the following interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
+`actions` is NoCheatPlus' task scheduler. This is the only place where you actually can control what a check should do after reaching a determined violation level.
+* `vl>X` To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached our defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
+An interval may be left undefined at the start (eg.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
 * The `cancel` flag is used in order to prevent something from happening (to cancel, as the flag would intend): with movement, this will cause a setback; in combat, this will result in a hit being canceled/not registered etc... If you don't want to penalise players on detections, the `cancel` flag can be omitted.
 Do note that the `cancel` flag currently supports cancellation with probability: instead of immediately prevent an action, you can tell NoCheatPlus that said action only has a probability of actually getting canceled/prevented, by specifying the probability in percentage (`x%`) before the cancel flag (eg.: `10%cancel`).
 This is particulary beneficiary in combat, where you may not want NoCheatPlus to immediately prevent hits from players.
@@ -26,7 +27,7 @@ This is particulary beneficiary in combat, where you may not want NoCheatPlus to
 ## Strings usage
 Strings are defined at the file's bottom part; you can think of them as aliases.
 A string can be used to either log something into NoCheatPlus' logging stream or execute a command. This enables server owners to do almost anything they wish to do upon detections.
-* `cmd` and `cmdc` are used to tell NoCheatPlus to execute a command. `cmdc` will force NoCheatPlus to recognize and use color codes.
+* `cmd` and `cmdc` are used to tell NoCheatPlus to execute a command action. The latter will force NoCheatPlus to recognize and use color codes (`&`).
 * `log` is used to tell NoCheatPlus to only log a message.
 <br>The template for strings is as it follows:</br>
 ![StringsExplenation](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/StringsExplenation.gif)
@@ -41,14 +42,15 @@ While the command for `kicksuspiciouscombat` is like this:
 ## Strings format
 You may have noticed, but strings need to respect a fixed format to be valid and be recognized by NoCheatPlus.
 If a string is not formatted correctly, NoCheatPlus will fallback to the default config's action for that check.
-The format used for `log` actions will be like this: `log:string:delay:cooldown:target`. For commands (`cmdc` and `cmd`) the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion.
+The format used for `log` actions will be like this: `log:string:delay:cooldown:target`. 
+For `cmdc`/`cmd` actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion. (`cmd(c):yourcommandhere[:delay:cooldown]`).
 * The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging a `string`. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
 * The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log a `string` once again. This is needed to prevent the spam of `strings`. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
-* The `target` part is used to indicate where NoCheatPlus should log a `log:string`. `i` stands for in-game chat, `c` stands for console, `f` stands for file.
+* The `target` part is used to indicate where NoCheatPlus should log a `log:string` action. `i` stands for in-game chat, `c` stands for console, `f` stands for file. The order is at your discretion (`icf`, `cfi`, `ifc` etc..) , however, at least _one_ log destination has to be specified.
 
 _As always, we'll be taking the previously illustrated string as an example:_
 * `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
-* `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to log the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `6` seconds
+* `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to execute the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `6` seconds. Since `cmdc` is used, this will also enforce color codes.
 
 
 # Placeholders
@@ -74,8 +76,8 @@ There are a few placeholders available which can be used to display more in-dept
 **Notes**
 * Remember that NoCheatPlus will still load up the check on start-up even if its set to false.  
 * Do note that some checks and/or modules might depend on other features to be enabled in order to work (eg.: disabling NoFall will partially cripple the Critical check)
-* For some checks immediate kicking or teleporting of players is not recommended, because it can conflict with the set-back logic or further event-processing, such as with the flying checks - for those we recommend to use the command prefix "ncp delay ", in order to run the actions outside of the event processing.
-* Always make sure to cancel first before you kick player to avoid exploits with checks not canceling properly
+* For some checks immediate kicking of players is not recommended, because it can conflict with the set-back logic or further event-processing, such as with the flying checks - for those we recommend to use the command prefix "ncp delay", in order to run the actions outside of the event processing.
+* Always make sure to cancel first before you kick player to avoid exploits with checks not canceling properly.
 * The `cancel` flag does not need to respect a fixed order, it can be put before or after an action (eg.: `log:yourstringhere:3:0:icf cancel` or `cancel log:yourstringhere:3:0:icf`)
 
 **Related**
