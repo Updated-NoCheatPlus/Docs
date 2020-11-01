@@ -39,14 +39,14 @@ The default message for the `fdirectionlowvl` string is as it follows:
 While the command for `kicksuspiciouscombat` is like this:
 <br>`kicksuspiciouscombat: ncp kick [player] &c&l(!)&7 Illegal combat modifications.`</br>
 
-## Strings format
-You may have noticed, but strings need to respect a fixed format to be valid and be recognized by NoCheatPlus.
-If a string is not formatted correctly, NoCheatPlus will fallback to the default config's action for that check.
+## Actions format
+You may have noticed, but actions need to respect a fixed format to be valid and be recognized by NoCheatPlus.
+If an action is not formatted correctly, NoCheatPlus will fallback to the default config's action for that check.
 The format used for `log` actions will be like this: `log:string:delay:cooldown:target`. 
 For `cmdc`/`cmd` actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion. (`cmd(c):yourcommandhere[:delay:cooldown]`).
-* The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging a `string`. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
-* The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log a `string` once again. This is needed to prevent the spam of `strings`. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
-* The `target` part is used to indicate where NoCheatPlus should log a `log:string` action. `i` stands for in-game chat, `c` stands for console, `f` stands for file. The order is at your discretion (`icf`, `cfi`, `ifc` etc..) , however, at least _one_ log destination has to be specified.
+* The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging the action. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
+* The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log an action once again. This is needed to prevent the spam of multiple actions in a given interval. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
+* The `target` part is used to indicate where NoCheatPlus should log a `log` action. `i` stands for in-game chat, `c` stands for console, `f` stands for file. The order is at your discretion (`icf`, `cfi`, `ifc` etc..) , however, at least _one_ log destination has to be specified.
 
 _As always, we'll be taking the previously illustrated string as an example:_
 * `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
