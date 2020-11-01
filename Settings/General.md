@@ -19,10 +19,10 @@ Do note that the `cancel` flag currently supports cancellation with probability:
 This is particulary beneficiary in combat, where you may not want NoCheatPlus to immediately prevent hits from players.
 
 <br>_Taking the previously illustrated example:_</br>
-* If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have any specified action before 2 VL. 
-* After a player has reached at least 2 VL the `log` action will be executed.
-* After 10 VL we then start to cancel whatever has been detected by the check and then execute the `log` action.
-* In the final interval, after a player has reached VL 50, we cancel, then `log` and finally we execute the `cmdc` action (which will kick the player in this case).
+* Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have any specified action before 2 VL. 
+* Interval 2: After a player has reached at least 2 VL the `log` action will be executed.
+* Interval 3: After 10 VL we then start to cancel whatever has been detected by the check and then execute the `log` action.
+* Interval 4: In the final interval, after a player has reached VL 50, we cancel, then `log` and finally we execute the `cmdc` action (which will kick the player in this case).
 
 ## Strings usage
 Strings are defined at the file's bottom part; you can think of them as aliases.
