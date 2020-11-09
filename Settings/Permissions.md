@@ -23,10 +23,10 @@
 `nocheatplus.bypass.denylogin` Exempts from login denial.  
 `nocheatplus.checks.blockplace.boatsanywhere` Allows to place boats on the ground (not just in water).  
 `nocheatplus.checks.blockbreak.break.liquid` Allows to break water/lava through cheats.
-`nocheatplus.checks.moving.survivalfly.speeding` Extra speed permission for [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md).
+<br>`nocheatplus.checks.moving.survivalfly.speeding` Extra speed permission for [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md).</br>
 `nocheatplus.checks.moving.survivalfly.sprinting` Will exempt players from getting checked for backwards and blindness sprinting.
-`nocheatplus.checks.moving.survivalfly.step` Will exempt players from SurvivalFly's step cheat modules.
-`nocheatplus.checks.moving.survivalfly.sneaking` Exempt players from the horizontal limits for sneaking.
+`nocheatplus.checks.moving.survivalfly.step` Will exempt players from SurvivalFly's step cheat modules.</br>
+`nocheatplus.checks.moving.survivalfly.sneaking` Exempt players from the horizontal limits for sneaking.</br>
 `nocheatplus.checks.moving.survivalfly.blocking` Exempt players from the horizontal limits for blocking/shielding.
 `nocheatplus.checks.moving.survivalfly.waterwalk` Will exempt players from getting checked by SurvivalFly's main waterwalk checks.
 
