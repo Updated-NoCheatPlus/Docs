@@ -60,6 +60,7 @@ CreativeFly is also the check responsible to validate the player's movement when
 * `Elytra_v_asc`: Vertical ascending phase with the elytra.
 * `Elytra_v_desc`: Vertical descending phase with the elytra.
 * `Elytra_h_asc`: The player glided horizontally more than allowed for this gliding phase.
+* `EXTREME_MOVE`: A sanity check. The player tried to cover a really high amount of distance with just one move.
 
 **Notes**
 
