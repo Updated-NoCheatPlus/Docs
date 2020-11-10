@@ -30,6 +30,7 @@ SurvivalFly is the main check for player movement. It checks both horizontal and
 | hover _sfviolation_                 | A hover violation is counted as a survivalfly violations with this amount of violation level. |
  
 There are also hidden options, which give more access to internals. Use with care, as these might allow different kinds of cheats or lead to other false positives, if changed. Ask back if in doubt or test changes made.
+(They need to be added manually to the configuration file, before the `vAcc` and `hAcc` entry)
 
 |Hidden Option                    | Description |
 | :------------------------------ | :---------- |
@@ -39,6 +40,9 @@ There are also hidden options, which give more access to internals. Use with car
 | sneakingspeed | Multiplier for the horizontal walking speed, when sneaking. Value is per-cent, 100 means no change (default), 200 doubles the allowed sneaking speed. Overrides the modifiers above. |
 | swimmingspeed | Multiplier for the horizontal swimming speed. Value is per-cent, 100 means no change (default), 200 doubles the allowed swimming speed. Overrides the modifiers above. |
 | speedingspeed | Multiplier for the horizontal speed. Value is per-cent, 100 means no change, 200 doubles the allowed horizontal speed (default). This always applies extra to other modifiers, regardless of the side conditions, provided a player has the permission _nocheatplus.checks.moving.survivalfly.speeding_. |
+| groundhop | Hidden option to account for a special case in legacy (< 1.7.) servers where the player is able to hop without y distance increases at moderate horizontal speed.|
+| slownesssprinthack | Hidden option to allow Survivalfly to adjust the horizontal speed limit when players sprint-jump with the slowness potion active. |
+| cobwebhack | Allow accumulating some VLs and silently set the player back when they are in cobwebs. (default true). |
 
 **Tags**
 * `vDistRel`: The player went beyond our y (vertical) envelopes or did a move that does not follow our vertical-distance rules.
