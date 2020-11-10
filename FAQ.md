@@ -1,6 +1,6 @@
 **Table of Contents**
 * [Why is aimbot/killaura not detected by NoCheatPlus?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-is-aimbotkillaura-not-detected-by-nocheatplus)
-* [I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#i-want-NoCheatPlus-to-only-block-fly-cheats-while-still-allowing-speed-hacksor-viceversahow-can-i-do-it)
+* [I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?](https://github.com/Lysandr0/Docs/blob/master/FAQ.md#i-want-nocheatplus-to-only-block-fly-cheats-while-still-allowing-speed-hacks-or-viceversa-how-can-i-do-it)
 * [Why does NoCheatPlus not detect NoKnockback?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-does-nocheatplus-not-detect-noknockback)
 * [How can I make NoCheatPlus so that it only notifies about potential cheaters instead of canceling actions?](https://github.com/Updated-NoCheatPlus/Docs/blob/e7dfa1215da46bdf70a024501be2f2af600c2976/FAQ.md#how-can-i-make-nocheatplus-so-that-it-only-notifies-about-potential-cheaters-instead-of-canceling-actions)
 * [Why use NoCheatPlus instead of plugin X?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#nocheatplus-does-not-block-any-hacks-on-my-server-i-can-login-with-any-hack-client-and-grief-as-much-as-i-want-without-getting-blocked)
