@@ -1,22 +1,26 @@
 **Table of Contents**
-* [Why is aimbot/killaura not detected by NoCheatPlus?](FAQ#why-is-aimbot/killaura-not-detected-by-nocheatplus)
-* [Why does NoCheatPlus not detect NoKnockback?](FAQ#why-does-nocheatplus-not-detect-nokncokback)
+* [Why is aimbot/killaura not detected by NoCheatPlus?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-is-aimbotkillaura-not-detected-by-nocheatplus)
+* [I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#i-want-NoCheatPlus-to-only-block-fly-cheats-while-still-allowing-speed-hacksor-viceversahow-can-i-do-it)
+* [Why does NoCheatPlus not detect NoKnockback?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-does-nocheatplus-not-detect-noknockback)
 * [How can I make NoCheatPlus so that it only notifies about potential cheaters instead of canceling actions?](https://github.com/Updated-NoCheatPlus/Docs/blob/e7dfa1215da46bdf70a024501be2f2af600c2976/FAQ.md#how-can-i-make-nocheatplus-so-that-it-only-notifies-about-potential-cheaters-instead-of-canceling-actions)
-* [Why use NoCheatPlus instead of plugin X?](FAQ#why-use-nocheatplus-instead-of-plugin-x)
+* [Why use NoCheatPlus instead of plugin X?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#nocheatplus-does-not-block-any-hacks-on-my-server-i-can-login-with-any-hack-client-and-grief-as-much-as-i-want-without-getting-blocked)
 * [NoCheatPlus does not block any hacks on my server, I can login with any hack client and grief as much as I want without getting blocked?](FAQ#nocheatplus-does-not-block-any-hacks-on-my-server-i-can-login-with-any-hack-client-and-grief-as-much-as-i-want-without-getting-blocked)
-* [I gave my friend permissions for a mod but he stills get blocked by NoCheatPlus?](FAQ#i-gave-my-friend-permissions-for-a-mod-but-he-stills-get-blocked-by-nocheatplus)
-* [Will NoCheatPlus support plugins like mcMMO and Citizens out of the box?](FAQ#will-nocheatplus-support-plugins-like-mcmmo-and-citizens-out-of-the-box)
-* [Why isn't cncp (CompatNoCheatPlus) already integrated in NoCheatPlus?](FAQ#why-isnt-cncp-compatnocheatplus-already-integrated-in-nocheatplus)
-* [Can i use NoCheatPlus with another anti-hack plugin?](FAQ#why-do-you-have-commands-like-ncp-ban-ncp-kick-and-other)
-* [Why do you have commands like /ncp ban, /ncp kick and other?](FAQ#why-use-nocheatplus-instead-of-plugin-x)
-* [Is banning based on check alerts encouraged?](FAQ#is-banning-based-on-check-alerts-encouraged)
-* [Where is the "donate" button?](FAQ#where-is-the-donate-button)
+* [I gave my friend permissions for a mod but he stills get blocked by NoCheatPlus?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#i-gave-my-friend-permissions-for-a-mod-but-he-stills-get-blocked-by-nocheatplus)
+* [Will NoCheatPlus support plugins like mcMMO and Citizens out of the box?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#will-nocheatplus-support-plugins-like-mcmmo-and-citizens-out-of-the-box)
+* [Why isn't cncp (CompatNoCheatPlus) already integrated in NoCheatPlus?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-isnt-cncp-compatnocheatplus-already-integrated-in-nocheatplus)
+* [Can I use NoCheatPlus with another anti-hack plugin?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#can-i-use-nocheatplus-with-another-anti-hack-plugin)
+* [Why do you have commands like /ncp ban, /ncp kick and other?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-are-commands-like-ncp-ban--or-ncp-kick--used-in-the-configuration-instead-of-the-default-commands)
+* [Is banning based on check alerts encouraged?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#is-banning-based-on-check-alerts-encouraged)
+* [Where is the "donate" button?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#where-is-the-donate-button)
 
 ### Why is aimbot/killaura not detected by NoCheatPlus?
-
 The principle of NCP as an _anticheat_ and **not** a _cheat-detector_ is rather to find envelopes/models to fit around legit behaviour: instead of detecting a specific cheat implementation type --in this case, kilaura-- we track down what’s possible for a player to do and _enforce_ that.
 NCP’s suit of combat checks serve this exact purpose; they attempt to create an even fight envelope by enforcing limits to players, blocking everything that’s clearly unlegit or potentially gamebreaking (E.g.: Instant turning, hitting 2+ entities at the same time, hitting at insane speeds etc…) so that legit players have a chance against cheaters as well.
 Unfortunately, unlike in the movement area, combat cannot be modelled upon by us. Movement cheats are meant to leave vanilla envelopes which can be tracked down and then be enforced to players, whereas combat hacks simply try to simulate a legit, player-like behaviour so there’s nothing that we can realistically “enforce”.  
+
+### I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?
+The main check for player movement is [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md), which currently does not discern horizontal from vertical speed. This may change in the future, for the time being however, if your only concern are vertical-oriented cheats (e.g.: fly, step) you can workaround this by editing the [speed limits](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md) for Survivalfly.
+Alternatively, if you want NoCheatPlus to only perform "sanity" checks on player (oten the case for anarchy servers, where you may still want to make sure that players can't crash/harm the server by performing insane moves) you can disable Survivalfly and edit [Creativefly's](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Creativefly.md) movement limits to some really high values. 
 
 ### Why does NoCheatPlus not detect NoKnockback?
 Key issues is that the client is authoritative on how it responds to velocity, the latency between client and server makes it extra hard for us to detect such cheat as well. Something is already in the works, however. (Moving.UnusedVelocity).
@@ -43,7 +47,7 @@ If you would like to suggest or implement another plugin compatibility in Compat
 ### Why isn't cncp (CompatNoCheatPlus) already integrated in NoCheatPlus?
 Because it would slow down the development of NoCheatPlus, we would always have to keep up with the other plugins if those get changed, also changes to NoCheatPlus might break compatibility with other plugins, so we would have to fix those too or remove the broken hooks. Also the testing for those components takes a lot of time and can't really be done by us. We might at some point build in a couple of generic things that will help with _some_ compatibility issues without endangering us of getting stuck with compatibility issues.
 
-### Can i use NoCheatPlus with another anti-hack plugin?
+### Can I use NoCheatPlus with another anti-hack plugin?
 Two plugins usually are not better than one. Just activate the few checks of the other plugin that you assume to be useful, disable the rest. Don't have both plugins check for the same things. The typical problems are that checks or the the whole plugins... a) become less effective, because one plugin won't even register actions that a player did, due to the other plugin having cancelled the action already, which can happen to both plugins, due to differing limits... b) that the same kind of checks conflict in taking back players actions, leading to unpleasant emergent effects, such as allowing flying with multiple fly checks being activated (also thinkable with built-in the vanilla fly check, thus let a plugin check for flying, setting allow-flight to true).
 
 ### Why are commands like 'ncp ban ...', or 'ncp kick ...' used in the configuration instead of the default commands?
