@@ -28,7 +28,7 @@ This is particulary beneficiary in combat, where you may not want NoCheatPlus to
 Strings are defined at the file's bottom part; you can think of them as aliases.
 A string can be used to either log something into NoCheatPlus' logging stream or execute a command. This enables server owners to do almost anything they wish to do upon detections.
 * `cmd` and `cmdc` are used to tell NoCheatPlus to execute a command action. The latter will force NoCheatPlus to recognize and use color codes (`&`).
-* `log` is used to tell NoCheatPlus to only log a message.
+* `log` is the action used to tell NoCheatPlus to log a message (defined in the strings section) into its logging stream (console,in-game or flat file).
 <br>The template for strings is as it follows:</br>
 ![StringsExplenation](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/StringsExplenation.gif)
 <br>Do note that normal messages need to be specified at the start/end with quotes. (eg.: 'your message here').<br>
@@ -40,10 +40,10 @@ While the command for `kicksuspiciouscombat` is like this:
 <br>`kicksuspiciouscombat: ncp kick [player] &c&l(!)&7 Illegal combat modifications.`</br>
 
 ## Actions format
-You may have noticed, but actions need to respect a fixed format to be valid and be recognized by NoCheatPlus.
+Actions do need to respect a fixed format to be valid and be recognized by NoCheatPlus.
 If an action is not formatted correctly, NoCheatPlus will fallback to the default config's action for that check.
-The format used for `log` actions will be like this: `log:string:delay:cooldown:target`. 
-For `cmdc`/`cmd` actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion. (`cmd(c):yourcommandhere[:delay:cooldown]`).
+* The format used for `log` actions will be like this: `log:string:delay:cooldown:target`. 
+* For `cmdc`/`cmd` actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion. (`cmd(c):yourcommandhere[:delay:cooldown]`).
 * The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging the action. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
 * The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log an action once again. This is needed to prevent the spam of multiple actions in a given interval. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
 * The `target` part is used to indicate where NoCheatPlus should log a `log` action. `i` stands for in-game chat, `c` stands for console, `f` stands for file. The order is at your discretion (`icf`, `cfi`, `ifc` etc..) , however, at least _one_ log destination has to be specified.
@@ -55,22 +55,22 @@ _As always, we'll be taking the previously illustrated string as an example:_
 
 # Placeholders
 There are a few placeholders available which can be used to display more in-depth informations in strings and to further customize actions.
-|Placeholder     | Description  |
-| :------------- | :------------|
-|`[player]` | Display the name of the player.|
-|`[IP]` | Display a player's IP.|
-|`[reachdistance]` | Display the reach distance in blocks (currently only supports PvE, not combat reach).|
-|`[tags]` | Generic tag used to display a specific check's informations (Eg.: with SurvivalFly, this will display the triggered subchecks).|
-|`[packets]` | Generic tag used to display a certain packet (Eg.: with MorePackets, this will display the amount of move-packet received, with AttackFrequency, the attack-packets and so on).|
-|`[limit]` | Display the limit of a specific check (Eg. with Fight.Speed, this will display the established limit in the config).|
-|`[violations]` | Returns the current violation level reached by the player.|
-|`[food]` | Used by FastConsume and InstantEat, it will display the food type that the player attempted to fast-use.|
-|`[check]` | Returns the check's name.|
-|`[locationto]` | Returns the coordinates where the player moved to.|
-|`[locationfrom]` | Returns the coordinates where the player moved from.|
-|`[distance]` | Returns the horizontal distance that the player has covered with one move.|
-|`[health]` | Returns a player's health in hearts.|
-|`[blocktype]` | Display a block's name for which the player tried to interact or phase through.|
+| Placeholder    | Description  | Check |
+| :------------- | :------------| :------------|
+|`[player]` | Display the name of the player.| `All` |
+|`[IP]` | Display a player's IP.| `Chat.Text`, `Chat.Commands`, `Chat.Login`, `Chat.Relog` |
+|`[reachdistance]` | Display the reach distance in blocks (currently only supports PvE, not combat reach).| `Block*.Reach`
+|`[tags]` | Generic tag used to display a specific check's informations (Eg.: with SurvivalFly, this will display the triggered subchecks).| `Moving.*`, `Net.AttackFrequency`, `Fight.Angle`, `Fight.Critical`, `Combined.Improbable`, `BlockPlace.AutoSign`, `Inventory.InventoryMove`, `Inventory.FastConsume`, `BlockPlace.Scaffold` |
+|`[packets]` | Generic tag used to display a certain packet (Eg.: with MorePackets, this will display the amount of move-packet received, with AttackFrequency, the attack-packets and so on).| `Net.AttackFrequency`, `Moving.MorePackets`, `Moving.Vehicle.MorePackets` | 
+|`[limit]` | Display the limit of a specific check (Eg. with Fight.Speed, this will display the established limit in the config).| `Fight.Speed` |
+|`[violations]` | Returns the current violation level reached by the player.| `All` |
+|`[food]` | Used by FastConsume and InstantEat, it will display the food type that the player attempted to fast-use.| `Inventory.FastUse`, `Inventory.FastConsume` |
+|`[check]` | Returns the check's name.| `All` |
+|`[locationto]` | Returns the coordinates where the player moved to.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
+|`[locationfrom]` | Returns the coordinates where the player moved from.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable` |
+|`[distance]` | Returns the horizontal distance that the player has covered with one move.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
+|`[health]` | Returns a player's health in hearts.| `Fight.GodMode`, `Fight.FastHeal` |
+|`[blocktype]` | Display a block's name for which the player tried to interact or phase through.| `Moving.Passable`, `BlockBreak.FastBreak` |
 
 
 **Notes**
