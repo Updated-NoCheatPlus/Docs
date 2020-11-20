@@ -4,27 +4,27 @@ This section of the configuration file provides you with additional settings to 
 |managelisteners||
 |bukkitapionly|Setting this to true will force NoCheatPlus to only run with the BukkitAPI instead of also using internals.|
 
-**Server**
+# Server
 |**Option**|**Meaning**|
 | :--------|:----------|
 | cbdedicated| If true, NoCheatPlus will use its dedicated module for the detected server version, currently supports 1.5 to 1.12|
 | cbreflection | In case NoCheatPlus does not have a native module for the detected server versions, it will use the Bukkit-API (MC 1.13+). |
 
-**Blocks**
+# Blocks
 |**Option**|**Meaning**|
 | :--------|:----------|
 |breakingtime| Enables you to override the breaking time of a block for specific side conditions.\\ An entry in this section maps a condition definition to the breaking time in milliseconds. Definitions for side conditions can be: BLOCK_TYPE:TOOL_TYPE:TOOL_MATERIAL_BASE:EFFICIENCY_LEVEL. In-air/water/aqua-affinity/haste are not possible to add at this stage. Those will get automatically evaluated. Later specifying these will be possible.|
 | allowinstabreak |The Fastbreak check will ignore every block you put in this list which means that players can mine them faster then possible.|
 
 Example of breakingtime:
-`SAND:AXE:DIAMOND:0: 10000`
-(Changes the breaking time for sand with a diamond axe with no efficiency enchantment to 10 seconds, thus fastbreak will trigger.)
+<br> `SAND:AXE:DIAMOND:0: 10000`</br> 
+(Changes the breaking time for sand with a diamond axe with no efficiency enchantment to 10 seconds, thus fastbreak will trigger).
  
 Use of breakingtime parameters:
-<br> ` BLOCK_TYPE`: Bukkit block names. Currently no extras are possible, such as data values/variants.<\br>
- `TOOL_TYPE`: `NONE, SWORD, SHEARS, SPADE, AXE, PICKAXE`
- `TOOL_MATERIAL_BASE`: `NONE, WOOD, STONE, IRON, DIAMOND, GOLD`
- `EFFICIENCY_LEVEL`: Level of the efficiency enchantment.
+<br> ` BLOCK_TYPE`: Bukkit block names. Currently no extras are possible, such as data values/variants.</br>
+<br> `TOOL_TYPE`: `NONE, SWORD, SHEARS, SPADE, AXE, PICKAXE`</br>
+<br> `TOOL_MATERIAL_BASE`: `NONE, WOOD, STONE, IRON, DIAMOND, GOLD`</br>
+<br> `EFFICIENCY_LEVEL`: Level of the efficiency enchantment.</br>
 
 |**Option**|**Meaning**|
 | :--------|:----------|
@@ -90,7 +90,7 @@ Currently, NoCheatPlus supports the following flags:
 | F_HEIGHT16_15 | Height 15/16 (0.9375 = 1 - 0.0625).|
 
 **Related**
-*[Passable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Passable.md)
-*[FastBreak](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Fastbreak.md)
-*[BukkitAPI](https://hub.spigotmc.org/javadocs/bukkit)
-*[Block names/enum](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
+* [Passable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Passable.md)
+* [FastBreak](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Fastbreak.md)
+* [BukkitAPI](https://hub.spigotmc.org/javadocs/bukkit)
+* [Block names/enum](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)
