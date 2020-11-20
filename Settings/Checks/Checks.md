@@ -1,5 +1,5 @@
 # BlockBreak
-#### Checks that are related to players breaking blocks.
+#### Checks related to players breaking blocks.
 * [Direction](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Direction.md)
 * [FastBreak](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Fastbreak.md)
 * [Frequency](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Frequency.md)
@@ -8,14 +8,14 @@
 * [WrongBlock](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Wrongblock.md)
 
 # BlockInteract
-#### Checks that are related to players interacting with blocks.
+#### Checks related to players interacting with blocks.
 * [Direction](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Direction.md)
 * [Reach](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Reach.md)
 * [Speed](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Speed.md)
 * [Visible](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockinteract%5D-Visible.md)
 
 # BlockPlace
-#### Checks that are related to players placing blocks.
+#### Checks related to players placing blocks.
 * [Against](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Against.md)
 * [AutoSign](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Autosign.md)
 * [Direction](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Direction.md)
@@ -27,7 +27,7 @@
 * [PreventMisc](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockplace%5D-Preventmisc.md)
 
 # Chat
-#### Checks that are related to chat activity and login/join.
+#### Checks related to chat activity and login/join.
 * [Captcha](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Captcha.md)
 * [Color](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Color.md)
 * [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Commands.md)
@@ -37,7 +37,7 @@
 * [Logins](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BChat%5D-Logins.md)
 
 # Combined
-#### Checks that are combined by multiple inputs from NoCheatPlus or that just don't fit into any other category.
+#### Checks combined by multiple inputs within NoCheatPlus or that just don't fit into any other category.
 * [BedLeave](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Bedleave.md)
 * [Enderpearls](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Enderpearl.md)
 * [Improbable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BCombined%5D-Improbable.md)
