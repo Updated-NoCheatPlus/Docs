@@ -89,6 +89,15 @@ Currently, NoCheatPlus supports the following flags:
 | F_VARIABLE_REDSTONE | Block change tracking: block redstone events can change the shape.|
 | F_HEIGHT16_15 | Height 15/16 (0.9375 = 1 - 0.0625).|
 
+# Changetracker
+This section allows you to alter some option concerning NoCheatPlus' block change tracker system which allow the moving checks to account for moving blocks (eg.: with pistons).
+|**Option**|**Meaning**|
+| :--------|:----------|
+| active   | Should the change tracker system be active at all? Without it, moving blocks will cause false positives. |
+| pistons | Should pistong be checked by the tracker ? |
+| maxageticks | Maximum age in ticks for which entries will be purged by the tracker system. |
+| *perworld* maxentries | Maximum entries per world allowed before being removed. |
+
 **Related**
 * [Passable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Passable.md)
 * [FastBreak](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BBlockbreak%5D-Fastbreak.md)
