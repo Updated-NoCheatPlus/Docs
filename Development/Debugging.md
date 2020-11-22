@@ -40,7 +40,7 @@ NCP can log all violations of all players to the console and/or to the ingame no
 
 # NCPTools
 
-NCPTools at BukkitDev (https://dev.bukkit.org/bukkit-mods/ncptools/) is a collection of tools we use for testing and debugging with NoCheatPlus.
+NCPTools at BukkitDev (https://dev.bukkit.org/projects/ncptools) is a collection of tools we use for testing and debugging with NoCheatPlus.
 
 These tools are meant for testing and debugging with test servers.
 

@@ -33,7 +33,7 @@ Download and further project links:
  * [General](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md)
  * [Strings](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Strings.md)
  * [Miscellaneous](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Miscellaneous.md)
-* [Compatibility](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/%5BSettings%5D-Compatibility.creole)
+* [Compatibility](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/%5BSettings%5D-Compatibility.md)
 
 ## Development
 * [API](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/API.md)

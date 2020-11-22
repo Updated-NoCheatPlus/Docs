@@ -52,11 +52,11 @@ CreativeFly is also the check responsible to validate the player's movement when
 * `AntiLevitate`: Player triggered the "anti-levitate" subcheck.
 * `vDist`: Indicates that the player went beyond the vertical limits.
 * `Bunnyhop`: This move was (most likely) a bunnyhop and all conditions have been applied.
-* `vFrict_g`: Horizontal friction + gravity.
+* `vFrict_g`: Vertical friction (gravity).
 * `Jump_gain`: Ordinary jump.
 * `Step_up`: Ordinary step-up.
 * `Fw_speed`: The player is boosting their elytra with a firework.
-* `Elytra_v_keep`: Tag usually associated to elytra cheats (fly etc...)
+* `Elytra_v_diff`: Tag usually associated to elytra cheats (fly etc...)
 * `Elytra_v_asc`: Vertical ascending phase with the elytra.
 * `Elytra_v_desc`: Vertical descending phase with the elytra.
 * `Elytra_h_asc`: The player glided horizontally more than allowed for this gliding phase.

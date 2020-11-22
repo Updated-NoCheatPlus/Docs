@@ -22,8 +22,8 @@ Example of breakingtime:
  
 Use of breakingtime parameters:
 <br> ` BLOCK_TYPE`: Bukkit block names. Currently no extras are possible, such as data values/variants.</br>
-<br> `TOOL_TYPE`: `NONE, SWORD, SHEARS, SPADE, AXE, PICKAXE`</br>
-<br> `TOOL_MATERIAL_BASE`: `NONE, WOOD, STONE, IRON, DIAMOND, GOLD`</br>
+<br> `TOOL_TYPE`: `NONE, SWORD, SHEARS, SPADE, AXE, PICKAXE, HOE`</br>
+<br> `TOOL_MATERIAL_BASE`: `NONE, WOOD, STONE, IRON, DIAMOND, NETHERITE, GOLD`</br>
 <br> `EFFICIENCY_LEVEL`: Level of the efficiency enchantment.</br>
 
 |**Option**|**Meaning**|
