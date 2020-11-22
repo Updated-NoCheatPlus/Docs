@@ -1,42 +1,84 @@
 This page lists all the config options that apply to the multiple existing features.  
 
 # Active
-Just a simple on/off switch for most features.  
-**True**: Enables that feature  
-**False**: Disables that feature 
+This is a simple switch to enable or disable features throughout the configuration.  
+**True**: Enables a feature  
+**False**: Disables a feature 
  
+
+# Set up a custom configuration
+We will be using the following string as an example for our walkthrough.
+<br>`actions: vl>2 log:fdirectionlowvl:5:6:i vl>10 cancel log:fdirection:2:4:if vl>50 cancel log:fdirection:0:7:icf cmdc:kicksuspiciouscombat:1:5`</br>
+
+## Actions
+`actions` is NoCheatPlus' task scheduler. This is the only place where you actually can control what a check should do after reaching a determined violation level.
+* `vl>X` To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached our defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
+An interval may be left undefined at the start (eg.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
+* The `cancel` flag is used in order to prevent something from happening (to cancel, as the flag would intend): with movement, this will cause a setback; in combat, this will result in a hit being canceled/not registered etc... If you don't want to penalise players on detections, the `cancel` flag can be omitted.
+Do note that the `cancel` flag currently supports cancellation with probability: instead of immediately prevent an action, you can tell NoCheatPlus that said action only has a probability of actually getting canceled/prevented, by specifying the probability in percentage (`x%`) before the cancel flag (eg.: `10%cancel`).
+This is particulary beneficiary in combat, where you may not want NoCheatPlus to immediately prevent hits from players.
+
+<br>_Taking the previously illustrated example:_</br>
+* Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have any specified action before 2 VL. 
+* Interval 2: After a player has reached at least 2 VL the `log` action will be executed.
+* Interval 3: After 10 VL we then start to cancel whatever has been detected by the check and then execute the `log` action.
+* Interval 4: In the final interval, after a player has reached VL 50, we cancel, then `log` and finally we execute the `cmdc` action (which will kick the player in this case).
+
+## Strings usage
+Strings are defined at the file's bottom part; you can think of them as aliases.
+A string can be used to either log something into NoCheatPlus' logging stream or execute a command. This enables server owners to do almost anything they wish to do upon detections.
+* `cmd` and `cmdc` are used to tell NoCheatPlus to execute a command action. The latter will force NoCheatPlus to recognize and use color codes (`&`).
+* `log` is the action used to tell NoCheatPlus to log a message (defined in the strings section) into its logging stream (console,in-game or flat file).
+<br>The template for strings is as it follows:</br>
+![StringsExplenation](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/StringsExplenation.gif)
+<br>Do note that normal messages need to be specified at the start/end with quotes. (eg.: 'your message here').<br>
+
+<br>_Taking the previously illustrated example:_</br>
+The default message for the `fdirectionlowvl` string is as it follows:
+<br>`fdirectionlowvl: '&c[player]&7 failed &c[check]&7: could be using an aimbot (hit not canceled) &7(&cVL[violations]&7)'`</br>
+While the command for `kicksuspiciouscombat` is like this:
+<br>`kicksuspiciouscombat: ncp kick [player] &c&l(!)&7 Illegal combat modifications.`</br>
+
+## Actions format
+Actions do need to respect a fixed format to be valid and be recognized by NoCheatPlus.
+If an action is not formatted correctly, NoCheatPlus will fallback to the default config's action for that check.
+* The format used for `log` actions will be like this: `log:string:delay:cooldown:target`. 
+* For `cmdc`/`cmd` actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion. (`cmd(c):yourcommandhere[:delay:cooldown]`).
+* The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging the action. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
+* The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log an action once again. This is needed to prevent the spam of multiple actions in a given interval. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
+* The `target` part is used to indicate where NoCheatPlus should log a `log` action. `i` stands for in-game chat, `c` stands for console, `f` stands for file. The order is at your discretion (`icf`, `cfi`, `ifc` etc..) , however, at least _one_ log destination has to be specified.
+
+_As always, we'll be taking the previously illustrated string as an example:_
+* `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
+* `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to execute the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `6` seconds. Since `cmdc` is used, this will also enforce color codes.
+
+
+# Placeholders
+There are a few placeholders available which can be used to display more in-depth informations in strings and to further customize actions.
+| Placeholder    | Description  | Check |
+| :------------- | :------------| :------------|
+|`[player]` | Display the name of the player.| `All` |
+|`[IP]` | Display a player's IP.| `Chat.Text`, `Chat.Commands`, `Chat.Login`, `Chat.Relog` |
+|`[reachdistance]` | Display the reach distance in blocks (currently only supports PvE, not combat reach).| `Block*.Reach`
+|`[tags]` | Generic tag used to display a specific check's informations (Eg.: with SurvivalFly, this will display the triggered subchecks).| `Moving.*`, `Net.AttackFrequency`, `Fight.Angle`, `Fight.Critical`, `Combined.Improbable`, `BlockPlace.AutoSign`, `Inventory.InventoryMove`, `Inventory.FastConsume`, `BlockPlace.Scaffold` |
+|`[packets]` | Generic tag used to display a certain packet (Eg.: with MorePackets, this will display the amount of move-packet received, with AttackFrequency, the attack-packets and so on).| `Net.AttackFrequency`, `Moving.MorePackets`, `Moving.Vehicle.MorePackets` | 
+|`[limit]` | Display the limit of a specific check (Eg. with Fight.Speed, this will display the established limit in the config).| `Fight.Speed` |
+|`[violations]` | Returns the current violation level reached by the player.| `All` |
+|`[food]` | Used by FastConsume and InstantEat, it will display the food type that the player attempted to fast-use.| `Inventory.FastUse`, `Inventory.FastConsume` |
+|`[check]` | Returns the check's name.| `All` |
+|`[locationto]` | Returns the coordinates where the player moved to.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
+|`[locationfrom]` | Returns the coordinates where the player moved from.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable` |
+|`[distance]` | Returns the horizontal distance that the player has covered with one move.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
+|`[health]` | Returns a player's health in hearts.| `Fight.GodMode`, `Fight.FastHeal` |
+|`[blocktype]` | Display a block's name for which the player tried to interact or phase through.| `Moving.Passable`, `BlockBreak.FastBreak` |
+
+
 **Notes**
 * Remember that NoCheatPlus will still load up the check on start-up even if its set to false.  
-* Disabling a dependency form another check will turn it into a ghost (Wont do anything, like its disabled)  
+* Do note that some checks and/or modules might depend on other features to be enabled in order to work (eg.: disabling NoFall will partially cripple the Critical check)
+* For some checks immediate kicking of players is not recommended, because it can conflict with the set-back logic or further event-processing, such as with the flying checks - for those we recommend to use the command prefix "ncp delay", in order to run the actions outside of the event processing.
+* Always make sure to cancel first before you kick player to avoid exploits with checks not canceling properly.
+* The `cancel` flag does not need to respect a fixed order, it can be put before or after an action (eg.: `log:yourstringhere:3:0:icf cancel` or `cancel log:yourstringhere:3:0:icf`)
 
-# Actions
-"Actions" is kind off the task scheduler of NoCheatPlus, here you define which actions NC+ should take at a defined violation level.  
-
-## Overview and Customize 
-| Action        | Description  |
-| :------------- | :------------|
-| **cancel**    | The effects of the action "cancel" depend on the check that it is used for. Usually it means to prevent something from happening, e.g. stop an attack or prevent sending of a chat message. `cancel` |
-| **log**       | Create and show/log a message. Log messages can be customized in how often, when and where they are registered/shown. `log:string:delay:repeat:target` <br> `log` Is simply used to let NoCheatPlus know that this is a log action. </br> <br> `string` Here you define the message that will be logged over a string (check strings reference). </br> <br> `delay` A number declaring how many times that action initially has to be executed before it really leads to logging a message. Use this for situations where it's common to have false positives in checks and you only want the log message to be shown if a player fails the check multiple times within a minute. </br> <br> `repeat` A number declaring how many seconds have to pass after a message has been logged before it can be logged again for that player (cooldown). This is needed to prevent "log-spam". Usually a value of 5 seconds is acceptable, for rare events you can use lower values. It is recommended to at least use the value 1 (one second) here. </br> <br> Example: `log:bdirection:0:5:if` </br> |
-| **cmd**       | Execute a command of Bukkit or another plugin as if it were typed into the server console by an admin. Like logging, these can be customized. `cmd:string:delay:repeat` <br> `cmd` Is simply used to let NoCheatPlus know it is a command action. </br> <br> `string` Here you define which string (read strings reference) should be taken to execute as command. </br> <br> `delay` A number declaring how many times that action initially has to be executed before it really leads to logging a message. Use this for situations where it's common to have false positives in checks and you only want the log message to be shown if a player fails the check multiple times within a minute. </br> <br> `repeat` A number declaring how many seconds have to pass after a message has been logged before it can be logged again for that player (cooldown). This is needed to prevent "log-spam". Usually a value of 5 seconds is acceptable, for rare events you can use lower values. It is recommended to at least use the value 1 (one second) here. </br> |
-| **cmdc**      | Same as _cmd_, just with replacing color codes that use '&'. |
-| **vl>X**      | Is meant to symbolize "violation level at least X". Used to define actions that will be executed only if players reached a certain violation level. Failing a check usually increases their "vl", not failing checks reduces it over time. Violation levels mean different things for different checks, e.g. they may describe moved distance beyond the limit, number of attacks above the attack limit, sent messages beyond the spam limit. <br> The "vl>x" isn't really an action. It limits all actions that are written afterwards to be only executed if the players’ violation level has reached at least the given value. This allows defining layers of actions and handling repeated or severe failing of checks different. For example the spam check will only kick players if they reach a certain violation level (vl). </br> |
-
-**Template**  
-![Action Explenation](Resources/ActionExplenation.gif)  
-
-**Levels**  
-![Action Levels](Resources/ActionLevels.gif)  
-Level 1: Will be executed if the violation is under 1000  
-Level 2: Will be executed if the violation is in range of 1000-1299  
-Level 3: Will be executed if the violation is 1300 and higher  
-
-Once a violation level reaches a **vl>X** limit all actions before that limit will become obsolete and wont be executed till the violation level goes down again. Now NoCheatPlus will execute the actions which are in the current level. Remember that executed commands wont be rolled back, so if you banned someone on level 2 he/she wont get unbanned on level 3 unless you specified it in your actions.
-
-**Notes**  
-* For some checks immediate kicking or teleporting of players is not recommended, because it can conflict with the set-back logic or further event-processing, such as with the flying checks - for those we recommend to use the command prefix "ncp delay ", in order to run the actions outside of the event processing.
-* Always make sure to **cancel** first before you do something else (for example kick) to avoid exploits with checks not canceling properly
-* The ":delay:repeat" part can be omitted from the "log" and "cmd" actions
-
-**Related**  
-* [Strings](Strings)
-* [Violations](Backgrounds#violations)
+**Related**
+* [Violations](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Others/Backgrounds.md#violations)

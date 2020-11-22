@@ -1,7 +1,7 @@
 **Table of content**
-* [Administrative commands](Commands#administrative-commands)
-* [Auxiliary commands](Commands#auxiliary-commands)
-* [Stopwatch commands](Commands#stop-watch)
+* [Administrative commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md#administrative-commands)
+* [Auxiliary commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md#auxiliary-commands)
+* [Stopwatch commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md#stopwatch)
 
 NoCheatPlus integrates a lightweight command system. It allows you to quickly exempt players from checks or to access and manage check data about a player. 
 
@@ -10,10 +10,8 @@ All commands support tab completion and some even allow shortcuts. The root comm
 NoCheatPlus also supports [Bukkit aliases](http://wiki.bukkit.org/Bukkit.yml#aliases) if you wish to have another alias command aside form **nocheatplus** and **ncp**.
 
 You can give a player access to a specific command by giving them the sub-node with the commands default name, like `nocheatplus.admin.info`.
-For further information about permissions in NoCheatPlus, we recommend looking at the [Permissions](https://github.com/MyPictures/NoCheatPlus/wiki/Permissions#commands).
+For further information about permissions in NoCheatPlus, we recommend looking at the [Permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md).
 
-**Related**
-* [Permissions](Permissions)
 
 # Administrative commands
 Those commands are used to basically manage NoCheatPlus on your server. Arguments in **( )** are needed, while arguments in **[ ]** are optional.

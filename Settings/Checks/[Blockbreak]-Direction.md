@@ -2,8 +2,8 @@ Config path: `checks.blockbreak.direction`
 Permission (bypass): `nocheatplus.checks.blockbreak.direction`  
 Exemption: `BLOCKBREAK_DIRECTION`  
 
-The Direction check forces players to look (eye location) at the block they want to break.
+BlockBreak.Direction forces players to look at the block they want to break 
 
 **Related**  
-* [Active](General#Active)
-* [Actions](General#Actions)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)

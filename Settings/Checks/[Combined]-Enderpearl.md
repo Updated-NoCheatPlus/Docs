@@ -6,9 +6,9 @@ This check aims to prevent no-clipping by abusing the teleportation of ender pea
 
 | Option             | Description |
 | :--------------    | :---------- |
-| preventclickblock  | Prevent players from throwing a ender pearl if their client has a solid block in front of them. |
+| preventclickblock  | Prevent the client from throwing ender pearls against walls if NCP detects that the client has a solid block in front of it |
 
 **Related**
-* [Active](General#Active)
-* [Actions](General#Actions)
-* [[Moving] Passable](%5BMoving%5D-Passable)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
+* [Passable](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Passable.md)

@@ -30,5 +30,5 @@ In order to protect commands that don't have a permission set, NCP will set a fi
 * Use the protection bypass permission if you want curtain players/groups to bypass your plugin protection.
 
 **References**\\
-* [[Permissions|Permissions]] 
-* [[Client Modifications|Client-Modifications]]
+* [[https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md|Permissions]] 
+* [[https://github.com/Updated-NoCheatPlus/Docs/blob/master/Client-Modifications.md|Client-Modifications]]

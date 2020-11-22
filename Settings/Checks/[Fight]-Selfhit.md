@@ -2,11 +2,17 @@ Config path: `checks.fight.selfhit`
 Permission (bypass): `nocheatplus.checks.fight.selfhit`  
 Exemption: `FIGHT_SELFHIT`  
 
-This check was designed to prevent hackers from hitting themselves, abusing that knockback effect and fly or do other illegal things. However Mojang fixed this exploit in Minecraft 1.4.5 and higher, so you can disable this without worries if you are on a up to date Minecraft version. 
+This check was originally designed to prevent cheaters from hitting themselves, in order to fly around. This was later on fixed by Mojang.
+
+| Option | Description |
+| :----- | :--------- |
+| excludeprojectiles| Should SelfHit exclude checking players hitting themselves with projectiles (e.g.: with a bow)?|
+| message| Should NCP log a message to players who try to hit themselves with a projectile? |
 
 **Notes**
-* Leaving selfhit enabled wont conflict with Mojangs or Spigots fix on this exploit
+* Leaving SelfHit enabled wont conflict with Mojangs or Spigots fix on this exploit
+* In 1.8 it is possible to fly with a bow (bowfly) so you should still leave this enabled if your server runs in 1.8.
 
 **Related**  
-* [Active](General#Active)
-* [Actions](General#Actions)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)

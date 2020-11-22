@@ -13,5 +13,5 @@ Selectively alter or remove the initial invulnerability after login.
 | modifiers | Define individual modifiers per damage type (the preset is defined with 'all'). The player will stay invulnerable for this amount of ticks longer/shorter for the specified damage type, allowing for negative values as well. |
 
 **Related**
-* [Active](General#Active)
-* [Actions](General#Actions)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)

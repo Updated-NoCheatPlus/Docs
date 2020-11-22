@@ -10,4 +10,4 @@ In order to support Minecraft in preventing dupe bugs, we have come up with a si
 | cancelother         | Cancel other actions as well that conflict with an open inventory. |
 
 **Related**  
-* [Active](General#Active)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)

@@ -8,11 +8,11 @@ This check limits the amount of players that can join in a short time.
 | :----------------- | :---------- |
 | startupdelay       | Set delay in seconds till NoCheatPlus enables this check after a server start. |
 | perworldcount      | If set to true, the counting will be performed for each world individually and not server-wide. |
-| seconds            | Duration in seconds before NoCheatPlus purges the login data and starts counting all over again. |
-| limit              | Number of logins that may happen within the specified time (seconds). |
+| seconds            | How long should the check last? (Seconds) |
+| limit              | How many players are allowed to log-in during the given time-frame? |
 | kickmessage        | This message will be shown to those players that get kicked because too many other players logged in at the same time. |
 
 
 **Related**   
-* [Active](General#Active)
-* [Actions](General#Actions)
+* [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
+* [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)

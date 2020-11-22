@@ -1,12 +1,12 @@
 **Table of context**
-* [Shortcuts](Permissions#shortcuts)
-* [Checks](Permissions#checks)
- * [Specific](Permissions#specific)
-* [Commands](Permissions#commands)
- * [Auxiliary commands](Permissions#auxiliary-commands)
-* [Client modifications](Permissions#client-modifications)
-* [Miscellaneous and parent permissions](Permissions#miscellaneous-and-parent-permissions)
-* [Configure permission caching behavior](Permissions#Configure-permission-caching-behavior)
+* [Shortcuts](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#shortcuts)
+* [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#checks)
+* [Specific](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#specific)
+* [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#commands)
+* [Auxiliary commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#auxiliary-commands)
+* [Client modifications](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#client-modifications)
+* [Miscellaneous and parent permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#miscellaneous-and-parent-permissions)
+* [Configure permission caching behavior](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#configure-permission-caching-behavior)
 
 # Shortcuts
 `nocheatplus.shortcut.info` Gives permissions to  
@@ -16,13 +16,19 @@
 
 # Checks
 `nocheatplus.checks` Exempts from all checks  
-`nocheatplus.checks.<Check category here>` Exempts from all checks of a given check category  
-`nocheatplus.checks.<Check category here>.<Check name here>` Exempts group of this check. Example: nocheatplus.checks.moving.creativefly will exempt from creativefly.
+`nocheatplus.checks.<Check category here>` Exempts from all checks of a given check category.  
+`nocheatplus.checks.<Check category here>.<Check name here>` Exempts group of this check. (Example: nocheatplus.checks.moving.creativefly will exempt from CreativeFly).
 
 ## Specific
-`nocheatplus.bypass.denylogin` Exempts from login denial  
+`nocheatplus.bypass.denylogin` Exempts from login denial.  
 `nocheatplus.checks.blockplace.boatsanywhere` Allows to place boats on the ground (not just in water).  
-`nocheatplus.checks.blockbreak.break.liquid` Allows to break water/lava  
+`nocheatplus.checks.blockbreak.break.liquid` Allows to break water/lava through cheats.
+<br>`nocheatplus.checks.moving.survivalfly.speeding` Extra speed permission for [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md).</br>
+`nocheatplus.checks.moving.survivalfly.sprinting` Will exempt players from getting checked for backwards and blindness sprinting.
+`nocheatplus.checks.moving.survivalfly.step` Will exempt players from SurvivalFly's step cheat modules.</br>
+`nocheatplus.checks.moving.survivalfly.sneaking` Exempt players from the horizontal limits for sneaking.</br>
+`nocheatplus.checks.moving.survivalfly.blocking` Exempt players from the horizontal limits for blocking/shielding.
+`nocheatplus.checks.moving.survivalfly.waterwalk` Will exempt players from getting checked by SurvivalFly's main waterwalk checks.
 
 # Commands
 `nocheatplus.command.commands` Can view all NC+ commands with _/ncp commands_  
@@ -90,7 +96,7 @@ With those permissions you can decide which mods should not be disabled on login
 
 # Miscellaneous and parent permissions
 
-`nocheatplus.admin` Gives access to all [NoCheatPlus commands](https://github.com/MyPictures/NoCheatPlus/wiki/Commands) including Auxiliary ones  
+`nocheatplus.admin` Gives access to all [NoCheatPlus commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md) including Auxiliary ones  
 `nocheatplus.notify` Will receive hack notifications over in-game chat
 
 Commands for which the permission got set by the protection features (hide plugins), might have altered default permissions or NoCheatPlus may have set a filter permission 'nocheatplus.filter.command.COMMAND_NAME', for the case the command was allowed to be run by everyone.
@@ -99,10 +105,10 @@ Commands for which the permission got set by the protection features (hide plugi
 * By default NoCheatPlus assigns all permissions and gives full rights to players that have been `/op-ed` on your server. If you don't want to give OPs full access to all NoCheatPlus features then take a look in the configuration of your permissions plugin (Example with PermissionsEx: allowOps: false).
 
 **Related**
-* [Client Modifications](Client-Modifications)
-* [Checks](Checks)
-* [Commands](Commands)
-* [Debugging](Debugging)
+* [Client Modifications](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Client-Modifications.md)
+* [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/Checks.md)
+* [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md)
+* [Debugging](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Debugging.md)
 
 [CJB Mods]:http://cjbmods.com/
 [Rei's Minimap]:http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1275219-jul-08-reis-minimap-v3-4_01
