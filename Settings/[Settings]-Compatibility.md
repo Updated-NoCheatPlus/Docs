@@ -1,8 +1,16 @@
 This section of the configuration file provides you with additional settings to improve overall compatibility stuff.
+# Exemptions
 |**Option**|**Meaning**|
 | :--------|:----------|
-|managelisteners||
-|bukkitapionly|Setting this to true will force NoCheatPlus to only run with the BukkitAPI instead of also using internals.|
+| _wildcard default metadata_ active | TODO |
+|_wildcard default metadata_  keys | TODO |
+|_wildcard_ npc | TODO |
+| _npc_ active | TODO |
+| _npc_ bukkitnpc | TODO |
+| _npc metadata_ active | TODO |
+| _npc metadata_ keys | TODO |
+| _remove_ join | TODO |
+| _remove_ leave | TODO |
 
 # Server
 |**Option**|**Meaning**|
