@@ -1,6 +1,7 @@
 **Table of Contents**
 * [Why is aimbot/killaura not detected by NoCheatPlus?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-is-aimbotkillaura-not-detected-by-nocheatplus)
-* [I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?](https://github.com/Lysandr0/Docs/blob/master/FAQ.md#i-want-nocheatplus-to-only-block-fly-cheats-while-still-allowing-speed-hacks-or-viceversa-how-can-i-do-it)
+* [I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#i-want-nocheatplus-to-only-block-fly-cheats-while-still-allowing-speed-hacks-or-viceversa-how-can-i-do-it)
+* [Is ProtocolLib required?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#is-protocollib-required)
 * [Why does NoCheatPlus not detect NoKnockback?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-does-nocheatplus-not-detect-noknockback)
 * [How can I make NoCheatPlus so that it only notifies about potential cheaters instead of canceling actions?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#how-can-i-make-nocheatplus-so-that-it-only-notifies-about-potential-cheaters-instead-of-canceling-actions)
 * [Why use NoCheatPlus instead of plugin X?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#why-use-nocheatplus-instead-of-plugin-x)
@@ -22,6 +23,9 @@ Unless this project gets more manpower, killauras won't be detected anytime soon
 ### I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?
 The main check for player movement is [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md), which currently does not discern horizontal from vertical movement. This may change in the future, for the time being however, if your only concern are vertical-oriented cheats (e.g.: fly, step) you can workaround this by editing the [speed limits](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md) for Survivalfly.
 Alternatively, if you want NoCheatPlus to only perform "sanity" checks on player (oten the case for anarchy servers, where you may still want to make sure that players can't harm the server by performing insane moves) you can disable Survivalfly and edit [CreativeFly's](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Creativefly.md) movement limits to some really high values. 
+
+### Is ProtocolLib required?
+At the current stage, NoCheatPlus only soft-depends on ProtocolLib. NCP will load up and run just fine without it, however: all the net checks, the 'noslowdown' detection in Survivalfly as well as several fixes for PvP and PvE won't work, all of which will translate in less protection and more false positives.
 
 ### Why does NoCheatPlus not detect NoKnockback?
 Key issues is that the client is authoritative on how it responds to velocity, the latency between client and server makes it extra hard for us to detect such cheat as well. Something is already in the works, however. (Moving.UnusedVelocity).
