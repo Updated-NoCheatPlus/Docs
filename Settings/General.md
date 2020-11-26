@@ -11,7 +11,7 @@ We will be using the following string as an example for our walkthrough.
 <br>`actions: vl>2 log:fdirectionlowvl:5:6:i vl>10 cancel log:fdirection:2:4:if vl>50 cancel log:fdirection:0:7:icf cmdc:kicksuspiciouscombat:1:5`</br>
 
 ## Actions
-![actions](https://github.com/Lysandr0/Docs/blob/master/Resources/actions.png)
+![actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/actions.png)
 The `actions` entry is NoCheatPlus' task scheduler and can be usually found at the end of a given check's options. This is the only place where you actually can control what a check should do after reaching a determined violation level.
 * `vl>X` To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached our defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
 An interval may be left undefined at the start (eg.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
