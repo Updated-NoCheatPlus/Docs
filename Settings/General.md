@@ -11,7 +11,8 @@ We will be using the following string as an example for our walkthrough.
 <br>`actions: vl>2 log:fdirectionlowvl:5:6:i vl>10 cancel log:fdirection:2:4:if vl>50 cancel log:fdirection:0:7:icf cmdc:kicksuspiciouscombat:1:5`</br>
 
 ## Actions
-`actions` is NoCheatPlus' task scheduler. This is the only place where you actually can control what a check should do after reaching a determined violation level.
+![actions](https://github.com/Lysandr0/Docs/blob/master/Resources/actions.png)
+The `actions` entry is NoCheatPlus' task scheduler and can be usually found at the end of a given check's options. This is the only place where you actually can control what a check should do after reaching a determined violation level.
 * `vl>X` To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached our defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
 An interval may be left undefined at the start (eg.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
 * The `cancel` flag is used in order to prevent something from happening (to cancel, as the flag would intend): with movement, this will cause a setback; in combat, this will result in a hit being canceled/not registered etc... If you don't want to penalise players on detections, the `cancel` flag can be omitted.
@@ -50,7 +51,7 @@ If an action is not formatted correctly, NoCheatPlus will fallback to the defaul
 
 _As always, we'll be taking the previously illustrated string as an example:_
 * `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
-* `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to execute the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `6` seconds. Since `cmdc` is used, this will also enforce color codes.
+* `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to execute the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `5` seconds. Since `cmdc` is used, this will also enforce color codes.
 
 
 # Placeholders
@@ -64,13 +65,13 @@ There are a few placeholders available which can be used to display more in-dept
 |`[packets]` | Generic tag used to display a certain packet (Eg.: with MorePackets, this will display the amount of move-packet received, with AttackFrequency, the attack-packets and so on).| `Net.AttackFrequency`, `Moving.MorePackets`, `Moving.Vehicle.MorePackets` | 
 |`[limit]` | Display the limit of a specific check (Eg. with Fight.Speed, this will display the established limit in the config).| `Fight.Speed` |
 |`[violations]` | Returns the current violation level reached by the player.| `All` |
-|`[food]` | Used by FastConsume and InstantEat, it will display the food type that the player attempted to fast-use.| `Inventory.FastUse`, `Inventory.FastConsume` |
+|`[food]` | Used by FastConsume and InstantEat, it will display the food type that the player attempted to fast-use.| `Inventory.InstantEat`, `Inventory.FastConsume` |
 |`[check]` | Returns the check's name.| `All` |
 |`[locationto]` | Returns the coordinates where the player moved to.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
 |`[locationfrom]` | Returns the coordinates where the player moved from.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable` |
 |`[distance]` | Returns the horizontal distance that the player has covered with one move.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
 |`[health]` | Returns a player's health in hearts.| `Fight.GodMode`, `Fight.FastHeal` |
-|`[blocktype]` | Display a block's name for which the player tried to interact or phase through.| `Moving.Passable`, `BlockBreak.FastBreak` |
+|`[blocktype]` | Display a block's name for which the player tried to interact or phase through.| `Moving.Passable`, `BlockBreak.FastBreak`, `BlockPlace.Against` |
 
 
 **Notes**
