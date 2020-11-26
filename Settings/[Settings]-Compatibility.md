@@ -102,7 +102,7 @@ This section allows you to alter some option concerning NoCheatPlus' block chang
 |**Option**|**Meaning**|
 | :--------|:----------|
 | active   | Should the change tracker system be active at all? Without it, moving blocks will cause false positives. |
-| pistons | Should pistong be checked by the tracker ? |
+| pistons | Should pistons be covered by the tracker? |
 | maxageticks | Maximum age in ticks for which entries will be purged by the tracker system. |
 | *perworld* maxentries | Maximum entries per world allowed before being removed. |
 
