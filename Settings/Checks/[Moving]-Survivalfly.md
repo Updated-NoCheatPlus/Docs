@@ -7,8 +7,8 @@ SurvivalFly is the main check for player movement. It checks both horizontal and
 
 | Option                              | Description |
 | :---------------------------------- | :---------- |
-| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) (See notes) |
-| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) (See notes) |
+| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) (See tags) |
+| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) (See tags) |
 | extended _reset-activeitem_         |  If this is set to true, Survivalfly will refresh whatever item the player is currently holding/using (off-hand is taken into account here) after failing the 'noslowdown' check. (See notes)  |
 | stepheight                          | The height a player can from ground upwards to ground, without jumping. This is set to 'default' by default, so NCP will adjust it automatically with the Minecraft version. In case NCP can't detect the version properly, e.g. with custom builds, setting an explicit value might help. Used to be 0.5 before MC 1.8 and 0.6 from then on. |
 | leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer. It fills up with moving below the applicable base moving speed (not accounting for special accelerations like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
