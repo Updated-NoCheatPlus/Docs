@@ -23,6 +23,12 @@ NoCheatPlus allows to set debug flags for almost all check groups. The flag in t
 Using the command _/ncp debug player ... (Permission: nocheatplus.command.debug) allows you to start debug logging for a player. The output is written to the log file specified in the configuration (not to the console).
 
 Syntax 3.16.1 / build 1144: /ncp debug player (player-name-or-uuid) yes/no/default[:checktype1[:checktype2...]] - For individual checks as well as groups (ALL, BLOCKBREAK, INVENTORY, FIGHT, ...).
+* Examples:
+    * `/ncp debug player abcdde yes` Same with `/ncp debug player abcdde` Debug all checks for player name 'abcdde'.
+    * `/ncp debug player abcdde yes:MOVING_SURVIVALFLY` Turn on debug for only SurvivalFly check.
+    * `/ncp debug player abcdde yes:MOVING:FIGHT_CRITICAL` Turn on debug for all moving releated checks and critial check.
+    * `/ncp debug player abcdde default` Reset to default state for all checks, something still remains on if it is set in config
+    * `/ncp debug player abcdde no` Turn off debug mode for all checks.
 
 Syntax 3.16.0 and before and slightly later: /ncp debug player (player-name) - No resetting other than 'ncp remove' or 'ncp reload'.
 
