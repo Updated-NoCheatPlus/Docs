@@ -12,7 +12,7 @@ Main reasons for taking the approach 'protection before detection' are:
 * Manpower - this is the 'free' plugin, and we need to provide something usable, without burning all our brain with cat and mice play. Thus we focus on rather lasting things in the first place.
 
 **Related**
-* [Fake entities and killaura bot checks](https://github.com/Updated-NoCheatPlusDocs/blob/master/Development/Discussion/FakeEntities.md)
+* [Fake entities and killaura bot checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Discussion/FakeEntities.md)
 * [Client-side anticheat](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Discussion/ClientSideAntiCheat.md)
 
 ### False Positives
