@@ -74,6 +74,7 @@ There are a few placeholders available which can be used to display more in-dept
 |`[distance]` | Returns the horizontal distance that the player has covered with one move.| `Moving.SurvivalFly`, `Moving.CreativeFly`, `Moving.Passable`, `Moving.Vehicle.Envelope` |
 |`[health]` | Returns a player's health in hearts.| `Fight.GodMode`, `Fight.FastHeal` |
 |`[blocktype]` | Display a block's name for which the player tried to interact or phase through.| `Moving.Passable`, `BlockBreak.FastBreak`, `BlockPlace.Against` |
+|`[model]` | Display CreativeFly's current movement model. | `Moving.CreativeFly` |
 
 
 **Notes**
