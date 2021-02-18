@@ -3,8 +3,7 @@ Permission (bypass): `nocheatplus.checks.moving.creativefly`
 Exemption: `MOVING_CREATIVEFLY`  
 Better with: `[Moving] Morepackets`  
 
-The CreativeFly checks aims to handle movement related to flying; it's more tailored for players who are in special gamemodes (Creative/Spectator) or are exposed to particular effects (e.g.: levitation)
-CreativeFly is also the check responsible to validate the player's movement when gliding with an elytra.
+CreativeFly aims to control special movements such as levitating, gliding and flying (in survival) as well as checking players in Creative and Spectator mode.
 
 | Option              | Description |
 | :------------------ | :---------- |
@@ -56,10 +55,12 @@ CreativeFly is also the check responsible to validate the player's movement when
 * `Jump_gain`: Ordinary jump.
 * `Step_up`: Ordinary step-up.
 * `Fw_speed`: The player is boosting their elytra with a firework.
-* `Elytra_v_keep`: Tag usually associated to elytra cheats (fly etc...)
-* `Elytra_v_asc`: Vertical ascending phase with the elytra.
-* `Elytra_v_desc`: Vertical descending phase with the elytra.
-* `Elytra_h_asc`: The player glided horizontally more than allowed for this gliding phase.
+* `e_vdiff`: Tag usually associated to elytra cheats (fly etc...)
+* `e_vasc`: Vertical ascending phase with the elytra.
+* `e_vdesc`: Vertical descending phase with the elytra.
+* `e_lostground`: Lost ground case with elytra.
+* `e_asc1/2/3`: Vertical ascending phase with the elytra (special cases).
+* `e_hspeed/(liq)`: The player glided horizontally more than allowed for this gliding phase (`liq` means the player is gliding in a liquid)..
 * `EXTREME_MOVE`: A sanity check. The player tried to cover a really high amount of distance with just one move.
 
 **Notes**
