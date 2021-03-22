@@ -57,13 +57,13 @@ _As always, we'll be taking the previously illustrated string as an example:_
 
 
 # Placeholders
-There are a few placeholders available which can be used to display more in-depth informations in strings and to further customize actions.
+There are a few placeholders available which can be used to display more in-depth information in strings and to further customize actions.
 | Placeholder    | Description  | Check |
 | :------------- | :------------| :------------|
 |`[player]` | Display the name of the player.| `All` |
 |`[IP]` | Display a player's IP.| `Chat.Text`, `Chat.Commands`, `Chat.Login`, `Chat.Relog` |
 |`[reachdistance]` | Display the reach distance in blocks.| `Block*.Reach`, `Fight.Reach`|
-|`[tags]` | Generic tag used to display a specific check's informations (Eg.: with SurvivalFly, this will display the triggered subchecks).| `Moving.*`, `Net.AttackFrequency`, `Fight.Angle`, `Fight.Critical`, `Combined.Improbable`, `BlockPlace.AutoSign`, `Inventory.InventoryMove`, `Inventory.FastConsume`, `BlockPlace.Scaffold` |
+|`[tags]` | Generic tag used to display a specific check's information (Eg.: with SurvivalFly, this will display the triggered subchecks).| `Moving.*`, `Net.AttackFrequency`, `Fight.Angle`, `Fight.Critical`, `Combined.Improbable`, `BlockPlace.AutoSign`, `Inventory.InventoryMove`, `Inventory.FastConsume`, `BlockPlace.Scaffold` |
 |`[packets]` | Generic tag used to display a certain packet (Eg.: with MorePackets, this will display the amount of move-packet received, with AttackFrequency, the attack-packets and so on).| `Net.AttackFrequency`, `Moving.MorePackets`, `Moving.Vehicle.MorePackets` | 
 |`[limit]` | Display the limit of a specific check (Eg. with Fight.Speed, this will display the established limit in the config).| `Fight.Speed`, `Net.AttackFrequency`|
 |`[violations]` | Returns the current violation level reached by the player.| `All` |
