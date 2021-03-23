@@ -51,7 +51,7 @@ CreativeFly aims to control special movements such as levitating, gliding and fl
 * `AntiLevitate`: Player triggered the "anti-levitate" subcheck.
 * `vDist`: Indicates that the player went beyond the vertical limits.
 * `Bunnyhop`: This move was (most likely) a bunnyhop and all conditions have been applied.
-* `vFrict_g`: Horizontal friction + gravity.
+* `vFrict_g`: Vertical friction (gravity).
 * `Jump_gain`: Ordinary jump.
 * `Step_up`: Ordinary step-up.
 * `Fw_speed`: The player is boosting their elytra with a firework.
