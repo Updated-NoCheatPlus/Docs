@@ -44,7 +44,9 @@ There are also hidden options, which give more access to internals. Use with car
 | slownesssprinthack | Hidden option to allow Survivalfly to adjust the horizontal speed limit when players sprint-jump with the slowness potion active. |
 
 **Tags**
-* `vDistRel`: The player went beyond our y (vertical) envelopes or did a move that does not follow our vertical-distance rules.
+* `vDistRel`: The player went beyond our vertical envelopes or did a move that does not follow our vertical-distance rules.
+* `HoneyAsc`: Player tried to ascend more than allowed while being on a honey block (The block halfs(+-) the jump height).
+* `GroundStep`: Indicates that the `stepheight` distance is currently being enforced, not necessarly triggering a VL. (This applies if the movement is fully on ground (from->to), otherwise the `vDistRel` distance will be applied).
 * `hSpeed`: The player went beyond our horizontal envelopes or did a move that exceeded our horizontal speed limits.
 * `Waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in y distances.).
 * `Watermove`: Indicates that the player is moving with very little y deltas above water.
@@ -62,9 +64,8 @@ There are also hidden options, which give more access to internals. Use with car
 * `LostSprint`: The sprint status of the player has been lost (see notes).
 * `UsingItem`: Indicates that the player is using/consuming an item (Blocking/Eating(...)).
 * `Hack_vEnv`: This movement is within our rule set (legit vertical move).
-* `LowJump/LowJump_set/ceil`: This move was most a low jump (likely cheating). Ceil represents a legit lowjump due to the player jumping in a 2-blocks high area.
+* `LowJump/LowJump_set/ceil`: This move was a low jump (likely cheating). Ceil represents a legit lowjump due to the player jumping in a 2-blocks high area.
 * `Data_reset/missing`: Indicates that the allowed y distance of the player has been reset due to a teleport/join/respawn.
-* `Permchecks(out/inliquid)`: After (horizontal) failure permission checks.
 * `hVel`: Some velocity has been applied to the player.
 * `hBufUse`: The player has used some of the available horizontal buffer.
 * `SwimUp/Down`: This move went further than our rule set for moving vertically in water.
