@@ -7,9 +7,9 @@ SurvivalFly is the main check for player movement. It checks both horizontal and
 
 | Option                              | Description |
 | :---------------------------------- | :---------- |
-| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) (See notes) |
-| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) (See notes) |
-| extended _reset-activeitem_         |  If this is set to true, Survivalfly will refresh whatever item the player is currently holding/using (off-hand is taken into account here) after failing the 'noslowdown' check. (See notes)  |
+| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) (See tags) |
+| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) (See tags) |
+| extended _reset-activeitem_         |  If true, SurvivalFly won't allow the player to use the item held upon a noslowdown violation, instead of setting them back. (See notes)  |
 | stepheight                          | The height a player can from ground upwards to ground, without jumping. This is set to 'default' by default, so NCP will adjust it automatically with the Minecraft version. In case NCP can't detect the version properly, e.g. with custom builds, setting an explicit value might help. Used to be 0.5 before MC 1.8 and 0.6 from then on. |
 | leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer. It fills up with moving below the applicable base moving speed (not accounting for special accelerations like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
 | leniency _ViolationFrequency_| The following feature aims at preventing the abuse of SurvivalFly's violation level relaxation mechanic (VLs will go down over time with legit moves) if you don't have set in your configuration to always cancel/setback on violations (see notes) by keeping track of the flag frequency in a custom amount of moves. If this option is set to true, SurvivalFly won't cancel any detected move if the generated violation is under your `maxleniencyvl` threshold, however, if the player is *repeatedly and continiously* triggering SurvivalFly under said threshold, then the violation level will start to increase so that (potential) cheaters will get setbacked much faster while granting to legit players a better gameplay experience as *sporadic and occasional* low violations won't immediately lead to a setback.|
@@ -42,10 +42,11 @@ There are also hidden options, which give more access to internals. Use with car
 | speedingspeed | Multiplier for the horizontal speed. Value is per-cent, 100 means no change, 200 doubles the allowed horizontal speed (default). This always applies extra to other modifiers, regardless of the side conditions, provided a player has the permission _nocheatplus.checks.moving.survivalfly.speeding_. |
 | groundhop | Hidden option to account for a special case in legacy (< 1.7.) servers where the player is able to hop without y distance increases at moderate horizontal speed.|
 | slownesssprinthack | Hidden option to allow Survivalfly to adjust the horizontal speed limit when players sprint-jump with the slowness potion active. |
-| cobwebhack | Allow accumulating some VLs and silently set the player back when they are in cobwebs. (default true). |
 
 **Tags**
-* `vDistRel`: The player went beyond our y (vertical) envelopes or did a move that does not follow our vertical-distance rules.
+* `vDistRel`: The player went beyond our vertical envelopes or did a move that does not follow our vertical-distance rules.
+* `HoneyAsc`: Player tried to ascend more than allowed while being on a honey block (The block halfs(+-) the jump height).
+* `GroundStep`: Indicates that the `stepheight` distance is currently being enforced, not necessarly triggering a VL. (This applies if the movement is fully on ground (from->to), otherwise the `vDistRel` distance will be applied).
 * `hSpeed`: The player went beyond our horizontal envelopes or did a move that exceeded our horizontal speed limits.
 * `Waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in y distances.).
 * `Watermove`: Indicates that the player is moving with very little y deltas above water.
@@ -57,22 +58,21 @@ There are also hidden options, which give more access to internals. Use with car
 * `Badsprint`: The player tried to sprint with blindness active.
 * `Backsprint`: The player tried to sprint backwards.
 * `Step`: Most likely a step-like movement.
-* `vDistSb`: The player went beyond the absolute y-distance to set back.
-* `Dirty`: Indicates that the player got velocity while being in-air.
+* `vDistSb`: The player went further than the set-back distance.
+* `Dirty`: This in-air phase has been affected by velocity.
 * `vAccDirty`: In-air velocity with vAcc being triggered.
-* `LostSprint`: The LostSprint workaround has been applied to the player.
-* `UsingItem`: Indicates that the player is using/consuming an item (Blocking/Eating(...))
-* `Hack_vEnv`: A vertical envelope case has been applied to the player, allowing the move.
-* `LowJump/LowJump_set/ceil`: This move was most likely a low jump (cheating). Ceil represents a legit lowjump due to the player jumping in a 2-blocks high area.
+* `LostSprint`: The sprint status of the player has been lost (see notes).
+* `UsingItem`: Indicates that the player is using/consuming an item (Blocking/Eating(...)).
+* `Hack_vEnv`: This movement is within our rule set (legit vertical move).
+* `LowJump/LowJump_set/ceil`: This move was a low jump (likely cheating). Ceil represents a legit lowjump due to the player jumping in a 2-blocks high area.
 * `Data_reset/missing`: Indicates that the allowed y distance of the player has been reset due to a teleport/join/respawn.
-* `Permchecks(out/inliquid)`: After (horizontal) failure permission checks.
 * `hVel`: Some velocity has been applied to the player.
-* `hBufUse`: Indicates that the player used up all the available horizontal buffer.
-* `SwimUp/Down`: The player went beyond our in-water y (vertical) envelopes or did a move that does not follow our vertical-distance rules while being in water.
+* `hBufUse`: The player has used some of the available horizontal buffer.
+* `SwimUp/Down`: This move went further than our rule set for moving vertically in water.
 * `ClimbSpeed`: The player went beyond our vertical speed limits for climbable blocks.
-* `CilmbDetached`: The player tried to climb up a block that's not possible to climb. (This applies for vines that are not attached to other blocks)
-* `vFrict_Climb`: Friction with velocity on climbable (e.g.: being hit while climbing a ladder)
-* `vWeb/Bush`: The player went beyond our vertical speed limits for web-like blocks (includes bushes as well)
+* `CilmbDetached`: The player tried to climb up a block that's not possible to climb (This applies for vines that are not attached to other blocks).
+* `vFrict_Climb`: Friction with velocity on climbable (e.g.: being hit while climbing a ladder).
+* `vWeb/Bush`: The player went beyond our vertical speed limits for web-like blocks (includes bushes as well).
 * `MaxPhase`: Indicates a too high jump or step phase for this move. 
 * `Itemreset`: The reset workaround has been applied.
 
@@ -82,9 +82,9 @@ There are also hidden options, which give more access to internals. Use with car
 * Hover is a sub-check of SurvivalFly which prevents players from hovering around in mid-air.
 * The _leniency/freeze_ settings mainly aim at configurations that don't cancel for low violation levels. With the freezing option, cheaters can't create repeated small violations as easily.
 * The `LostGround` workarounds check if touching the ground was lost (because the client did not send, or the server did not put it through) [This is due to a Minecraft bug](https://bugs.mojang.com/browse/MC-90024)
-* The `LostSprint` workaround allows for smoother transitions between sprinting/walking. It checks if the player is still (legitimately) moving at sprinting speed even though the server has caused their sprinting status to expire (lag/latency)
+* The `LostSprint` workarounds, likewise the `LostGround` ones, check if the sprinting status has been lost. This is often occours during a combat. Without this, players would be setbacked a lot during a fight.
 * The `hAcc` subcheck acts as a sort of last line of defense against speed hacks, in case all other method get bypassed, so it's not recommended to disable.
-* Around MC 1.8.x/1.13.x the server would sometimes desync the player when using items, making them look like as if they were using noslowdown cheats (e.g.: the player is blocking server-side but not client-side). The itemsreset workaround will attempt to mitigate this by refreshing the player's item after failing our noslow detection.
+* Around MC 1.8.x/1.13.x the server would sometimes desync the player when using items, making them look like as if they were using noslowdown cheats (the player is blocking server-side but not client-side). The itemsreset workaround will attempt to mitigate this by refreshing the player's item after failing our noslow detection instead of penalizing the player by cancelling their move.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)

@@ -38,7 +38,8 @@
 `nocheatplus.command.inspect` Can retrieve player status data with _/ncp inspect_  
 `nocheatplus.command.lag` Can view server lag spikes with _/ncp lag_  
 `nocheatplus.command.log` Can access internal debug data with _/ncp log_
-`nocheatplus.command.notify` Can toggle on/off in-game cheat notifications (includes permission `nocheatplus.notify`) for _/ncp notify_ command)  
+<br>`nocheatplus.command.notify` Can toggle on/off in-game cheat notifications (includes permission `nocheatplus.notify`) for _/ncp notify_ command)</br>
+`nocheatplus.notify` Can view NC+ in-game notifications (but can't toggle them on/off without the permission above)
 `nocheatplus.command.reload` Can reload NC+ to re-read configurations and permissions with _/ncp reload_  
 `nocheatplus.command.removeplayer` Can remove a players violation history with _/ncp removeplayer_  
 `nocheatplus.command.unexempt` Can unexempt a player from checks with _/ncp unexempt_  
