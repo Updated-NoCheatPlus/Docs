@@ -9,7 +9,7 @@ CreativeFly aims to control special movements such as levitating, gliding and fl
 | :------------------ | :---------- |
 | ignoreallowflight   | Should CreativeFly **ignore** players who are set to be allowed to fly in _survival/adventure_ and let SurvivalFly handle them instead? Provided there aren't side conditions forcing use of CreativeFly (see notes) regardless of `ignoreallowflight` being set to false. If this option is set to false, players in _survival_ who are set to be allowed to fly will be able to use almost **any kind of movement cheat** as SurvivalFly will not be run for the player. |
 | ignorecreative      | Should CreativeFly **ignore** players who are in creative mode and let SurvivalFly handle them instead? Provided there aren't other side conditions forcing use of CreativeFly (see notes), regardless of `ignorecreative` being set to true. **This does not disable CreativeFly**. |
-| **riptiding**           | Riptide movement modelling |
+| **riptiding**           | Riptiding is handled by CreativeFly. |
 | riptiding _horizontal speed_|Maximum horizontal speed allowed while riptiding. The formula is as it follows: (horizontal value / 100 * 0.6).|
 | riptiding _vertical ascend speed_|Maximum ascend speed allowed in riptiding. The formula is as it follows: (vertical value / 100). |
 | riptiding _vertical maxheight_|The maximum height in blocks that players can travel after having gone beyond MC's 256 height limit. (maxheight + 256 = maximum world height).|
