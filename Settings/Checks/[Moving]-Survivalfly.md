@@ -7,9 +7,10 @@ SurvivalFly is the main check for player movement. It checks both horizontal and
 
 | Option                              | Description |
 | :---------------------------------- | :---------- |
-| extended _vertical-accounting_      | Enable/Disable the *vertical-accounting* sub-check (vAcc) (See tags) |
-| extended _horizontal-accounting_    | Enable/Disable the *horizontal-accounting* sub-check (hAcc) (See tags) |
+| extended _vertical-accounting_      | Whether the *vertical-accounting* sub-check(vAcc) should be active (See tags) |
+| extended _horizontal-accounting_    | Whether the *horizontal-accounting* sub-check(hAcc) should be active (See tags) |
 | extended _reset-activeitem_         |  If true, SurvivalFly won't allow the player to use the item held upon a noslowdown violation, instead of setting them back. (See notes)  |
+| extended _noslow_                   | Whether the noslowdown detection should be active at all.|
 | stepheight                          | The height a player can from ground upwards to ground, without jumping. This is set to 'default' by default, so NCP will adjust it automatically with the Minecraft version. In case NCP can't detect the version properly, e.g. with custom builds, setting an explicit value might help. Used to be 0.5 before MC 1.8 and 0.6 from then on. |
 | leniency _hbufmax_ | The cap value for the horizontal buffer. Horizontal moving violations get compensated with emptying the buffer. It fills up with moving below the applicable base moving speed (not accounting for special accelerations like with bunny hopping). The higher the number, the more the time it will take for NCP to setback speed cheaters. |
 | leniency _ViolationFrequency_| The following feature aims at preventing the abuse of SurvivalFly's violation level relaxation mechanic (VLs will go down over time with legit moves) if you don't have set in your configuration to always cancel/setback on violations (see notes) by keeping track of the flag frequency in a custom amount of moves. If this option is set to true, SurvivalFly won't cancel any detected move if the generated violation is under your `maxleniencyvl` threshold, however, if the player is *repeatedly and continiously* triggering SurvivalFly under said threshold, then the violation level will start to increase so that (potential) cheaters will get setbacked much faster while granting to legit players a better gameplay experience as *sporadic and occasional* low violations won't immediately lead to a setback.|
@@ -44,26 +45,24 @@ There are also hidden options, which give more access to internals. Use with car
 | slownesssprinthack | Hidden option to allow Survivalfly to adjust the horizontal speed limit when players sprint-jump with the slowness potion active. |
 
 **Tags**
-* `vDistRel`: The player went beyond our vertical envelopes or did a move that does not follow our vertical-distance rules.
+* `vDistRel`: This move does not follow our vertical-distance rules (violation).
 * `HoneyAsc`: Player tried to ascend more than allowed while being on a honey block (The block halfs(+-) the jump height).
 * `GroundStep`: Indicates that the `stepheight` distance is currently being enforced, not necessarly triggering a VL. (This applies if the movement is fully on ground (from->to), otherwise the `vDistRel` distance will be applied).
-* `hSpeed`: The player went beyond our horizontal envelopes or did a move that exceeded our horizontal speed limits.
+* `hSpeed`: This move exceeds our horizontal limits.
 * `Waterwalk`: Indicates that the player is walking on water (walking in/on water without any change in y distances.).
 * `Watermove`: Indicates that the player is moving with very little y deltas above water.
 * `Lostground_[tag]`: A LostGround case has been detected and applied to the player. This will allow the movement.
-* `yChInc/yChIncFly/yChDec/yChIncAir`: Change of y direction checks, the yChIncFly one indicates moving upwards after falling without having touched the ground first. (yChangeIncrease/yChangeDecrease/yChangeIncreaseAir/(...)).
+* `yChInc/yChIncFly/yChDec/AirJump`: Change of y direction checks, AirJump represents moving upwards after falling without having touched the ground first. (yChangeIncrease/yChangeDecrease/(...)).
 * `vAcc`. The vertical-accounting check. Demands players to start to fall after having been in air for a specific amount of time. Acts as a "gravity enforcer", sort of. 
 * `hAcc`: The horizontal-accounting check. It monitors average combined-medium (e.g. air+ground or air+water) speed, with a rather simple bucket(s)-overflow mechanism.
 * `Bunnyhop/Bunnyenv/any tag containing "bunny"`: This movement is related to our bunnyhop detection method. This will often result in the player being allowed to perform such move.
 * `Badsprint`: The player tried to sprint with blindness active.
 * `Backsprint`: The player tried to sprint backwards.
-* `Step`: Most likely a step-like movement.
 * `vDistSb`: The player went further than the set-back distance.
 * `Dirty`: This in-air phase has been affected by velocity.
 * `vAccDirty`: In-air velocity with vAcc being triggered.
 * `LostSprint`: The sprint status of the player has been lost (see notes).
 * `UsingItem`: Indicates that the player is using/consuming an item (Blocking/Eating(...)).
-* `Hack_vEnv`: This movement is within our rule set (legit vertical move).
 * `LowJump/LowJump_set/ceil`: This move was a low jump (likely cheating). Ceil represents a legit lowjump due to the player jumping in a 2-blocks high area.
 * `Data_reset/missing`: Indicates that the allowed y distance of the player has been reset due to a teleport/join/respawn.
 * `hVel`: Some velocity has been applied to the player.
@@ -72,9 +71,11 @@ There are also hidden options, which give more access to internals. Use with car
 * `ClimbSpeed`: The player went beyond our vertical speed limits for climbable blocks.
 * `CilmbDetached`: The player tried to climb up a block that's not possible to climb (This applies for vines that are not attached to other blocks).
 * `vFrict_Climb`: Friction with velocity on climbable (e.g.: being hit while climbing a ladder).
-* `vWeb/Bush`: The player went beyond our vertical speed limits for web-like blocks (includes bushes as well).
+* `vWeb/vWedDesc`: Webs vertical distance checking (Ascending/Descending).
+* `vBush/vbushDesc`: In berry bush vertical distance checking (Ascending/Descending).
 * `MaxPhase`: Indicates a too high jump or step phase for this move. 
 * `Itemreset`: The reset workaround has been applied.
+* `SnowAsc/SnowDesc`: Powder snow vertical distance checking (Ascending/Descending).
 
 **Notes**
 * If you don't set in your configuration to always cancel movements on violations (especially on lower ones), cheaters can tipically abuse this by creating small and repeateed violations which stay under your tolerance threshold and use cheats; a fair amount of fly 'bypasses" exploit this exact scenario. The ViolationFrequency hook will mitigate this by a lot, as cheaters cannot repeatedely create smaller violations without making them escalate over time, reaching the next VL interval where a cancel flag is set.
