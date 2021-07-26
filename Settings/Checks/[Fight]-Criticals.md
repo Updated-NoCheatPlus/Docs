@@ -13,7 +13,7 @@ This check ensures that critical hits performed by players are legit.
 **Tags**
 * `falldist_mismatch`: This tag indicates a mismatch between Minecraft's fall distance and our calculated fall distance (the fall distance is taken from the NoFall check).
 * `lowjump`: The player tried to jump lower than normal in order to get more critical hits.
-* `silent_jump`: The player somehow accumulated some fall distance while still being on ground (often the case with packet-based critical cheats).
+* `silent_jump`: The player accumulated fall distance while still being on ground (often the case with packet-based critical cheats).
 
 **Notes**
 * In MC you need to hit someone while falling to get a critical hit.
