@@ -15,10 +15,10 @@
 * [Where is the "donate" button?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#where-is-the-donate-button)
 
 ### Why is aimbot/killaura not detected by NoCheatPlus?
-The principle of NCP as an _anticheat_ and **not** a _cheat-detector_ is rather to find envelopes/models to fit around legit behaviour: instead of detecting a specific cheat implementation type --in this case, kilaura-- we track down what’s possible for a player to do and _enforce_ that.
-NCP’s suit of combat checks serve this exact purpose; they attempt to create an even fight envelope by enforcing limits to players, blocking everything that’s clearly unlegit or potentially gamebreaking (E.g.: Instant turning, hitting 2+ entities at the same time, hitting at insane speeds etc…) so that legit players have a chance against cheaters as well.
-Unfortunately, unlike in the movement area, combat cannot be modelled upon by us. Movement cheats are meant to leave vanilla envelopes which can be tracked down and then be enforced to players, whereas combat hacks simply try to simulate a legit, player-like behaviour so there’s nothing that we can realistically “enforce”.
-Unless this project gets more manpower, killauras won't be detected anytime soon. 
+The principle of NCP as an _anticheat_ and **not** a _cheat-detector_ is rather to find envelopes to fit around legit behaviour: instead of detecting specific cheat implementation types (like killaura) we track down what’s possible for a player to do and _enforce_ that.
+NCP’s suit of combat checks serve this exact purpose; they attempt to create an even fight envelope (E.g.: blocking Instant turning, hitting 2+ entities at the same time, hitting at insane speeds etc…) so that legit players have a chance against cheaters as well.
+Unfortunately, unlike in the movement area, combat can't be really 'modeled' by us. By nature, movement cheats are meant to perform things that a legit player cannot do, whereas combat cheats simply try to simulate a legit/player-like behaviour so there’s nothing that we can “enforce”. When (if) this project gets more manpower to keep up with the cat-and-mice play, then focusing more in the combat can be considered.
+Please have a look at the [Fundamentals](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Fundamentals.md) page for further info.
 
 ### I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?
 The main check for player movement is [SurvivalFly](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md), which currently does not discern horizontal from vertical movement. This may change in the future, for the time being however, if your only concern are vertical-oriented cheats (e.g.: fly, step) you can workaround this by editing the [speed limits](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/%5BMoving%5D-Survivalfly.md) for Survivalfly.
@@ -66,7 +66,3 @@ It has been removed for the time being. We might re-add it once we are in need o
 
 **Related**  
 * [Known Issues](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Known-Issues.md).
-
-[CompatNoCheatPlus]:https://dev.bukkit.org/bukkit-plugins/compatnocheatplus-cncp/
-[mcMMO]:https://dev.bukkit.org/bukkit-plugins/mcmmo/
-[Citizens]:https://dev.bukkit.org/bukkit-plugins/citizens/
