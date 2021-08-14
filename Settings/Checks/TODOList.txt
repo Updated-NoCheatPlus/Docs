@@ -2,7 +2,6 @@ List of stuff that's still missing documentation:
 
 [X] Document all modifiers under CreativeFly
 * Splitmove in moving.general
-* Redundant packets in FlyingFrequency 
 * Net.general
 * Text: allowvlreset
 * Vehicle.schedulesetbacks
