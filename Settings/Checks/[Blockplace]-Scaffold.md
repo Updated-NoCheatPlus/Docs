@@ -12,6 +12,9 @@ Scaffold is a multi-module check that attempts to enforce realistic speeds and m
 | rotate _difference_| The rotate subecheck checks for large changes in rotation between block placements. If the calculated difference is bigger than the set difference, Scaffold will trigger.|
 | toolswitch| The toolswitch subcheck checks if the player is quickly switching inventory slots between block placements.|
 
+**Notes**
+* Keep in mind that legit fast scaffolding techniques do exist (e.g.: "godbridge") so you may want to tweak Scaffold's values to your likings, especially on gamemodes where bridging is a core/important mechanic, like Skywars.
+
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
 * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
