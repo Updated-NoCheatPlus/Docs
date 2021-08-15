@@ -2,8 +2,8 @@ Config path: `checks.blockbreak.frequency`
 Permission (bypass): `nocheatplus.checks.blockbreak.frequency`  
 Exemption: `BLOCKBREAK_FREQUENCY`  
 
-The BlockBreak.Frequency check hard-limits the amount of blocks a player can break in custom time frames in total.
-It does not concern the speed at which players can break a single block (which is covered by the FastBreak check)
+Frequency limits the total amount of blocks a player can break in custom time frames.
+It does not concern the speed at which players can break a single block (which is covered by the FastBreak check).
 
 
 | Option              | Description |
