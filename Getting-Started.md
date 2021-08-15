@@ -1,7 +1,6 @@
 # Installation
-1. Download NoCheatPlus from one of those 2 sources:
- * Release builds on [DBO]
- * Latest development build on [Jenkins]
+1. Download NoCheatPlus from the current source:
+ * [Jenkins]
 
 2. Drop the NoCheatPlus.jar in your /plugins folder like this:  ![Installation](Resources/Installation.gif)  
 
@@ -15,6 +14,5 @@
 5. [Configure NoCheatPlus](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Configuration.md)
 6. [Study the Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md)
 
-[DBO]:https://dev.bukkit.org/bukkit-plugins/nocheatplus/files/
 [Jenkins]:https://ci.codemc.io/job/Updated-NoCheatPlus/job/Updated-NoCheatPlus/
 
