@@ -14,6 +14,7 @@ Scaffold is a multi-module check that attempts to enforce realistic speeds and m
 
 **Notes**
 * Keep in mind that legit fast scaffolding techniques do exist (e.g.: "godbridge") so you may want to tweak Scaffold's values to your likings, especially on gamemodes where bridging is a core/important mechanic, like Skywars.
+* Some Scaffold implementations may trigger MorePackets if turning around too fast.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
