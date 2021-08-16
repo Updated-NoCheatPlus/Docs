@@ -19,6 +19,7 @@ This check ensures that critical hits performed by players are legit.
 * In MC you need to hit someone while falling to get a critical hit.
 * Check `checks.moving.nofall.anticrticals` if you wish to further tweak settings concerning critical cheats.
 * The `falldist_mismatch` module uses NoFall's internal calculations to determine if players could be cheating, so disabling NoFall will partially cripple this check.
+* Some packet-based critical cheats may trigger MorePackets if cheaters hit their target too many times while moving.
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
