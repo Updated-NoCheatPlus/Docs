@@ -3,7 +3,7 @@ Permission (bypass): `nocheatplus.checks.moving.passable`
 Exemption: `MOVING_PASSABLE`  
 Better with: `[Combined] Enderpearl`
 
-The Passaable check prevents moving into or inside of blocks.
+Passable prevents players from moving into or inside of blocks.
 
 | Option                                    | Description |
 | :---------------------------------------- | :---------- |
