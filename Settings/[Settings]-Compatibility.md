@@ -15,7 +15,7 @@ This section of the configuration file provides you with additional settings to 
 # Server
 |**Option**|**Meaning**|
 | :--------|:----------|
-| cbdedicated| If true, NoCheatPlus will use its dedicated module for the detected server version, currently supports 1.5 to 1.12.|
+| cbdedicated| If true, NoCheatPlus will use its dedicated module for the detected server version, only for 1.4.5 to 1.12.2. |
 | cbreflection | Resort to the BukkitAPI if no dedicated module is present. Applies from MC 1.13+ and on. |
 
 # Blocks
@@ -107,7 +107,7 @@ Currently, NoCheatPlus supports the following flags:
 
 |**Option**|**Meaning**|
 | :--------|:----------|
-| minimalworldY | Alter the the minimal y coordinate a block can be at (non air). Original intention is to provide compatibility for datapacks. |
+| minimalworldY | Alter the the minimal y coordinate a block can be at (non air). Original intention is to provide compatibility for datapacks (1.17+). |
 
 # Changetracker
 This section allows you to alter some option concerning NoCheatPlus' block change tracker system, which allows the moving checks to account for moving blocks (eg.: with pistons).
