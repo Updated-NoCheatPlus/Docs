@@ -13,7 +13,7 @@ Fastconsume replaces the former Instanteat check and extends it by forcing vanil
 **Notes**
 * NoCheatPlus will automatically fallback to "Instanteat" if your server does not support the consume event which fastconsume needs to work.
 * Setting duration higher will require players more time to consume the item while setting it lower allows them to consume it quicker.
-* NCP will automatically add `DRIED_KELP` to the exceptions list if your server runs in MC 1.13 or higher versions.
+* This check will auto-disable itself in newer versions (1.9+) since it's not possible to use this kind of cheat anymore.
 
 **Related**
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
