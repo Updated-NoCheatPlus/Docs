@@ -4,7 +4,6 @@
 * [Specific](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#specific)
 * [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#commands)
 * [Auxiliary commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#auxiliary-commands)
-* [Client modifications](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#client-modifications)
 * [Miscellaneous and parent permissions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#miscellaneous-and-parent-permissions)
 * [Configure permission caching behavior](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Permissions.md#configure-permission-caching-behavior)
 
@@ -54,47 +53,6 @@
 `nocheatplus.command.kicklist` Can view all players that have been temp-kicked with _/ncp kicklist_  
 `nocheatplus.command.tell` Can send private messages to players using _/ncp tell_  
 
-# Client modifications
-With those permissions you can decide which mods should not be disabled on login.
-
-## [CJB Mods]
-`nocheatplus.mods.cjb` Allows all CJB mod features.  
-`nocheatplus.mods.cjb.fly` Allows to use the fly mod.  
-`nocheatplus.mods.cjb.radar` Allows to use the radar/minimap.  
-`nocheatplus.mods.cjb.xray` Allows to xray.  
-
-## [Rei's Minimap]
-`nocheatplus.mods.rei.cave` Enables cave rendering.  
-`nocheatplus.mods.rei.radar` Enables all radar features.  
-`nocheatplus.mods.rei.radar.animal` Enables the animal radar.  
-`nocheatplus.mods.rei.radar.player` Enables the player radar.  
-`nocheatplus.mods.rei.radar.mob` Enables the mob radar.  
-`nocheatplus.mods.rei.radar.other` Enables radar for "other" entities.  
-`nocheatplus.mods.rei.radar.slime` Enables the radar for slimes.  
-`nocheatplus.mods.rei.radar.squid` Enables the squid radar.  
-
-## [Smart Moving]
-`nocheatplus.mods.smartmoving` Enables all smart movement featuers.  
-`nocheatplus.mods.smartmoving.climbing` Enables climbing.  
-`nocheatplus.mods.smartmoving.crawling` Enables crawling.  
-`nocheatplus.mods.smartmoving.flying` Enables flying.  
-`nocheatplus.mods.smartmoving.jumping` Enables jumping.  
-`nocheatplus.mods.smartmoving.sliding` Enables sliding.  
-`nocheatplus.mods.smartmoving.swimming` Enables special swimming.  
-
-## [Zombe's modpack]
-`nocheatplus.mods.zombe` Enables all featuers of the zombe mod.  
-`nocheatplus.mods.zombe.cheat` Enables the cheating parts.  
-`nocheatplus.mods.zombe.fly` Enables flying.  
-`nocheatplus.mods.zombe.noclip` Enables nocliping.  
-
-## [JourneyMap]
-`nocheatplus.mods.journey` Enables all Journey map featuers.  
-`nocheatplus.mods.journey.radar` Enables the radar.  
-`nocheatplus.mods.journey.cave` Enables the cave redering.  
-
-(I think one is missing here hmm...)
-
 # Miscellaneous and parent permissions
 
 `nocheatplus.admin` Gives access to all [NoCheatPlus commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md) including Auxiliary ones  
@@ -106,16 +64,9 @@ Commands for which the permission got set by the protection features (hide plugi
 * By default NoCheatPlus assigns all permissions and gives full rights to players that have been `/op-ed` on your server. If you don't want to give OPs full access to all NoCheatPlus features then take a look in the configuration of your permissions plugin (Example with PermissionsEx: allowOps: false).
 
 **Related**
-* [Client Modifications](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Client-Modifications.md)
 * [Checks](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Checks/Checks.md)
 * [Commands](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/Commands.md)
 * [Debugging](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Development/Debugging.md)
-
-[CJB Mods]:http://cjbmods.com/
-[Rei's Minimap]:http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1275219-jul-08-reis-minimap-v3-4_01
-[Smart Moving]:http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1274224-smart-moving
-[Zombe's modpack]:http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/mod-packs/1272345-zombes-modpack-26-mods-v8-2-2-upd-11-jul
-[JourneyMap]:http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1278348-journeymap-5-0-1-realtime-mapping-in-game-or-in-a
 
 # Configure permission caching behavior
 Since NoCheatPlus 3.16.1-SNAPSHOT (since build 1040) / 3.17.0-RC, permission caching has been introduced. This allows for configuration of how to check for permissions, in case permission checks turn out to consume too much performance, or in case you want to override the behavior for other reasons.
