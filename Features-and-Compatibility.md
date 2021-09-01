@@ -26,5 +26,3 @@ Here are all plugins which either use the NC+ API or specially account for NC+ t
 [BungeeNCPNotify]:https://dev.bukkit.org/bukkit-plugins/bungeencpnotify/
 [Config compatibility settings]:https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/%5BSettings%5D-Compatibility.creole
 
-## Other
-* Can send MOTDs to control some client mods that support it (Reis minimap etc.).
