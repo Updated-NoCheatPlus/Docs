@@ -10,5 +10,8 @@ This check will make sure that your players use the proper fire speed to shoot a
 | delay               | The legit speed NCP will accept from pulling the string to the actual shot. |
 
 **Related**  
+* This check will auto-disable itself on newer versions (1.9+) since it's not possible to use this kind of cheat anymore.
+
+**Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
 * [Actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#actions)
