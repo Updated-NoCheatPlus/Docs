@@ -13,11 +13,14 @@ We will be using the following string as an example for our walkthrough.
 
 ## Actions
 ![actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/actions.png)
-The `actions` entry can be considered as NoCheatPlus' task scheduler and can be usually found at the end of a given check's options. This is the only place where you actually can control what a check should do after reaching a determined violation level.
+The `actions` entry can be considered as NoCheatPlus' task scheduler and can be found at the end of a given check's options. This is the only place where you can control what a check should do after reaching a determined violation level.
 * **`vl>X`** To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached the defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
-An interval may be left undefined at the start (eg.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
-* The **`cancel`** action is used in order to prevent something from happening (to cancel, as the flag would intend): with movement, this will cause a setback; in combat, this will result in a hit being canceled etc... If you don't want to penalise players on detections, the `cancel` flag can be omitted.
-Do note that the `cancel` flag currently supports cancellation with probability: instead of immediately prevent an action, you can tell NoCheatPlus that said action only has a probability of actually getting canceled/prevented, by specifying the probability in percentage (`x%`) before the cancel flag (eg.: `10%cancel`). Can be used in combat, for instance, to not immediately cancel a hit.
+An interval may be left undefined at the start (e.g.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
+* **`cancel`** is the flag used to indicate that an action is to be cancelled, this can have a several meanings: 
+<br>-Cancel an event (prevent) (i.e.: prevent illegal moves by setting the player back, or cancel illegal hits in combat.);
+<br>-Undo actions done by players in some other way (i.e.: restore altered fall damage or fall distance);
+<br>-Do something that should've been done (enforce) (i.e.: enforcing damage if players ignore its source (GodMode));
+<br>Note that the `cancel` flag currently supports cancellation with probability: instead of cancelling an action 100% of the time, you can tell NoCheatPlus that said action only has a probability of actually getting cancelled, by specifying the probability in percentage (`x%`) before the cancel flag (e.g.: `10%cancel`). Can be used in combat, for instance, to not immediately cancel a hit.
 
 <br>_Taking the previously illustrated example:_</br>
 * Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have any specified action before 2 VL. 
