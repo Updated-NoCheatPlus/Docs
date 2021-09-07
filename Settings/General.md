@@ -16,7 +16,7 @@ We will be using the following string as an example for our walkthrough.
 The `actions` entry can be considered as NoCheatPlus' task scheduler and can be found at the end of a given check's options. This is the only place where you can control what a check should do after reaching a determined violation level.
 * **`vl>X`** To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached the defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
 An interval may be left undefined at the start (e.g.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
-* **`cancel`** is the flag used to indicate that an action is to be cancelled, this can have a several meanings: 
+* **`cancel`** is the flag used to indicate that an action is to be cancelled, this can have several meanings: 
 <br>-Cancel an event (prevent) (i.e.: prevent illegal moves by setting the player back, or cancel illegal hits in combat.);
 <br>-Undo actions done by players in some other way (i.e.: restore altered fall damage or fall distance);
 <br>-Do something that should've been done (enforce) (i.e.: enforcing damage if players ignore its source (GodMode));
