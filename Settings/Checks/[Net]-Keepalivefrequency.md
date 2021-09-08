@@ -3,7 +3,7 @@ Permission (bypass): `nocheatplus.checks.net.keepalivefrequency`
 Exemption: `NET_KEEPALIVEFREQUENCY`  
 Depends on: `ProtocolLib (plugin)` 
 
-The KeepAliveFrequency limits the amount of keepAlive packets a player can send in a second in order to gain unfair advantages.
+KeepAlive limits the amount of keep-alive packets that can be sent to the server to gain certain advantages (i.e.: GodMode).
 
 | Option              | Description |
 | :------------------ | :---------- |
