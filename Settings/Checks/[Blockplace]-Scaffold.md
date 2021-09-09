@@ -15,8 +15,9 @@ Scaffold is a multi-module check that attempts to enforce realistic speeds and m
 | Improbable _weight_ |The weight this check should have when feeding improbable. Set to 0.0 if you don't want this check to feed Improbable at all.|
 
 **Notes**
-* Keep in mind that legit fast-scaffolding techniques do exist (e.g.: "godbridge") so you may want to tweak Scaffold's values to your likings, especially on gamemodes where bridging is a core/important mechanic, like Skywars.
-* Some Scaffold implementations may trigger MorePackets if turning around too fast.
+* Keep in mind that legit fast-scaffolding techniques do exist (e.g.: "godbridge") so you may want to tweak Scaffold's time subcheck to your likings, especially on gamemodes where bridging is a core/important mechanic, like Skywars.
+* Some Scaffold implementations tend to also trigger MorePackets if turning around too fast.
+* Yaw rate is also monitored here. Makes it even harder to do unlikely rotation changes. 
 
 **Related**  
 * [Active](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Settings/General.md#active)
