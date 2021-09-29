@@ -49,7 +49,7 @@ Currently, NoCheatPlus supports the following flags:
 | F_LIQUID | Indicator for all liquid types. |
 | F_POWDERSNOW | Like powder snow, which has special onGround properties.|
 | F_BLUE_ICE | Like blue ice.|
-| F_NEWLIQ | Indicator flag for 1.13 liquids proprieties.|
+| F_WATER_PLANT | Like water plants (1.13+).|
 | F_WATER | Like water. |
 | F_LAVA | Like lava. |
 | F_CARPET | Inidicator flag for carpets. |
