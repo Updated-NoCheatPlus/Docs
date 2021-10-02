@@ -21,8 +21,8 @@ This section of the configuration file provides you with additional settings to 
 # Blocks
 |**Option**|**Meaning**|
 | :--------|:----------|
-|breakingtime| Enables you to override the breaking time of a block for specific side conditions. An entry in this section maps a condition definition to the breaking time in milliseconds. Definitions for side conditions can be: BLOCK_TYPE:TOOL_TYPE:TOOL_MATERIAL_BASE:EFFICIENCY_LEVEL. In-air/water/aqua-affinity/haste are not possible to add at this stage. Those will get automatically evaluated. Later specifying these will be possible.|
-| allowinstabreak | Blocks entered here will not be verified by the FastBreak check, meaning the player will be able to mine them at whichever speed.|
+|breakingtime| Enables you to override the breaking time of a block for specific side conditions. An entry in this section maps a condition definition to the breaking time in milliseconds. Definitions for side conditions can be: BLOCK_TYPE:TOOL_TYPE:TOOL_MATERIAL_BASE:EFFICIENCY_LEVEL.|
+| allowinstabreak | Blocks entered here will not be monitored by the FastBreak check, meaning the player will be able to mine them at whichever speed.|
 
 Example of breakingtime:
 <br> `SAND:AXE:DIAMOND:0: 10000`</br> 
@@ -48,7 +48,7 @@ Currently, NoCheatPlus supports the following flags:
 | F_STAIRS | Indicator flag for stairs. |
 | F_LIQUID | Indicator for all liquid types. |
 | F_POWDERSNOW | Like powder snow, which has special onGround properties.|
-| F_BLUE_ICE | Like blue ice.|
+| F_BLUE_ICE | Like blue ice, more slipperiness.|
 | F_WATER_PLANT | Like water plants (1.13+).|
 | F_WATER | Like water. |
 | F_LAVA | Like lava. |
@@ -57,7 +57,7 @@ Currently, NoCheatPlus supports the following flags:
 | F_COBWEB2 | Like berry bushes, which behaves similarly to webs. |
 | F_SOULSAND | Like soulsand. Ensures slower speed if walking on this block with this flag. |
 | F_BUBBLECOLUMN | Like bubblec column, which allows the player to move faster vertically. |
-| F_STICKY | Like honey block, sticky. Landing on this block will half fall damage |
+| F_STICKY | Like honey block, sticky. Landing on this block will half fall damage. |
 | F_RAILS | All rails types a minecart can move on. |
 | F_ICE | Like ice, which will allow the player to slide on it, increasing their horizontal speed. |
 | F_LEAVES | Indicator flag for all leaves. |
@@ -65,7 +65,7 @@ Currently, NoCheatPlus supports the following flags:
 | F_ANVIL | Indicator flag for anvils. |
 | F_THIN_FENCE | Indicator flag for panes and iron bars. |
 | F_THICK_FENCE | Indicator flag for walls and fences (e.g.: cobblestone wall). |
-| F_FAKEBOUNDS | Flag used to activate a workaround for the edges of thin fences (iron bars and glass panes) on 1.8 servers (which are bugged and would trigger the Passable check when colliding on them XZ). |
+| F_FAKEBOUNDS | Meta-flag used to activate a workaround for the edges of thin fences (iron bars and glass panes) on 1.8 servers (which are bugged and would trigger the Passable check when colliding on them XZ). |
 | F_SOLID  | Result of Minecraft's isSolid. Used for setting the ground flag. |
 | F_IGN_PASSABLE | Indicate that this block is fully passable (used for compatibility). |
 | F_GROUND | The player can stand on this block sneaking or not. |
