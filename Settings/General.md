@@ -23,19 +23,19 @@ An interval may be left undefined at the start (e.g.: `vl>2 cancel (...)`), but 
 <br>Note that the `cancel` flag currently supports cancellation with probability: instead of cancelling an action 100% of the time, you can tell NoCheatPlus that said action only has a probability of actually getting cancelled, by specifying the probability in percentage (`x%`) before the cancel flag (e.g.: `10%cancel`). Can be used in combat, for instance, to not immediately cancel a hit.
 
 <br>_Taking the previously illustrated example:_</br>
-* Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have any specified action before 2 VL. 
+* Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have anything specified before 2 VL. 
 * Interval 2: After a player has reached at least 2 VL the `log` action will be executed.
-* Interval 3: After 10 VL we then start to cancel whatever has been detected by the check and then execute the `log` action.
+* Interval 3: After 10 VL we then start to cancel whatever has been detected by the check and execute the `log` action.
 * Interval 4: In the final interval, after a player has reached VL 50, we cancel, then `log` and finally we execute the `cmdc` action (which will kick the player in this case).
 
 ## Strings usage
 Strings are defined at the file's bottom part; you can think of them as aliases.
 A string can be used to either log something into NoCheatPlus' logging stream or execute a command. This enables server owners to do almost anything they wish to do upon detections.
-* **`cmd`** and **`cmdc`** are used to tell NoCheatPlus to execute a command action (defined in the strings section). The latter will force NoCheatPlus to recognize and use color codes (`&`).
-* **`log`** is the action used to tell NoCheatPlus to log a message (defined in the strings section) into its logging stream (console, in-game or flat file).
+* **`cmd`** and **`cmdc`** are used to tell NoCheatPlus to execute a command action. The latter will force NoCheatPlus to recognize color codes (`&`).
+* **`log`** is used to tell NoCheatPlus to log a message into its logging stream (console, in-game or flat file).
 <br>The template for strings is as it follows:</br> 
 ![StringsExplenation](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/StringsExplenation.gif)
-<br>Do note that normal messages need to be specified at the start/end with quotes. (eg.: 'your message here').<br>
+<br>Do note that normal messages need start and ending quotes. (eg.: 'your message here').<br>
 
 <br>_Taking the previously illustrated example:_</br>
 * The default message for the `fdirectionlowvl` string is as it follows:
@@ -44,10 +44,9 @@ A string can be used to either log something into NoCheatPlus' logging stream or
 <br>`kicksuspiciouscombat: ncp kick [player] &c&l(!)&7 Illegal combat modifications.`</br>
 
 ## Actions format
-Actions do need to respect a fixed format to be valid and recognized by NoCheatPlus.
-If an action is not formatted correctly, NoCheatPlus will fallback to the default config's action for that check.
-* The format used for **`log`** actions will be like this: **`log:string:delay:cooldown:target`**.
-* For **`cmdc`**/**`cmd`** actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be safely removed or specified, at your discretion. (**`cmd(c):yourcommandhere[:delay:cooldown]`**).
+In order for actions to be recognized by NoCheatPlus, they need to respect a specific format. If an action is not formatted correctly, NoCheatPlus will fallback to the default actions for that check.
+* The format used for **`log`** actions is: **`log:string:delay:cooldown:target`**.
+* For **`cmdc`**/**`cmd`** actions, the `target` part _has_ to be omitted, while `delay` and `repeat` _can_ be removed or specified, at your discretion: (**`cmd(c):yourcommandhere[:delay:cooldown]`**).
 * The `delay` part tells NoCheatPlus how many failed checks it has to wait before actually logging the action. This is used if you feel like a check is throwing too many false positives and you want to log your string only if a player fails the check multiple times within a minute. 
 * The `cooldown` is used to indicate how many seconds have to pass before NoCheatPlus can log an action once again. This is needed to prevent the spam of multiple actions in a given interval. Usually a value of 5 seconds is acceptable. It is recommended to at least enforce a one second cooldown.
 * The `target` part is used to indicate where NoCheatPlus should log a `log` action. `i` stands for in-game chat, `c` stands for console, `f` stands for file. The order is at your discretion (`icf`, `cfi`, `ifc` etc..) , however, at least _one_ log destination has to be specified.
@@ -55,7 +54,7 @@ If an action is not formatted correctly, NoCheatPlus will fallback to the defaul
 <br>Colons are used to separate arguments from one another.</br>
 
 _As always, we'll be taking the previously illustrated string as an example:_
-* `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` message only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
+* `log:fdirectionlowvl:5:6:i`: This will let NoCheatPlus know that it needs to log the `fdirectionlowvl` string only in the in-game chat (`i`), every `5` failed checks, with a cooldown of `6` seconds.
 * `cmdc:kicksuspiciouscombat:1:5`: This will let NoCheatPlus know that it needs to execute the `kicksuspiciouscombat` command after failing the check `1` time, with a cooldown of `5` seconds. Since **`cmdc`** is used, color codes will be used.
 
 
