@@ -15,9 +15,10 @@
 * [Where is the "donate" button?](https://github.com/Updated-NoCheatPlus/Docs/blob/master/FAQ.md#where-is-the-donate-button)
 
 ### Why is aimbot/killaura not detected by NoCheatPlus?
-The principle of NCP as an _anticheat_ and **not** a _cheat-detector_ is rather to find envelopes to fit around legit behaviour: instead of detecting specific cheat implementation types (like killaura) we track down what’s possible for a player to do and _enforce_ that.
-NCP’s suit of combat checks serve this exact purpose; they attempt to create an even fight envelope (E.g.: blocking Instant turning, hitting 2+ entities at the same time, hitting at insane speeds etc…) so that legit players have a chance against cheaters as well.
-Unfortunately, unlike in the movement area, combat can't be really 'modeled' by us. By nature, movement cheats are meant to perform things that a legit player cannot do, whereas combat cheats simply try to simulate a legit/player-like behaviour so there’s nothing that we can “enforce”. When (if) this project gets more manpower to keep up with the cat-and-mice play, then focusing more in the combat can be considered.
+The principle of NCP as a *public* anti-cheat, is to find envelopes to fit around legit behaviour: instead of detecting specific cheat implementations (like killaura) we track down what players can do and try to _enforce_ that.
+NCP’s suite of combat checks serve this exact purpose; they attempt to create an even fight envelope, so that legit players have a chance against cheaters as well (i.e.: blocking players hitting 2 or more entities at the same time, hitting at insane speeds etc…). 
+Unfortunately, this specific approach fails in the combat area, unlike the movement area which pays off a lot more: by nature, movement cheats are meant to perform things that a legit player cannot do, whereas combat cheats simply try to *simulate a legit behaviour* nowadays; there's nothing for us to enforce.
+This means that we'd need to add fast-to-react, fast-to-bypass combat checks: when (if) this project gets more manpower to keep up with the cat-and-mice play, then focusing more in the combat can be considered.
 Please have a look at the [Fundamentals](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Fundamentals.md) page for further info.
 
 ### I want NoCheatPlus to only block fly cheats while still allowing speed hacks (or viceversa). How can I do it?
