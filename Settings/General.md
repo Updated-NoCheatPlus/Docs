@@ -14,8 +14,9 @@ We will be using the following string as an example for our walkthrough.
 ## Actions
 ![actions](https://github.com/Updated-NoCheatPlus/Docs/blob/master/Resources/actions.png)
 The `actions` entry can be considered as NoCheatPlus' task scheduler and can be found at the end of a given check's options. This is the only place where you can control what a check should do after reaching a determined violation level.
-* **`vl>X`** To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached the defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.
-An interval may be left undefined at the start (e.g.: `vl>2 cancel (...)`), but the `actions` section cannot be left blank as a whole.
+* **`vl>X`** To be interpreted literally, it means "violation greater than X". This is used to articulate actions into different intervals. After a player has reached the defined violation threshold, the subsequent interval will be executed. In other words, the `vl>X` is a limiter to how many actions can be performed in a given interval.<br>
+Intervals can be ommitted altogether, meaning: you can tell NoCheatPlus to perform a single and specific action at any violation level (e.g.: `actions: log:fdirection:10:10:icf`), but the `actions` section cannot be left blank as a whole.<br>
+The first interval may be left undefined at the start (e.g.: `vl>2 cancel (...)`).<br>
 * **`cancel`** is the flag used to indicate that an action is to be cancelled, this can have several meanings: 
 <br>-Cancel an event (prevent) (i.e.: prevent illegal moves by setting the player back, or cancel illegal hits in combat.);
 <br>-Undo actions done by players in some other way (i.e.: restore altered fall damage or fall distance);
@@ -23,10 +24,10 @@ An interval may be left undefined at the start (e.g.: `vl>2 cancel (...)`), but 
 <br>Note that the `cancel` flag currently supports cancellation with probability: instead of cancelling an action 100% of the time, you can tell NoCheatPlus that said action only has a probability of actually getting cancelled, by specifying the probability in percentage (`x%`) before the cancel flag (e.g.: `10%cancel`). Can be used in combat, for instance, to not immediately cancel a hit.
 
 <br>_Taking the previously illustrated example:_</br>
-* Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have anything specified before 2 VL. 
-* Interval 2: After a player has reached at least 2 VL the `log` action will be executed.
-* Interval 3: After 10 VL we then start to cancel whatever has been detected by the check and execute the `log` action.
-* Interval 4: In the final interval, after a player has reached VL 50, we cancel, then `log` and finally we execute the `cmdc` action (which will kick the player in this case).
+* Interval 1: If players don't reach at least 2 VL, NoCheatPlus will do nothing, as we don't have anything specified before VL 2. 
+* Interval 2: After the player has reached at least a violation level of 3 the `log` action will be executed.
+* Interval 3: After a violation level of 10, we then start to cancel whatever has been detected by the check and execute the `log` action.
+* Interval 4: In the final interval, after a player has reached VL 50, we cancel, then `log` and finally, we execute the `cmdc` action (which will kick the player in this case).
 
 ## Strings usage
 Strings are defined at the file's bottom part; you can think of them as aliases.
